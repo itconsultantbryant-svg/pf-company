@@ -45,6 +45,22 @@ A modern, fully responsive website for **Power Factor Engineering & Consultancy 
 
 No build step or dependencies required.
 
+## Deploying on Render
+
+This repo is ready to deploy as a **Render Static Site** (no build step).
+
+1. In Render, click **New +** → **Static Site**
+2. Connect the GitHub repo `itconsultantbryant-svg/pf-company`
+3. Configure:
+   - **Branch:** `main`
+   - **Build Command:** *(leave blank)*
+   - **Publish Directory:** `.`
+4. Click **Create Static Site**
+
+Notes:
+- A `render.yaml` file is included so Render can auto-detect settings.
+- `_redirects` is included so clean URLs like `/about` work (they serve `about.html`).
+
 ## Structure
 
 ```

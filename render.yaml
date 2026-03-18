@@ -1,0 +1,7 @@
+services:
+  - type: static_site
+    name: pf-company
+    env: static
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: true
