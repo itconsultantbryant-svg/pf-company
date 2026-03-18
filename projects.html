@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Power Factor projects: residential, commercial, and industrial solar and electrical installations.">
+  <title>Our Projects | Power Factor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__spinner" aria-label="Loading"></div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/powerfactor_logo.jpeg" alt="Power Factor"></a>
+      <nav class="nav-desktop">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="solar-packages.html">Solar Packages</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html#quote" class="nav-cta">Get Quote</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" aria-label="Mobile menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="solar-packages.html">Solar Packages</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html#quote" class="nav-cta">Get Quote</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Our Projects</h1>
+        <p style="color: var(--gray-200); margin-top: var(--space-md);">Residential, commercial, and industrial installations.</p>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <div class="filter-bar">
+          <button type="button" data-filter="all" class="active">All</button>
+          <button type="button" data-filter="residential">Residential</button>
+          <button type="button" data-filter="commercial">Commercial</button>
+          <button type="button" data-filter="industrial">Industrial</button>
+        </div>
+        <div class="grid-3">
+          <div class="project-card reveal" data-category="residential">
+            <img src="assets/work-1.jpeg" alt="Residential solar project">
+            <div class="project-card__overlay">
+              <h3>Maple Street Residence</h3>
+              <p>Residential • 8.5 kW</p>
+            </div>
+          </div>
+          <div class="project-card reveal" data-category="commercial">
+            <img src="assets/work-2.jpeg" alt="Commercial solar project">
+            <div class="project-card__overlay">
+              <h3>Tech Park Office Building</h3>
+              <p>Commercial • 120 kW</p>
+            </div>
+          </div>
+          <div class="project-card reveal" data-category="industrial">
+            <img src="assets/work-3.jpeg" alt="Industrial solar project">
+            <div class="project-card__overlay">
+              <h3>Green Manufacturing Plant</h3>
+              <p>Industrial • 450 kW</p>
+            </div>
+          </div>
+          <div class="project-card reveal" data-category="residential">
+            <img src="assets/work-4.jpeg" alt="Residential rooftop solar">
+            <div class="project-card__overlay">
+              <h3>Lakeview Home</h3>
+              <p>Residential • 12 kW</p>
+            </div>
+          </div>
+          <div class="project-card reveal" data-category="commercial">
+            <img src="assets/work-5.jpeg" alt="Commercial installation">
+            <div class="project-card__overlay">
+              <h3>Retail Center</h3>
+              <p>Commercial • 85 kW</p>
+            </div>
+          </div>
+          <div class="project-card reveal" data-category="industrial">
+            <img src="assets/work-6.jpeg" alt="Warehouse solar">
+            <div class="project-card__overlay">
+              <h3>Distribution Warehouse</h3>
+              <p>Industrial • 200 kW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title text-center reveal">Featured Projects</h2>
+        <p class="section-subtitle text-center reveal">Highlighted installations and outcomes.</p>
+        <div class="grid-2">
+          <div class="card reveal">
+            <img src="assets/work-7.jpeg" alt="Featured residential" style="border-radius: var(--radius-md) var(--radius-md) 0 0; margin: calc(-1 * var(--space-xl)) calc(-1 * var(--space-xl)) var(--space-lg); width: calc(100% + 2 * var(--space-xl));">
+            <h3 class="card__title">Maple Street Residence</h3>
+            <p class="card__text">8.5 kW rooftop system with battery backup. Annual savings of 90% on electricity. Completed in 2024.</p>
+          </div>
+          <div class="card reveal">
+            <img src="assets/work-8.jpeg" alt="Featured commercial" style="border-radius: var(--radius-md) var(--radius-md) 0 0; margin: calc(-1 * var(--space-xl)) calc(-1 * var(--space-xl)) var(--space-lg); width: calc(100% + 2 * var(--space-xl));">
+            <h3 class="card__title">Tech Park Office Building</h3>
+            <p class="card__text">120 kW commercial array. Reduced grid demand by 70% and achieved LEED recognition. Completed in 2023.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <h2 class="section-title text-center reveal">Before & After</h2>
+        <p class="section-subtitle text-center reveal">See the transformation on a typical residential installation.</p>
+        <div class="before-after" id="before-after">
+          <img class="before-after__before" src="assets/work-1.jpeg" alt="Before solar">
+          <img class="before-after__after" src="assets/work-2.jpeg" alt="After solar">
+          <div class="before-after__slider" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title text-center reveal">What Clients Say About Our Projects</h2>
+        <div class="testimonials-slider">
+          <div class="testimonial-slide active">
+            <p class="testimonial-quote">"The installation was seamless and our energy bills have dropped dramatically. Power Factor delivered exactly what they promised."</p>
+            <div class="testimonial-author">Sarah M.</div>
+            <div class="testimonial-role">Maple Street Residence</div>
+          </div>
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">"Our commercial project was completed on time and on budget. Professional team and excellent communication throughout."</p>
+            <div class="testimonial-author">James K.</div>
+            <div class="testimonial-role">Tech Park Office Building</div>
+          </div>
+        </div>
+        <div class="testimonials-dots">
+          <button type="button" class="active" aria-label="Testimonial 1"></button>
+          <button type="button" aria-label="Testimonial 2"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Start Your Project</h2>
+          <p>Get a free assessment and quote for your property.</p>
+          <a href="contact.html#quote" class="btn btn--primary btn--lg">Get a Quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><img src="assets/powerfactor_logo.jpeg" alt="Power Factor"></a>
+          <p><strong>Power Factor Engineering & Consultancy Inc.</strong><br>Engineering With Integrity, Powering Sustainable Solutions. Delivering reliable solar and electrical solutions across Liberia.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Instagram">📷</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="solar-packages.html">Solar Packages</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact">
+            <p><span>📞</span> +231 776 676 675</p>
+            <p><span>📞</span> +231 888 661 114</p>
+            <p><span>📍</span> Paynesville City, Liberia</p>
+            <p><span>✉️</span> info@powerfactor.com</p>
+          </div>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <form id="newsletter-form" action="#" method="post">
+            <input type="email" placeholder="Your email" required aria-label="Email for newsletter">
+            <button type="submit" class="btn btn--primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Power Factor. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
