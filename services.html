@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="page-services">
   <div id="loader" class="loader" aria-hidden="true">
     <div class="loader__spinner" aria-label="Loading"></div>
   </div>
@@ -29,11 +29,13 @@
         <a href="contact.html">Contact</a>
         <a href="contact.html#quote" class="nav-cta">Get Quote</a>
       </nav>
-      <button class="hamburger" aria-label="Open menu" type="button">
+      <button class="hamburger" aria-label="Open menu" type="button" aria-expanded="false" aria-controls="nav-mobile">
         <span></span><span></span><span></span>
       </button>
     </div>
-    <nav class="nav-mobile" aria-label="Mobile menu">
+    <div class="nav-mobile-overlay" aria-hidden="true"></div>
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile menu">
+      <button type="button" class="nav-mobile-close" aria-label="Close menu">×</button>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
@@ -50,7 +52,7 @@
     <section class="page-hero">
       <div class="container">
         <h1>Our Services</h1>
-        <p style="color: var(--gray-200); margin-top: var(--space-md);">Engineering with integrity. Electrical, solar, AC, CCTV, and consultancy across Liberia.</p>
+        <p class="page-hero__sub">Engineering with integrity. Electrical, solar, AC, CCTV, and consultancy across Liberia.</p>
       </div>
     </section>
 
