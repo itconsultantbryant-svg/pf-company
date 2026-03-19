@@ -135,15 +135,27 @@ ul, ol { list-style: none; }
   color: var(--white);
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-md);
+  line-height: var(--line-height-tight);
 }
 .logo img {
   height: 42px;
   width: auto;
+  flex-shrink: 0;
   display: block;
   object-fit: contain;
 }
-.logo span { color: var(--brand-accent); }
+.logo span {
+  color: var(--white);
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+}
+.logo span .accent { color: var(--brand-accent); }
+@media (max-width: 380px) {
+  .logo span { font-size: var(--font-size-base); }
+}
+.footer .logo span { color: var(--gray-200); }
+.footer .logo span .accent { color: var(--brand-accent); }
 .nav-desktop {
   display: none;
 }
