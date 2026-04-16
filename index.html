@@ -14,6 +14,20 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem('enersource-theme');
+          const prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = saved ?? (prefersDark ? 'dark' : 'light');
+          const isDark = theme === 'dark';
+          document.documentElement.classList.toggle('dark', isDark);
+          document.body && document.body.classList.toggle('dark', isDark);
+        } catch {}
+      })();
+    </script>
   </head>
   <body class="bg-white font-sans text-slate-950 antialiased dark:bg-slate-950 dark:text-white">
     <div id="root"></div>

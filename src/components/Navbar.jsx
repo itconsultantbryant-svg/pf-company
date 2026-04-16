@@ -15,7 +15,15 @@ const navItems = [
 ];
 
 function useTheme() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(() =>
+    document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+  );
+
+  const apply = (next) => {
+    const isDark = next === 'dark';
+    document.documentElement.classList.toggle('dark', isDark);
+    document.body?.classList.toggle('dark', isDark);
+  };
 
   useEffect(() => {
     const saved = localStorage.getItem('enersource-theme');
@@ -25,14 +33,25 @@ function useTheme() {
 
     const initial = saved ?? (prefersDark ? 'dark' : 'light');
     setTheme(initial);
-    document.documentElement.classList.toggle('dark', initial === 'dark');
+    apply(initial);
+  }, []);
+
+  useEffect(() => {
+    const onStorage = (e) => {
+      if (e.key !== 'enersource-theme') return;
+      const next = e.newValue === 'dark' ? 'dark' : 'light';
+      setTheme(next);
+      apply(next);
+    };
+    window.addEventListener('storage', onStorage);
+    return () => window.removeEventListener('storage', onStorage);
   }, []);
 
   const toggle = () => {
     setTheme((prev) => {
       const next = prev === 'dark' ? 'light' : 'dark';
       localStorage.setItem('enersource-theme', next);
-      document.documentElement.classList.toggle('dark', next === 'dark');
+      apply(next);
       return next;
     });
   };
