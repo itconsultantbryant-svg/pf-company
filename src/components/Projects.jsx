@@ -6,34 +6,36 @@ import SectionHeading from './SectionHeading.jsx';
 
 const projects = [
   {
-    title: 'JFK Medical Center',
+    title: 'John F. Kennedy Medical Center (JFKMC)',
     icon: <Hospital className="h-5 w-5" />,
-    year: '2024',
-    location: 'Monrovia, Liberia',
-    capacity: '250 kW (est.)',
-    value: 'Confidential',
-    summary: 'Critical-facility solar deployment designed for resilience and uptime.',
-    highlights: ['Safety-first commissioning', 'Documentation + handover', 'Maintenance plan']
+    year: 'January 2025 – January 2026 (Active)',
+    location: '21st Street Sinkor, Tubman Boulevard, Monrovia, Liberia',
+    capacity: '219.1kWp Solar PV | 595kWh Battery Storage (9 critical units)',
+    value: 'USD $388,045',
+    summary:
+      'Solar Standalone System for 9 Critical Units at JFKMC (operating theaters, ICU, maternity wards, emergency units).',
+    highlights: ['Final Phase — Battery Bank Installation', 'Testing, Commissioning & Staff Training']
   },
   {
-    title: 'Bloom Bank Solarization',
+    title: 'Bloom Bank Africa Liberia Limited',
     icon: <Building2 className="h-5 w-5" />,
-    year: '2023',
-    location: 'Liberia',
-    capacity: '120 kW (est.)',
-    value: 'Confidential',
-    summary: 'Commercial solar integration focused on efficiency, monitoring, and uptime.',
-    highlights: ['Hybrid-ready design', 'Performance monitoring', 'Preventive maintenance']
+    year: 'March 2025 – September (6 Months)',
+    location: 'Ashmun Street, Clara Town, Buchanan City, Redlight, and 5th Street Sinkor',
+    capacity: '202.8kWp Solar PV | 445kWh Battery Storage (16kW–100kW per location)',
+    value: 'USD $316,110.60',
+    summary: 'Installation of Hybrid Solar Energy System at Five Bloom Bank Branches.',
+    highlights: ['Successfully Completed Ahead of Schedule (4.5 Months)']
   },
   {
-    title: 'ECOWAS Installations',
+    title: 'USAID GHSC-PSM / ECOWAS Commission',
     icon: <Landmark className="h-5 w-5" />,
-    year: '2022–2025',
-    location: 'Liberia',
-    capacity: 'Multi-site (1–50 kW)',
-    value: 'Confidential',
-    summary: 'A set of institutional deployments delivered across multiple sites.',
-    highlights: ['Site assessments', 'Standardized components', 'Training + support']
+    year: 'September 2023 – February 2024 (6 Months)',
+    location:
+      'Grand Gedeh, Bomi, Grand Bassa, Grand Cape Mount, Rivercess, River Gee, Nimba, Gbarpolu, Margibi, Montserrado, and Lofa Counties',
+    capacity: '136kWp Solar PV | 255kWh Battery Storage (17 stations × 5kW systems)',
+    value: 'USD $198,000',
+    summary: 'Installation of 5kW Solar Hybrid Systems at 17 Community Radio Stations.',
+    highlights: ['Successfully Completed — Currently Under Preventive Maintenance Contract']
   }
 ];
 
@@ -45,8 +47,8 @@ export default function Projects() {
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading
               eyebrow="Projects & milestones"
-              title="Proof through delivery."
-              subtitle="A snapshot of deployments and milestones that demonstrate capability, safety, and results."
+              title="Client references (verified)."
+              subtitle="Representative references from recent projects, reflecting execution standards and institutional relationships."
             />
             <Link
               to="/projects"

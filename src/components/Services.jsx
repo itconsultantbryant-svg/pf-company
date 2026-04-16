@@ -16,37 +16,37 @@ const services = [
     title: 'System Design & Engineering',
     icon: <PlugZap className="h-5 w-5" />,
     details:
-      'Site assessment, load profiling, PV sizing, electrical design, protection, and documentation.'
+      'Custom solar system design for off-grid and grid-tie applications, load assessments, and technical specification development.'
   },
   {
     title: 'Supply & Procurement',
     icon: <ShoppingCart className="h-5 w-5" />,
     details:
-      'Reliable sourcing of panels, inverters, batteries, BOS components, and accessories with traceability.'
+      'Sourcing of high-quality solar panels, inverters, batteries, and balance-of-system components from certified global manufacturers.'
   },
   {
     title: 'Installation & Commissioning',
     icon: <Hammer className="h-5 w-5" />,
     details:
-      'Professional installation, testing, commissioning, and handover for grid-tie and off-grid systems.'
+      'Professional installation of solar PV systems from 1kW to 10MW capacity, including three-phase hybrid systems for critical facilities.'
   },
   {
-    title: 'Preventive Maintenance',
+    title: 'Preventive Maintenance & SLA',
     icon: <Wrench className="h-5 w-5" />,
     details:
-      'Routine inspections, performance checks, cleaning, firmware updates, and issue prevention.'
+      'Scheduled maintenance contracts, system monitoring, fault diagnosis, and performance optimization to ensure maximum uptime.'
   },
   {
-    title: 'System Upgrades',
+    title: 'System Upgrades & Expansion',
     icon: <RefreshCcw className="h-5 w-5" />,
     details:
-      'Battery expansions, inverter upgrades, monitoring add-ons, and performance optimization.'
+      'Assessment and upgrade of existing solar installations, battery bank replacements, and capacity expansion projects.'
   },
   {
     title: 'Technical Training',
     icon: <GraduationCap className="h-5 w-5" />,
     details:
-      'Training for operators and technicians to ensure safe operation and long-term reliability.'
+      'Training of client technical staff on system operation, basic maintenance, and safety procedures post-commissioning.'
   }
 ];
 
@@ -59,7 +59,7 @@ export default function Services() {
             <SectionHeading
               eyebrow="Services"
               title="Everything you need for a successful solar deployment."
-              subtitle="Interactive service cards with clear deliverables — optimized for scanning and conversion."
+              subtitle="End-to-end solar energy solutions tailored to the unique energy needs of each client."
             />
             <Link
               to="/services"

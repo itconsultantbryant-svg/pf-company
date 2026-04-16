@@ -1,6 +1,6 @@
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Facebook, Instagram, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import Container from './Container.jsx';
 import SectionHeading from './SectionHeading.jsx';
@@ -66,8 +66,8 @@ export default function Contact() {
           <div>
             <SectionHeading
               eyebrow="Contact"
-              title="Let’s plan your solar system."
-              subtitle="Tell us about your site and load needs. We’ll respond with a clear next step and a quote path."
+              title="Contact information"
+              subtitle="Rehab Junction, Paynesville City Montserrado County, Liberia"
             />
 
             <div className="mt-8 grid gap-4">
@@ -92,12 +92,49 @@ export default function Contact() {
                     <div className="font-heading text-sm font-extrabold text-slate-950 dark:text-white">
                       Phone
                     </div>
-                    <a
-                      className="mt-1 block text-sm font-semibold text-slate-600 hover:underline dark:text-slate-300"
-                      href="tel:+231773227668"
-                    >
-                      +231-773-227-668
-                    </a>
+                    <div className="mt-1 grid gap-1">
+                      <a
+                        className="text-sm font-semibold text-slate-600 hover:underline dark:text-slate-300"
+                        href="tel:+231773227668"
+                      >
+                        +231-773-227-668
+                      </a>
+                      <a
+                        className="text-sm font-semibold text-slate-600 hover:underline dark:text-slate-300"
+                        href="tel:+231881126464"
+                      >
+                        +231-881-126-464
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-white/10 dark:bg-white/5">
+                <div className="flex items-start gap-3">
+                  <MessageCircle className="mt-0.5 h-5 w-5 text-primary" />
+                  <div>
+                    <div className="font-heading text-sm font-extrabold text-slate-950 dark:text-white">
+                      WhatsApp
+                    </div>
+                    <div className="mt-1 grid gap-1">
+                      <a
+                        className="text-sm font-semibold text-slate-600 hover:underline dark:text-slate-300"
+                        href="https://wa.me/231881199106"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        +231-881-199-106
+                      </a>
+                      <a
+                        className="text-sm font-semibold text-slate-600 hover:underline dark:text-slate-300"
+                        href="https://wa.me/231773227668"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        +231-773-227-668
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -115,6 +152,24 @@ export default function Contact() {
                     >
                       info@enersourcelr.com
                     </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-white/10 dark:bg-white/5">
+                <div className="flex items-start gap-3">
+                  <Facebook className="mt-0.5 h-5 w-5 text-primary" />
+                  <div>
+                    <div className="font-heading text-sm font-extrabold text-slate-950 dark:text-white">
+                      Follow Us
+                    </div>
+                    <div className="mt-1 grid gap-1 text-sm font-semibold text-slate-600 dark:text-slate-300">
+                      <div>Facebook: @enersource</div>
+                      <div className="inline-flex items-center gap-2">
+                        <Instagram className="h-4 w-4 text-primary" aria-hidden="true" />
+                        Instagram: @enersourcelr
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

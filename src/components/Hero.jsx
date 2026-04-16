@@ -44,9 +44,9 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, ease: 'easeOut', delay: 0.12 }}
             >
-              Clean, affordable, reliable solar solutions across Liberia — from homes to enterprise
-              systems. We design, procure, install, commission, and maintain energy systems built
-              for performance.
+              Clean, affordable, reliable solar solutions across Liberia — delivering clean, abundant,
+              low-cost, distributed, and renewable energy to clients, communities, and our nation
+              Liberia.
             </motion.p>
 
             <motion.div

@@ -4,10 +4,12 @@ import Container from './Container.jsx';
 import SectionHeading from './SectionHeading.jsx';
 
 const values = [
-  { title: 'Ethics', icon: <Shield className="h-5 w-5" /> },
+  { title: 'Ethics & Moral', icon: <Shield className="h-5 w-5" /> },
   { title: 'Honesty', icon: <HandHeart className="h-5 w-5" /> },
   { title: 'Quality & Safety', icon: <Award className="h-5 w-5" /> },
-  { title: 'Excellence', icon: <Target className="h-5 w-5" /> }
+  { title: 'Responsibility', icon: <Target className="h-5 w-5" /> },
+  { title: 'Humanity', icon: <HandHeart className="h-5 w-5" /> },
+  { title: 'Excellence', icon: <Award className="h-5 w-5" /> }
 ];
 
 export default function About() {
@@ -18,27 +20,27 @@ export default function About() {
           <div>
             <SectionHeading
               eyebrow="About Enersource"
-              title="Full-lifecycle solar solutions built for Liberia."
-              subtitle="We deliver end-to-end services — planning, engineering, procurement, installation, commissioning, training, and preventive maintenance — for grid-tie and off-grid systems."
+              title="EnerSource Inc. is a Liberian-owned and operated Engineering Company."
+              subtitle="Founded in 2021 by Alfred V. Morris, Jr. and Jonetta Bijoux Morris, Enersource Inc. provides clean, abundant, low-cost, distributed, and renewable energy alongside security and technology services to clients, communities, and our nation Liberia."
             />
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {[
                 {
-                  title: 'Grid-tie & off-grid',
-                  text: 'Design options aligned to your load profile and site constraints.'
+                  title: 'Full-service solar installer',
+                  text: 'We own the entire project lifecycle: from client acquisition and custom system design, through installation and commissioning, to long-term maintenance.'
                 },
                 {
-                  title: 'Engineering-first',
-                  text: 'Reliability, safety, and performance baked into every build.'
+                  title: 'Grid-Tie & Off-Grid',
+                  text: 'We offer both Grid-Tie and Off-Grid configurations for a wide range of use cases and sites.'
                 },
                 {
-                  title: 'Procurement you can trust',
-                  text: 'Right components, right sizing, transparent documentation.'
+                  title: '1kW to 10MW',
+                  text: 'Our experienced professional technicians can engineer and deploy solar systems ranging from 1 kilowatt (1kW) to ten megawatts (10MW).'
                 },
                 {
-                  title: 'Maintenance & upgrades',
-                  text: 'Keep systems healthy and future-proof over time.'
+                  title: 'Nationwide impact',
+                  text: 'We serve NGOs, health facilities, government institutions, commercial businesses, factories, schools, universities, churches, and banking institutions across Montserrado and multiple counties throughout Liberia.'
                 }
               ].map((b, idx) => (
                 <motion.div
@@ -74,7 +76,10 @@ export default function About() {
                     Vision
                   </div>
                   <div className="text-lg font-extrabold text-slate-950 dark:text-white">
-                    Power a cleaner, more resilient Liberia.
+                    To provide the most compelling value in the solar energy industry — designing and
+                    installing the highest quality solar energy systems, on time, safely, with high
+                    customer satisfaction, at the lowest possible cost. We are fully committed to
+                    innovation and the growth of renewable energy in Liberia and across our nation.
                   </div>
                 </div>
 
@@ -85,15 +90,15 @@ export default function About() {
                   <ul className="grid gap-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
                     <li className="flex gap-2">
                       <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
-                      Deliver safe, high-performing solar systems from 1kW to utility scale.
+                      Advancing the renewable energy industry by serving our clients and creating measurable value for them.
                     </li>
                     <li className="flex gap-2">
                       <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
-                      Provide transparent lifecycle support — installation, training, maintenance.
+                      Driving the large-scale utilization of renewable energy and photovoltaic systems with entrepreneurial commitment, investing our own resources and sharing knowledge with local installers.
                     </li>
                     <li className="flex gap-2">
                       <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
-                      Build trust through measurable results and long-term partnerships.
+                      Providing unparalleled value that accelerates the adoption of solar energy systems, delivering clean, abundant, low-cost, and distributed energy to customers, communities, and our nation.
                     </li>
                   </ul>
                 </div>

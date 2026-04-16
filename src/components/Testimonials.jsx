@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useReducedMotion } from 'framer-motion';
-import { Quote } from 'lucide-react';
+import { Mail, Phone, Quote } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -10,25 +10,31 @@ import SectionHeading from './SectionHeading.jsx';
 
 const testimonials = [
   {
-    name: 'Operations Lead',
-    org: 'Healthcare Facility',
-    location: 'Monrovia',
+    name: 'Mr. Joseph Massah — Chief Financial Officer (Project Coordinator)',
+    org: 'John F. Kennedy Medical Center',
+    location: 'Monrovia, Liberia',
     quote:
-      'Enersource delivered a clean installation with clear documentation and a smooth handover. The system performance has been consistent.'
+      'Solar Standalone System for 9 Critical Units at JFKMC (Operating theaters, ICU, maternity wards, emergency units).',
+    phone: '+231-886-524-291',
+    email: 'josephmassah2@gmail.com'
   },
   {
-    name: 'Facilities Manager',
-    org: 'Financial Institution',
+    name: 'Mr. Kingsley Minikum, Jr — Project Manager',
+    org: 'Bloom Bank Africa Liberia Limited',
     location: 'Liberia',
     quote:
-      'Professional team from survey to commissioning. Their preventive maintenance plan gave us confidence for long-term uptime.'
+      'Installation of Hybrid Solar Energy System at Five Bloom Bank Branches.',
+    phone: '+231-770-416-473',
+    email: 'kminikum@bloombankafrica.com'
   },
   {
-    name: 'Project Coordinator',
-    org: 'Institutional Client',
-    location: 'Liberia',
+    name: 'Dr. Nathaniel B. Walker — Political Advisor & Early Warning Liaison, ECOWAS',
+    org: 'ECOWAS Commission / USAID GHSC-PSM',
+    location: 'Liberia (11 counties)',
     quote:
-      'Great communication and a strong safety culture on site. The work was completed on schedule and aligned to spec.'
+      'Installation of 5kW Solar Hybrid Systems at 17 Community Radio Stations.',
+    phone: '+231-770-944-659',
+    email: 'nwalker@ecowas.int'
   }
 ];
 
@@ -39,9 +45,9 @@ export default function Testimonials() {
       <Container className="py-20">
         <div className="flex flex-col gap-10">
           <SectionHeading
-            eyebrow="Testimonials"
-            title="References that speak to reliability."
-            subtitle="Swipeable, accessible slider with pagination dots."
+            eyebrow="Client references"
+            title="Three verified references from recent projects."
+            subtitle="Representative of Enersource Inc.'s capabilities, execution standards, and institutional client relationships."
             align="center"
           />
 
@@ -78,6 +84,16 @@ export default function Testimonials() {
                     </p>
                     <div className="mt-5 font-heading text-sm font-extrabold text-slate-950 dark:text-white">
                       {t.name}
+                    </div>
+                    <div className="mt-3 grid gap-2 text-sm font-semibold text-slate-600 dark:text-slate-300">
+                      <a className="inline-flex items-center gap-2 hover:underline" href={`tel:${t.phone.replace(/\\s/g, '')}`}>
+                        <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
+                        {t.phone}
+                      </a>
+                      <a className="inline-flex items-center gap-2 hover:underline" href={`mailto:${t.email}`}>
+                        <Mail className="h-4 w-4 text-primary" aria-hidden="true" />
+                        {t.email}
+                      </a>
                     </div>
                   </article>
                 </SwiperSlide>
