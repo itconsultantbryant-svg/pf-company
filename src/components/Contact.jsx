@@ -30,7 +30,7 @@ export default function Contact() {
         setStatus({
           state: 'error',
           message:
-            'Email sending is not configured yet. Add EmailJS keys in a `.env` file to enable.'
+            'Please try again later!'
         });
         return;
       }
@@ -71,36 +71,36 @@ export default function Contact() {
             />
 
             <div className="mt-8 grid gap-4">
-              <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-white/10 dark:bg-white/5">
+              <div className="rounded-2xl border border-slate-200 bg-white p-5">
                 <div className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-slate-950 dark:text-white">
+                    <div className="font-heading text-sm font-extrabold text-slate-950">
                       Address
                     </div>
-                    <div className="mt-1 text-sm font-semibold text-slate-600 dark:text-slate-300">
+                    <div className="mt-1 text-sm font-semibold text-slate-600">
                       Rehab Junction, Paynesville City, Liberia
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-white/10 dark:bg-white/5">
+              <div className="rounded-2xl border border-slate-200 bg-white p-5">
                 <div className="flex items-start gap-3">
                   <Phone className="mt-0.5 h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-slate-950 dark:text-white">
+                    <div className="font-heading text-sm font-extrabold text-slate-950">
                       Phone
                     </div>
                     <div className="mt-1 grid gap-1">
                       <a
-                        className="text-sm font-semibold text-slate-600 hover:underline dark:text-slate-300"
+                        className="text-sm font-semibold text-slate-600 hover:underline"
                         href="tel:+231773227668"
                       >
                         +231-773-227-668
                       </a>
                       <a
-                        className="text-sm font-semibold text-slate-600 hover:underline dark:text-slate-300"
+                        className="text-sm font-semibold text-slate-600 hover:underline"
                         href="tel:+231881126464"
                       >
                         +231-881-126-464
@@ -110,16 +110,16 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-white/10 dark:bg-white/5">
+              <div className="rounded-2xl border border-slate-200 bg-white p-5">
                 <div className="flex items-start gap-3">
                   <MessageCircle className="mt-0.5 h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-slate-950 dark:text-white">
+                    <div className="font-heading text-sm font-extrabold text-slate-950">
                       WhatsApp
                     </div>
                     <div className="mt-1 grid gap-1">
                       <a
-                        className="text-sm font-semibold text-slate-600 hover:underline dark:text-slate-300"
+                        className="text-sm font-semibold text-slate-600 hover:underline"
                         href="https://wa.me/231881199106"
                         target="_blank"
                         rel="noreferrer"
@@ -127,7 +127,7 @@ export default function Contact() {
                         +231-881-199-106
                       </a>
                       <a
-                        className="text-sm font-semibold text-slate-600 hover:underline dark:text-slate-300"
+                        className="text-sm font-semibold text-slate-600 hover:underline"
                         href="https://wa.me/231773227668"
                         target="_blank"
                         rel="noreferrer"
@@ -139,15 +139,15 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-white/10 dark:bg-white/5">
+              <div className="rounded-2xl border border-slate-200 bg-white p-5">
                 <div className="flex items-start gap-3">
                   <Mail className="mt-0.5 h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-slate-950 dark:text-white">
+                    <div className="font-heading text-sm font-extrabold text-slate-950">
                       Email
                     </div>
                     <a
-                      className="mt-1 block text-sm font-semibold text-slate-600 hover:underline dark:text-slate-300"
+                      className="mt-1 block text-sm font-semibold text-slate-600 hover:underline"
                       href="mailto:info@enersourcelr.com"
                     >
                       info@enersourcelr.com
@@ -156,14 +156,14 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-white/10 dark:bg-white/5">
+              <div className="rounded-2xl border border-slate-200 bg-white p-5">
                 <div className="flex items-start gap-3">
                   <Facebook className="mt-0.5 h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-slate-950 dark:text-white">
+                    <div className="font-heading text-sm font-extrabold text-slate-950">
                       Follow Us
                     </div>
-                    <div className="mt-1 grid gap-1 text-sm font-semibold text-slate-600 dark:text-slate-300">
+                    <div className="mt-1 grid gap-1 text-sm font-semibold text-slate-600">
                       <div>Facebook: @enersource</div>
                       <div className="inline-flex items-center gap-2">
                         <Instagram className="h-4 w-4 text-primary" aria-hidden="true" />
@@ -175,7 +175,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-white/5">
+            <div className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
               <iframe
                 title="Map to Paynesville City"
                 className="h-72 w-full"
@@ -191,51 +191,51 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5"
+            className="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm backdrop-blur"
           >
             <form onSubmit={onSubmit} className="grid gap-4">
               <div className="grid gap-4 sm:grid-cols-2">
-                <label className="grid gap-2 text-sm font-extrabold text-slate-700 dark:text-slate-200">
+                <label className="grid gap-2 text-sm font-extrabold text-slate-700">
                   Name
                   <input
                     required
                     value={form.name}
                     onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
-                    className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-semibold text-slate-950 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40 dark:border-white/10 dark:bg-slate-950/30 dark:text-white"
+                    className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-semibold text-slate-950 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40"
                     autoComplete="name"
                   />
                 </label>
-                <label className="grid gap-2 text-sm font-extrabold text-slate-700 dark:text-slate-200">
+                <label className="grid gap-2 text-sm font-extrabold text-slate-700">
                   Email
                   <input
                     required
                     type="email"
                     value={form.email}
                     onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
-                    className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-semibold text-slate-950 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40 dark:border-white/10 dark:bg-slate-950/30 dark:text-white"
+                    className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-semibold text-slate-950 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40"
                     autoComplete="email"
                   />
                 </label>
               </div>
 
-              <label className="grid gap-2 text-sm font-extrabold text-slate-700 dark:text-slate-200">
+              <label className="grid gap-2 text-sm font-extrabold text-slate-700">
                 Phone
                 <input
                   value={form.phone}
                   onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
-                  className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-semibold text-slate-950 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40 dark:border-white/10 dark:bg-slate-950/30 dark:text-white"
+                  className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-semibold text-slate-950 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40"
                   autoComplete="tel"
                 />
               </label>
 
-              <label className="grid gap-2 text-sm font-extrabold text-slate-700 dark:text-slate-200">
+              <label className="grid gap-2 text-sm font-extrabold text-slate-700">
                 Message
                 <textarea
                   required
                   value={form.message}
                   onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}
                   rows={6}
-                  className="resize-none rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-950 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40 dark:border-white/10 dark:bg-slate-950/30 dark:text-white"
+                  className="resize-none rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-950 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40"
                 />
               </label>
 
@@ -254,7 +254,7 @@ export default function Contact() {
                       ? 'text-accent'
                       : status.state === 'error'
                         ? 'text-rose-500'
-                        : 'text-slate-600 dark:text-slate-300'
+                        : 'text-slate-600'
                   }`}
                   role={status.state === 'error' ? 'alert' : 'status'}
                 >
@@ -263,7 +263,7 @@ export default function Contact() {
               ) : null}
 
               {!canSend ? (
-                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                <p className="text-xs font-semibold text-slate-500">
                   To enable EmailJS, add `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, and
                   `VITE_EMAILJS_PUBLIC_KEY` to a `.env` file.
                 </p>

@@ -8,7 +8,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'left
     <div className={`flex flex-col gap-3 ${alignment}`}>
       {eyebrow ? (
         <motion.p
-          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
+          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-secondary shadow-sm"
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
@@ -20,7 +20,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'left
       ) : null}
 
       <motion.h2
-        className="font-heading text-3xl font-extrabold tracking-tight text-slate-950 dark:text-white sm:text-4xl"
+        className="font-heading text-3xl font-extrabold tracking-tight text-secondary sm:text-4xl"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.6 }}
@@ -31,7 +31,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'left
 
       {subtitle ? (
         <motion.p
-          className={`max-w-2xl text-base font-semibold leading-relaxed text-slate-600 dark:text-slate-300 ${
+          className={`max-w-2xl text-base font-semibold leading-relaxed text-slate-600 ${
             align === 'center' ? 'mx-auto' : ''
           }`}
           initial={{ opacity: 0, y: 10 }}
@@ -45,4 +45,3 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'left
     </div>
   );
 }
-

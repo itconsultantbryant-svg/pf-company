@@ -12,6 +12,9 @@ Modern, responsive, highly interactive corporate website for **Enersource Inc.**
 - Lucide icons
 - EmailJS (optional, for contact form)
 
+printf "protocol=https\nhost=github.com\n" | git credential-osxkeychain erase
+git push
+
 ## Brand + assets
 
 - Company logo: `assets/enersource_logo.jpeg` (used in `Navbar` + `Footer`)
@@ -87,5 +90,10 @@ This repo includes `render.yaml` configured for Vite:
 - Build: `npm install && npm run build`
 - Publish directory: `dist`
 
-SPA routing is supported via `_redirects` (also copied to `dist/` via `public/_redirects`).
+SPA routing (no “Not Found” on refresh for `/contact`, etc.):
+
+- **`render.yaml`** includes a `routes` rewrite: `/*` → `/index.html` (Render Blueprint).
+- **`public/_redirects`** is copied into `dist/` for hosts that honor Netlify-style rules.
+
+After changing `render.yaml`, sync the Blueprint in the Render dashboard (or redeploy) so rewrites apply.
 

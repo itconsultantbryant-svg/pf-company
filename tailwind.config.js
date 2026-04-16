@@ -15,7 +15,8 @@ export default {
         body: ['Open Sans', 'Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif']
       },
       boxShadow: {
-        glow: '0 0 0 1px rgba(253,184,19,0.25), 0 20px 60px rgba(11,60,93,0.25)'
+        glow:
+          '0 0 0 1px rgba(11,60,93,0.08), 0 1px 2px rgba(11,60,93,0.06), 0 12px 40px rgba(11,60,93,0.12)'
       }
     }
   },

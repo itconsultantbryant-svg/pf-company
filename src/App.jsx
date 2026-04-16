@@ -44,7 +44,7 @@ export default function App() {
   }, [location.hash, location.pathname, reduceMotion]);
 
   return (
-    <div className="min-h-dvh bg-white text-slate-950">
+    <div className="min-h-dvh bg-slate-50 text-slate-900">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-xl focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-extrabold focus:text-slate-950 focus:shadow-lg focus:outline-none"
@@ -56,9 +56,9 @@ export default function App() {
         <Suspense
           fallback={
             <div className="mx-auto max-w-6xl px-4 py-20">
-              <div className="h-3 w-40 animate-pulse rounded bg-white/10" />
-              <div className="mt-4 h-10 w-full animate-pulse rounded bg-white/10" />
-              <div className="mt-4 h-10 w-2/3 animate-pulse rounded bg-white/10" />
+              <div className="h-3 w-40 animate-pulse rounded-lg bg-slate-200" />
+              <div className="mt-4 h-10 w-full animate-pulse rounded-lg bg-slate-200/80" />
+              <div className="mt-4 h-10 w-2/3 animate-pulse rounded-lg bg-slate-200/60" />
             </div>
           }
         >

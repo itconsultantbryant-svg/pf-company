@@ -1,7 +1,12 @@
 services:
-  - type: static_site
+  - type: web
     name: enersource-inc
-    env: static
+    runtime: static
     buildCommand: npm install && npm run build
     staticPublishPath: dist
-    pullRequestPreviewsEnabled: true
+    previews:
+      generation: automatic
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
