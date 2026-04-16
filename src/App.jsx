@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Navbar from './components/Navbar.jsx';
@@ -29,9 +29,22 @@ function PageShell({ children }) {
 
 export default function App() {
   const location = useLocation();
+  const reduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    const hash = location.hash?.replace('#', '');
+    if (hash) {
+      const el = document.getElementById(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+        return;
+      }
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  }, [location.hash, location.pathname, reduceMotion]);
 
   return (
-    <div className="min-h-dvh bg-slate-950 text-white">
+    <div className="min-h-dvh bg-white text-slate-950 dark:bg-slate-950 dark:text-white">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-xl focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-extrabold focus:text-slate-950 focus:shadow-lg focus:outline-none"

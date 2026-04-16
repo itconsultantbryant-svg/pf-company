@@ -62,18 +62,18 @@ export default function Navbar() {
     () =>
       ({ isActive }) =>
         [
-          'rounded-full px-3 py-2 text-sm font-semibold transition-colors',
+          'rounded-full px-3 py-2 text-sm font-extrabold tracking-tight transition-colors',
           'focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950',
           isActive
-            ? 'bg-primary/15 text-secondary dark:text-white'
-            : 'text-slate-700 hover:bg-slate-900/5 hover:text-slate-950 dark:text-slate-200 dark:hover:bg-white/10 dark:hover:text-white'
+            ? 'bg-primary/20 text-secondary dark:text-white'
+            : 'text-secondary/80 hover:bg-secondary/5 hover:text-secondary dark:text-white/80 dark:hover:bg-white/10 dark:hover:text-white'
         ].join(' '),
     []
   );
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/70 backdrop-blur dark:border-white/10 dark:bg-slate-950/60">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
+    <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/80 backdrop-blur dark:border-white/10 dark:bg-slate-950/70">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4">
         <Link
           to="/"
           className="group flex items-center gap-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950"
@@ -82,14 +82,14 @@ export default function Navbar() {
           <img
             src={logoSrc}
             alt="Enersource Inc. logo"
-            className="h-9 w-9 rounded-lg object-cover shadow-sm ring-1 ring-slate-200 dark:ring-white/10"
+            className="h-9 w-9 rounded-xl object-cover shadow-sm ring-1 ring-slate-200 dark:ring-white/10"
             loading="eager"
           />
           <div className="leading-tight">
-            <div className="font-heading text-sm font-extrabold tracking-tight text-slate-950 dark:text-white">
+            <div className="font-heading text-sm font-extrabold tracking-tight text-secondary dark:text-white">
               Enersource Inc.
             </div>
-            <div className="text-xs font-semibold text-slate-600 dark:text-slate-300">
+            <div className="text-xs font-semibold text-secondary/70 dark:text-white/70">
               Source of Africa’s Energy
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggle}
-            className="ml-1 grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 transition-colors hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/10 dark:bg-white/5 dark:text-slate-200 dark:hover:bg-white/10 dark:focus-visible:ring-offset-slate-950"
+            className="ml-1 grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-secondary/80 transition-colors hover:bg-secondary/5 hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/10 dark:bg-white/5 dark:text-white/80 dark:hover:bg-white/10 dark:hover:text-white dark:focus-visible:ring-offset-slate-950"
             aria-label="Toggle dark mode"
           >
             {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}

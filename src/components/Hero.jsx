@@ -6,7 +6,7 @@ import QuoteCalculator from './QuoteCalculator.jsx';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden" id="hero">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_10%,rgba(253,184,19,0.35),transparent_60%),radial-gradient(60%_50%_at_10%_40%,rgba(0,168,150,0.25),transparent_55%),radial-gradient(60%_50%_at_90%_45%,rgba(11,60,93,0.35),transparent_55%)]"

@@ -52,7 +52,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="relative">
+    <section className="relative" id="services">
       <Container className="py-20">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">

@@ -35,7 +35,7 @@ const testimonials = [
 export default function Testimonials() {
   const reduceMotion = useReducedMotion();
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden" id="testimonials">
       <Container className="py-20">
         <div className="flex flex-col gap-10">
           <SectionHeading

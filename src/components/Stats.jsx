@@ -67,7 +67,7 @@ export default function Stats() {
   const { ref, inView } = useInViewport(0.25);
 
   return (
-    <section className="relative" ref={ref}>
+    <section className="relative" ref={ref} id="stats">
       <Container className="py-14">
         <div className="grid gap-4 rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s, idx) => (

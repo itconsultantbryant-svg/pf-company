@@ -16,7 +16,7 @@ const partners = [
 
 export default function Partners() {
   return (
-    <section className="relative">
+    <section className="relative" id="partners">
       <Container className="py-20">
         <div className="rounded-3xl border border-slate-200 bg-white/70 p-8 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5">
           <SectionHeading

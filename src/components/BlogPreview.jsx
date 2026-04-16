@@ -14,7 +14,7 @@ export default function BlogPreview() {
   const latest = [...posts].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
 
   return (
-    <section className="relative">
+    <section className="relative" id="news">
       <Container className="py-20">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">

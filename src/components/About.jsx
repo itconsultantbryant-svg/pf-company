@@ -12,7 +12,7 @@ const values = [
 
 export default function About() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden" id="about">
       <Container className="py-20">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>

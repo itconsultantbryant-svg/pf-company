@@ -5,7 +5,7 @@ import Container from './Container.jsx';
 
 export default function CTA() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden" id="cta">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_50%,rgba(253,184,19,0.28),transparent_60%),radial-gradient(60%_50%_at_15%_45%,rgba(0,168,150,0.18),transparent_60%)]"
