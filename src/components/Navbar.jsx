@@ -3,7 +3,7 @@ import { Menu, Moon, Sun, X } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
-import logoSrc from '../../assets/enersource_logo.jpeg';
+import logoSrc from '../assets/enersource_logo.jpeg';
 
 const navItems = [
   { to: '/', label: 'Home' },

@@ -1,6 +1,6 @@
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logoSrc from '../../assets/enersource_logo.jpeg';
+import logoSrc from '../assets/enersource_logo.jpeg';
 
 const quickLinks = [
   { to: '/', label: 'Home' },
