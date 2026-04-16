@@ -60,7 +60,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative" id="contact">
+    <section className="relative text-slate-800 dark:text-slate-200" id="contact">
       <Container className="py-20">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
@@ -71,36 +71,36 @@ export default function Contact() {
             />
 
             <div className="mt-8 grid gap-4">
-              <div className="rounded-2xl border border-slate-200 bg-white p-5">
+              <div className="rounded-2xl border border-slate-400/60 bg-slate-100 p-5 dark:border-slate-600 dark:bg-slate-800/90">
                 <div className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-slate-950">
+                    <div className="font-heading text-sm font-extrabold text-slate-900 dark:text-slate-100">
                       Address
                     </div>
-                    <div className="mt-1 text-sm font-semibold text-slate-600">
+                    <div className="mt-1 text-sm font-semibold text-slate-700 dark:text-slate-300">
                       Rehab Junction, Paynesville City, Liberia
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-5">
+              <div className="rounded-2xl border border-slate-400/60 bg-slate-100 p-5 dark:border-slate-600 dark:bg-slate-800/90">
                 <div className="flex items-start gap-3">
                   <Phone className="mt-0.5 h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-slate-950">
+                    <div className="font-heading text-sm font-extrabold text-slate-900 dark:text-slate-100">
                       Phone
                     </div>
                     <div className="mt-1 grid gap-1">
                       <a
-                        className="text-sm font-semibold text-slate-600 hover:underline"
+                        className="text-sm font-semibold text-slate-700 hover:underline dark:text-slate-300"
                         href="tel:+231773227668"
                       >
                         +231-773-227-668
                       </a>
                       <a
-                        className="text-sm font-semibold text-slate-600 hover:underline"
+                        className="text-sm font-semibold text-slate-700 hover:underline dark:text-slate-300"
                         href="tel:+231881126464"
                       >
                         +231-881-126-464
@@ -110,16 +110,16 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-5">
+              <div className="rounded-2xl border border-slate-400/60 bg-slate-100 p-5 dark:border-slate-600 dark:bg-slate-800/90">
                 <div className="flex items-start gap-3">
                   <MessageCircle className="mt-0.5 h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-slate-950">
+                    <div className="font-heading text-sm font-extrabold text-slate-900 dark:text-slate-100">
                       WhatsApp
                     </div>
                     <div className="mt-1 grid gap-1">
                       <a
-                        className="text-sm font-semibold text-slate-600 hover:underline"
+                        className="text-sm font-semibold text-slate-700 hover:underline dark:text-slate-300"
                         href="https://wa.me/231881199106"
                         target="_blank"
                         rel="noreferrer"
@@ -127,7 +127,7 @@ export default function Contact() {
                         +231-881-199-106
                       </a>
                       <a
-                        className="text-sm font-semibold text-slate-600 hover:underline"
+                        className="text-sm font-semibold text-slate-700 hover:underline dark:text-slate-300"
                         href="https://wa.me/231773227668"
                         target="_blank"
                         rel="noreferrer"
@@ -139,15 +139,15 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-5">
+              <div className="rounded-2xl border border-slate-400/60 bg-slate-100 p-5 dark:border-slate-600 dark:bg-slate-800/90">
                 <div className="flex items-start gap-3">
                   <Mail className="mt-0.5 h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-slate-950">
+                    <div className="font-heading text-sm font-extrabold text-slate-900 dark:text-slate-100">
                       Email
                     </div>
                     <a
-                      className="mt-1 block text-sm font-semibold text-slate-600 hover:underline"
+                      className="mt-1 block text-sm font-semibold text-slate-700 hover:underline dark:text-slate-300"
                       href="mailto:info@enersourcelr.com"
                     >
                       info@enersourcelr.com
@@ -156,14 +156,14 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-5">
+              <div className="rounded-2xl border border-slate-400/60 bg-slate-100 p-5 dark:border-slate-600 dark:bg-slate-800/90">
                 <div className="flex items-start gap-3">
                   <Facebook className="mt-0.5 h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-slate-950">
+                    <div className="font-heading text-sm font-extrabold text-slate-900 dark:text-slate-100">
                       Follow Us
                     </div>
-                    <div className="mt-1 grid gap-1 text-sm font-semibold text-slate-600">
+                    <div className="mt-1 grid gap-1 text-sm font-semibold text-slate-700 dark:text-slate-300">
                       <div>Facebook: @enersource</div>
                       <div className="inline-flex items-center gap-2">
                         <Instagram className="h-4 w-4 text-primary" aria-hidden="true" />
@@ -191,7 +191,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm backdrop-blur"
+            className="rounded-3xl border border-slate-400/60 bg-slate-100/90 p-6 shadow-sm backdrop-blur dark:border-slate-600 dark:bg-slate-800/90"
           >
             <form onSubmit={onSubmit} className="grid gap-4">
               <div className="grid gap-4 sm:grid-cols-2">
@@ -205,37 +205,37 @@ export default function Contact() {
                     autoComplete="name"
                   />
                 </label>
-                <label className="grid gap-2 text-sm font-extrabold text-slate-700">
+                <label className="grid gap-2 text-sm font-extrabold text-slate-800 dark:text-slate-200">
                   Email
                   <input
                     required
                     type="email"
                     value={form.email}
                     onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
-                    className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-semibold text-slate-950 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40"
+                    className="h-11 rounded-xl border border-slate-400/60 bg-white px-3 text-sm font-semibold text-slate-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100"
                     autoComplete="email"
                   />
                 </label>
               </div>
 
-              <label className="grid gap-2 text-sm font-extrabold text-slate-700">
+              <label className="grid gap-2 text-sm font-extrabold text-slate-800 dark:text-slate-200">
                 Phone
                 <input
                   value={form.phone}
                   onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
-                  className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-semibold text-slate-950 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40"
+                  className="h-11 rounded-xl border border-slate-400/60 bg-white px-3 text-sm font-semibold text-slate-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100"
                   autoComplete="tel"
                 />
               </label>
 
-              <label className="grid gap-2 text-sm font-extrabold text-slate-700">
+              <label className="grid gap-2 text-sm font-extrabold text-slate-800 dark:text-slate-200">
                 Message
                 <textarea
                   required
                   value={form.message}
                   onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}
                   rows={6}
-                  className="resize-none rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-950 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40"
+                  className="resize-none rounded-xl border border-slate-400/60 bg-white px-3 py-2 text-sm font-semibold text-slate-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100"
                 />
               </label>
 
@@ -263,7 +263,7 @@ export default function Contact() {
               ) : null}
 
               {!canSend ? (
-                <p className="text-xs font-semibold text-slate-500">
+                <p className="text-xs font-semibold text-slate-600 dark:text-slate-400">
                   Please try again later!
                 </p>
               ) : null}

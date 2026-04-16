@@ -52,7 +52,7 @@ export default function Projects() {
             />
             <Link
               to="/projects"
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-extrabold text-slate-950 transition-colors hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-400/70 bg-slate-200/80 px-5 py-3 text-sm font-extrabold text-secondary transition-colors hover:bg-slate-300/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-300 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 dark:focus-visible:ring-offset-slate-900"
             >
               View projects <ArrowUpRight className="h-4 w-4" />
             </Link>
@@ -113,7 +113,7 @@ export default function Projects() {
                               </div>
                             </div>
 
-                            <div className="shrink-0 rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-xs font-extrabold text-slate-700">
+                            <div className="shrink-0 rounded-full border border-slate-400/60 bg-slate-200/80 px-3 py-1 text-xs font-extrabold text-slate-800 dark:border-slate-600 dark:bg-slate-700/80 dark:text-slate-200">
                               {p.year}
                             </div>
                           </div>
@@ -158,7 +158,7 @@ export default function Projects() {
                       aria-hidden="true"
                       className="absolute left-4 top-8 hidden -translate-x-1/2 sm:block lg:left-1/2"
                     >
-                      <div className="grid h-9 w-9 place-items-center rounded-full border border-slate-200 bg-white shadow-sm">
+                      <div className="grid h-9 w-9 place-items-center rounded-full border border-slate-400/60 bg-slate-200/80 shadow-sm dark:border-slate-600 dark:bg-slate-800">
                         <div className="h-2.5 w-2.5 rounded-full bg-primary" />
                       </div>
                     </div>

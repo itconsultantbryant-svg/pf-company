@@ -63,7 +63,7 @@ export default function Services() {
             />
             <Link
               to="/services"
-              className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-extrabold text-slate-950 transition-colors hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              className="inline-flex items-center justify-center rounded-xl border border-slate-400/70 bg-slate-200/80 px-5 py-3 text-sm font-extrabold text-secondary transition-colors hover:bg-slate-300/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-300 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 dark:focus-visible:ring-offset-slate-900"
             >
               View all services
             </Link>
@@ -88,14 +88,14 @@ export default function Services() {
                     <div className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/15 text-primary">
                       {s.icon}
                     </div>
-                    <div className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
+                    <div className="text-xs font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
                       Enersource
                     </div>
                   </div>
-                  <h3 className="mt-4 font-heading text-lg font-extrabold text-slate-950">
+                  <h3 className="mt-4 font-heading text-lg font-extrabold text-slate-900 dark:text-slate-100">
                     {s.title}
                   </h3>
-                  <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-600">
+                  <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700 dark:text-slate-300">
                     {s.details}
                   </p>
                   <div className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-secondary">

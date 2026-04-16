@@ -4,19 +4,36 @@
   color-scheme: light;
 }
 
+html.dark {
+  color-scheme: dark;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Open Sans", Roboto, ui-sans-serif, system-ui, sans-serif;
-  background: rgb(248 250 252);
-  color: rgb(15 23 42);
   -webkit-font-smoothing: antialiased;
 }
 
+/* Light: muted slate (not harsh white) so brand reds/greens read clearly */
+html:not(.dark) body {
+  background: rgb(226 232 240);
+  color: rgb(30 41 59);
+}
+
+html.dark body {
+  background: rgb(2 6 23);
+  color: rgb(241 245 249);
+}
+
 ::selection {
-  background: rgba(253, 184, 19, 0.35);
+  background: rgba(198, 40, 40, 0.22);
+}
+
+html.dark ::selection {
+  background: rgba(253, 184, 19, 0.25);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -24,4 +41,3 @@ body {
     scroll-behavior: auto;
   }
 }
-

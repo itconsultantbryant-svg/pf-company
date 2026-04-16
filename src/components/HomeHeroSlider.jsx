@@ -27,7 +27,7 @@ export default function HomeHeroSlider() {
 
   return (
     <section
-      className="relative border-b border-slate-200 bg-slate-100"
+      className="relative border-b border-slate-400/50 bg-slate-200/80 dark:border-slate-700 dark:bg-slate-900"
       aria-label="Featured project photography"
     >
       <div className="relative w-full overflow-hidden">
@@ -53,7 +53,7 @@ export default function HomeHeroSlider() {
             bulletActiveClass: '!bg-primary !w-6'
           }}
           navigation
-          className="home-hero-swiper [&_.swiper-button-next]:text-secondary [&_.swiper-button-prev]:text-secondary [&_.swiper-pagination]:!bottom-4"
+          className="home-hero-swiper [&_.swiper-button-next]:text-secondary [&_.swiper-button-prev]:text-secondary dark:[&_.swiper-button-next]:text-slate-200 dark:[&_.swiper-button-prev]:text-slate-200 [&_.swiper-pagination]:!bottom-4"
         >
           {slides.map((s) => (
             <SwiperSlide key={s.src}>

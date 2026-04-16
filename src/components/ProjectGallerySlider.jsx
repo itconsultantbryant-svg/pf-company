@@ -36,15 +36,18 @@ export default function ProjectGallerySlider() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="border-b border-slate-200 bg-slate-50 py-10 sm:py-12" aria-label="Project photography">
+    <section
+      className="border-b border-slate-400/50 bg-slate-200/50 py-10 dark:border-slate-700 dark:bg-slate-900/80 sm:py-12"
+      aria-label="Project photography"
+    >
       <Container>
-        <p className="mb-4 text-center text-xs font-extrabold uppercase tracking-wider text-secondary">
+        <p className="mb-4 text-center text-xs font-extrabold uppercase tracking-wider text-secondary dark:text-slate-300">
           Gallery
         </p>
-        <h2 className="mb-6 text-center font-heading text-xl font-extrabold text-secondary sm:text-2xl">
+        <h2 className="mb-6 text-center font-heading text-xl font-extrabold text-secondary dark:text-slate-100 sm:text-2xl">
           Recent deployments & sites
         </h2>
-        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-glow">
+        <div className="overflow-hidden rounded-2xl border border-slate-400/50 bg-slate-200/70 shadow-glow dark:border-slate-600 dark:bg-slate-800/60">
           <Swiper
             modules={[Autoplay, EffectFade, Navigation, Pagination]}
             effect="fade"
@@ -68,11 +71,11 @@ export default function ProjectGallerySlider() {
               bulletActiveClass: '!bg-primary !w-6'
             }}
             navigation
-            className="project-gallery-swiper [&_.swiper-button-next]:text-secondary [&_.swiper-button-prev]:text-secondary [&_.swiper-pagination]:!bottom-3"
+            className="project-gallery-swiper [&_.swiper-button-next]:text-secondary [&_.swiper-button-prev]:text-secondary dark:[&_.swiper-button-next]:text-slate-200 dark:[&_.swiper-button-prev]:text-slate-200 [&_.swiper-pagination]:!bottom-3"
           >
             {slides.map((s) => (
               <SwiperSlide key={s.src}>
-                <div className="flex min-h-[220px] w-full items-center justify-center py-4 sm:min-h-[300px] md:min-h-[380px]">
+                <div className="flex min-h-[220px] w-full items-center justify-center bg-slate-200/40 py-4 dark:bg-slate-900/40 sm:min-h-[300px] md:min-h-[380px]">
                   <img
                     src={s.src}
                     alt={s.alt}

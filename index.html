@@ -16,15 +16,17 @@
     />
     <script>
       (() => {
-        // Light mode only
         try {
-          localStorage.removeItem('enersource-theme');
+          const s = localStorage.getItem('enersource-theme');
+          const dark =
+            s === 'dark' || (s !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.classList.toggle('dark', dark);
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
         } catch {}
-        document.documentElement.classList.remove('dark');
       })();
     </script>
   </head>
-  <body class="bg-slate-50 font-sans text-slate-900 antialiased">
+  <body class="min-h-dvh font-sans antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

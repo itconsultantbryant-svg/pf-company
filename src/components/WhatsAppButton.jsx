@@ -11,6 +11,7 @@ function WhatsAppIcon({ className }) {
   );
 }
 
+/** WhatsApp brand green — isolated from page theme so it never washes out */
 export default function WhatsAppButton() {
   const phone = '+231773227668';
   const message = encodeURIComponent('Hello Enersource Inc. — I would like a solar quote.');
@@ -21,11 +22,12 @@ export default function WhatsAppButton() {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="fixed bottom-6 right-4 z-[100] inline-flex items-center gap-2 rounded-full bg-whatsapp px-4 py-3 text-sm font-extrabold text-white shadow-[0_4px_14px_rgba(37,211,102,0.45)] ring-2 ring-white/90 transition hover:brightness-105 hover:shadow-[0_6px_20px_rgba(37,211,102,0.55)] active:scale-[0.98] sm:bottom-6 sm:right-6"
+      style={{ backgroundColor: '#25D366', color: '#ffffff' }}
+      className="fixed bottom-6 right-4 z-[110] inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-extrabold shadow-[0_4px_16px_rgba(22,163,74,0.55),0_2px_8px_rgba(0,0,0,0.2)] ring-2 ring-white/90 ring-offset-2 ring-offset-slate-200 transition hover:brightness-95 hover:shadow-[0_6px_22px_rgba(22,163,74,0.6)] active:scale-[0.98] dark:ring-offset-slate-950 sm:bottom-6 sm:right-6"
       aria-label="Chat on WhatsApp"
     >
-      <WhatsAppIcon className="h-6 w-6 shrink-0" />
-      <span className="hidden sm:inline">WhatsApp</span>
+      <WhatsAppIcon className="h-6 w-6 shrink-0 text-white" />
+      <span className="hidden text-white sm:inline">WhatsApp</span>
     </a>
   );
 }

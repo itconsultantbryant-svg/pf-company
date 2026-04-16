@@ -18,7 +18,7 @@ export default function Partners() {
   return (
     <section className="relative" id="partners">
       <Container className="py-20">
-        <div className="rounded-3xl border border-slate-200 bg-white/70 p-8 shadow-sm backdrop-blur">
+        <div className="rounded-3xl border border-slate-400/50 bg-slate-100 dark:border-slate-600 bg-slate-100/90 dark:bg-slate-800/80 p-8 shadow-sm backdrop-blur">
           <SectionHeading
             eyebrow="Partners & clients"
             title="Trusted by institutions and growing teams."
@@ -29,7 +29,7 @@ export default function Partners() {
             {partners.map((p, idx) => (
               <motion.div
                 key={p.name}
-                className="group flex items-center justify-center rounded-2xl border border-slate-200 bg-white p-6 text-center"
+                className="group flex items-center justify-center rounded-2xl border border-slate-400/50 bg-slate-100 dark:border-slate-600 dark:bg-slate-800/80 p-6 text-center"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
@@ -46,8 +46,8 @@ export default function Partners() {
           </div>
 
           <div className="mt-10 grid gap-4 lg:grid-cols-2">
-            <div className="rounded-3xl border border-slate-200 bg-white p-6">
-              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-slate-500">
+            <div className="rounded-3xl border border-slate-400/50 bg-slate-100 dark:border-slate-600 dark:bg-slate-800/80 p-6">
+              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
                 Healthcare & Medical Institutions
               </div>
               <ul className="mt-4 grid gap-2 text-sm font-semibold text-slate-700">
@@ -55,8 +55,8 @@ export default function Partners() {
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-slate-200 bg-white p-6">
-              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-slate-500">
+            <div className="rounded-3xl border border-slate-400/50 bg-slate-100 dark:border-slate-600 dark:bg-slate-800/80 p-6">
+              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
                 Financial Institutions
               </div>
               <ul className="mt-4 grid gap-2 text-sm font-semibold text-slate-700">
@@ -65,8 +65,8 @@ export default function Partners() {
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-slate-200 bg-white p-6">
-              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-slate-500">
+            <div className="rounded-3xl border border-slate-400/50 bg-slate-100 dark:border-slate-600 dark:bg-slate-800/80 p-6">
+              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
                 International Development & Civil Society
               </div>
               <ul className="mt-4 grid gap-2 text-sm font-semibold text-slate-700">
@@ -76,8 +76,8 @@ export default function Partners() {
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-slate-200 bg-white p-6">
-              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-slate-500">
+            <div className="rounded-3xl border border-slate-400/50 bg-slate-100 dark:border-slate-600 dark:bg-slate-800/80 p-6">
+              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
                 Government & Regulatory Bodies / Commercial
               </div>
               <ul className="mt-4 grid gap-2 text-sm font-semibold text-slate-700">

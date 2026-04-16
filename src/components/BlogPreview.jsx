@@ -25,7 +25,7 @@ export default function BlogPreview() {
             />
             <Link
               to="/blog"
-              className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-extrabold text-slate-950 transition-colors hover:bg-slate-50"
+              className="inline-flex items-center justify-center rounded-xl border border-slate-400/70 bg-slate-200/80 px-5 py-3 text-sm font-extrabold text-secondary transition-colors hover:bg-slate-300/80 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700"
             >
               View all posts
             </Link>
@@ -35,7 +35,7 @@ export default function BlogPreview() {
             {latest.map((p, idx) => (
               <motion.article
                 key={p.slug}
-                className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-transform hover:-translate-y-1"
+                className="group rounded-3xl border border-slate-400/50 bg-slate-100 p-6 shadow-sm transition-transform hover:-translate-y-1 dark:border-slate-600 dark:bg-slate-800/90"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.35 }}

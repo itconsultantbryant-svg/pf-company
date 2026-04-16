@@ -20,7 +20,7 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white">
+    <footer className="border-t border-slate-400/50 bg-slate-100 dark:border-slate-700 dark:bg-slate-900">
       <div className="mx-auto max-w-6xl px-4 py-14">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
@@ -28,16 +28,20 @@ export default function Footer() {
               <img
                 src={logoSrc}
                 alt="Enersource Inc. logo"
-                className="h-10 w-10 rounded-xl object-cover ring-1 ring-slate-200"
+                className="h-10 w-10 rounded-xl object-cover ring-1 ring-slate-400/50 dark:ring-slate-600"
                 loading="lazy"
               />
               <div>
-                <div className="font-heading text-base font-extrabold text-secondary">Enersource Inc.</div>
-                <div className="text-sm font-semibold text-slate-600">Source of Africa’s Energy</div>
+                <div className="font-heading text-base font-extrabold text-secondary dark:text-slate-100">
+                  Enersource Inc.
+                </div>
+                <div className="text-sm font-semibold text-slate-600 dark:text-slate-400">
+                  Source of Africa’s Energy
+                </div>
               </div>
             </div>
 
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-700 dark:text-slate-300">
               Clean, affordable, and reliable solar solutions across Liberia — from design and
               procurement to installation, commissioning, and long-term maintenance.
             </p>
@@ -45,21 +49,21 @@ export default function Footer() {
             <div className="mt-4 flex items-center gap-2">
               <a
                 href="#"
-                className="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-slate-50 text-secondary transition-colors hover:border-primary/40 hover:bg-primary/10 hover:text-secondary"
+                className="grid h-10 w-10 place-items-center rounded-full border border-slate-400/60 bg-slate-200/80 text-secondary transition-colors hover:border-primary/50 hover:bg-primary/15 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-primary/50 dark:hover:bg-primary/20"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" strokeWidth={2} />
               </a>
               <a
                 href="#"
-                className="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-slate-50 text-secondary transition-colors hover:border-primary/40 hover:bg-primary/10 hover:text-secondary"
+                className="grid h-10 w-10 place-items-center rounded-full border border-slate-400/60 bg-slate-200/80 text-secondary transition-colors hover:border-primary/50 hover:bg-primary/15 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-primary/50 dark:hover:bg-primary/20"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" strokeWidth={2} />
               </a>
               <a
                 href="#"
-                className="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-slate-50 text-secondary transition-colors hover:border-primary/40 hover:bg-primary/10 hover:text-secondary"
+                className="grid h-10 w-10 place-items-center rounded-full border border-slate-400/60 bg-slate-200/80 text-secondary transition-colors hover:border-primary/50 hover:bg-primary/15 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-primary/50 dark:hover:bg-primary/20"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" strokeWidth={2} />
@@ -68,7 +72,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading text-sm font-extrabold uppercase tracking-wider text-secondary">
+            <h3 className="font-heading text-sm font-extrabold uppercase tracking-wider text-secondary dark:text-slate-200">
               Quick Links
             </h3>
             <nav className="mt-4 grid gap-2">
@@ -76,7 +80,7 @@ export default function Footer() {
                 <Link
                   key={l.to}
                   to={l.to}
-                  className="text-sm font-semibold text-slate-600 transition-colors hover:text-secondary"
+                  className="text-sm font-semibold text-slate-700 transition-colors hover:text-primary dark:text-slate-300 dark:hover:text-gold"
                 >
                   {l.label}
                 </Link>
@@ -85,12 +89,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading text-sm font-extrabold uppercase tracking-wider text-secondary">
+            <h3 className="font-heading text-sm font-extrabold uppercase tracking-wider text-secondary dark:text-slate-200">
               Services
             </h3>
             <ul className="mt-4 grid gap-2">
               {services.map((s) => (
-                <li key={s} className="text-sm font-semibold text-slate-600">
+                <li key={s} className="text-sm font-semibold text-slate-700 dark:text-slate-300">
                   {s}
                 </li>
               ))}
@@ -98,29 +102,37 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading text-sm font-extrabold uppercase tracking-wider text-secondary">
+            <h3 className="font-heading text-sm font-extrabold uppercase tracking-wider text-secondary dark:text-slate-200">
               Contact
             </h3>
-            <div className="mt-4 grid gap-3 text-sm font-semibold text-slate-600">
+            <div className="mt-4 grid gap-3 text-sm font-semibold text-slate-700 dark:text-slate-300">
               <div className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden />
+                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden />
                 <div>Rehab Junction, Paynesville City</div>
               </div>
-              <a className="flex items-center gap-2 text-secondary hover:underline" href="tel:+231773227668">
-                <Phone className="h-5 w-5 shrink-0 text-accent" aria-hidden />
+              <a
+                className="flex items-center gap-2 text-secondary hover:underline dark:text-slate-200"
+                href="tel:+231773227668"
+              >
+                <Phone className="h-5 w-5 shrink-0 text-gold" aria-hidden />
                 +231-773-227-668
               </a>
-              <a className="flex items-center gap-2 text-secondary hover:underline" href="mailto:info@enersourcelr.com">
-                <Mail className="h-5 w-5 shrink-0 text-accent" aria-hidden />
+              <a
+                className="flex items-center gap-2 text-secondary hover:underline dark:text-slate-200"
+                href="mailto:info@enersourcelr.com"
+              >
+                <Mail className="h-5 w-5 shrink-0 text-gold" aria-hidden />
                 info@enersourcelr.com
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-slate-200 pt-6 text-sm text-slate-500 md:flex-row md:items-center">
+        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-slate-400/50 pt-6 text-sm text-slate-600 dark:border-slate-700 dark:text-slate-400 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Enersource Inc. All rights reserved.</p>
-          <p className="font-semibold text-slate-600">Built for speed, accessibility, and trust.</p>
+          <p className="font-semibold text-slate-700 dark:text-slate-300">
+            Built for speed, accessibility, and trust.
+          </p>
         </div>
       </div>
     </footer>

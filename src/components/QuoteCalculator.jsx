@@ -61,15 +61,15 @@ export default function QuoteCalculator() {
             <Calculator className="h-5 w-5" />
           </div>
           <div>
-            <div className="font-heading text-sm font-extrabold text-slate-950">
+            <div className="font-heading text-sm font-extrabold text-slate-900 dark:text-slate-100">
               Solar quote estimator
             </div>
-            <div className="text-xs font-semibold text-slate-600">
+            <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">
               Fast sizing estimate (not a final quote)
             </div>
           </div>
         </div>
-        <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-xs font-extrabold text-slate-700">
+        <div className="inline-flex items-center gap-2 rounded-full border border-slate-400/60 bg-slate-200/80 px-3 py-1 text-xs font-extrabold text-slate-800 dark:border-slate-600 dark:bg-slate-700/80 dark:text-slate-200">
           <SunMedium className="h-4 w-4 text-primary" aria-hidden="true" />
           Liberia PSH: ~{PSH_LIBERIA}
         </div>
@@ -78,10 +78,10 @@ export default function QuoteCalculator() {
       <div className="mt-5 grid gap-4">
         <label className="grid gap-2">
           <div className="flex items-center justify-between gap-3">
-            <span className="text-sm font-extrabold text-slate-700">
+            <span className="text-sm font-extrabold text-slate-800 dark:text-slate-200">
               System type
             </span>
-            <span className="text-xs font-bold text-slate-500">
+            <span className="text-xs font-bold text-slate-600 dark:text-slate-400">
               Grid / Hybrid / Off-grid
             </span>
           </div>
@@ -97,10 +97,10 @@ export default function QuoteCalculator() {
                 onClick={() => setSystemType(o.id)}
                 className={[
                   'h-11 rounded-xl border text-sm font-extrabold transition',
-                  'focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white',
+                  'focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-200 dark:focus-visible:ring-offset-slate-900',
                   systemType === o.id
-                    ? 'border-primary/60 bg-primary/15 text-slate-950'
-                    : 'border-slate-200 bg-white text-slate-700 hover:bg-slate-50'
+                    ? 'border-primary/60 bg-primary/15 text-slate-900 dark:text-slate-100'
+                    : 'border-slate-400/60 bg-slate-200/80 text-slate-800 hover:bg-slate-300/80 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700'
                 ].join(' ')}
                 aria-pressed={systemType === o.id}
               >
@@ -112,10 +112,10 @@ export default function QuoteCalculator() {
 
         <label className="grid gap-2">
           <div className="flex items-center justify-between gap-3">
-            <span className="text-sm font-extrabold text-slate-700">
+            <span className="text-sm font-extrabold text-slate-800 dark:text-slate-200">
               Monthly energy use
             </span>
-            <span className="text-xs font-bold text-slate-500">
+            <span className="text-xs font-bold text-slate-600 dark:text-slate-400">
               {monthlyKwh} kWh/mo
             </span>
           </div>
@@ -129,7 +129,7 @@ export default function QuoteCalculator() {
             className="w-full accent-primary"
             aria-label="Monthly energy use in kilowatt-hours"
           />
-          <div className="flex justify-between text-xs font-semibold text-slate-500">
+          <div className="flex justify-between text-xs font-semibold text-slate-600 dark:text-slate-400">
             <span>50</span>
             <span>2000</span>
           </div>
@@ -148,7 +148,7 @@ export default function QuoteCalculator() {
             value={backupHours}
             onChange={(e) => setBackupHours(Number(e.target.value))}
             disabled={systemType === 'grid'}
-            className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-extrabold text-slate-950 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40 disabled:opacity-60"
+            className="h-11 rounded-xl border border-slate-400/60 bg-white px-3 text-sm font-extrabold text-slate-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/40 disabled:opacity-60 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100"
           >
             {[0, 4, 8, 12, 24].map((h) => (
               <option key={h} value={h}>
@@ -184,9 +184,9 @@ export default function QuoteCalculator() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-white p-4">
+        <div className="rounded-2xl border border-slate-400/50 bg-slate-200/50 p-4 dark:border-slate-600 dark:bg-slate-900/50">
           <div className="flex items-center justify-between">
-            <div className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
+            <div className="text-xs font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
               Panels (approx.)
             </div>
             <div className="text-xs font-extrabold text-accent">{PANEL_WATTS}W</div>
@@ -209,9 +209,9 @@ export default function QuoteCalculator() {
         </div>
       </div>
 
-      <div className="mt-3 rounded-2xl border border-slate-200 bg-white p-4">
+      <div className="mt-3 rounded-2xl border border-slate-400/50 bg-slate-200/50 p-4 dark:border-slate-600 dark:bg-slate-900/50">
         <div className="flex items-center justify-between">
-          <div className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
+          <div className="text-xs font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
             Battery (if applicable)
           </div>
           <div className="text-sm font-extrabold text-primary">
@@ -224,7 +224,7 @@ export default function QuoteCalculator() {
         </div>
       </div>
 
-      <p className="mt-4 text-xs font-semibold text-slate-500">
+      <p className="mt-4 text-xs font-semibold text-slate-600 dark:text-slate-400">
         This is a quick estimate for UX. Exact sizing requires site survey, load list, inverter/battery
         selection, and installation constraints.
       </p>
