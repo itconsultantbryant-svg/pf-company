@@ -1,99 +1,91 @@
-# pf-company
+# Enersource Inc. — Corporate Solar Website
 
-# Power Factor Engineering & Consultancy Inc.
+Modern, responsive, highly interactive corporate website for **Enersource Inc.** (solar energy company), with clean-energy branding, strong UX/UI, animations, and accessibility basics.
 
-A modern, fully responsive website for **Power Factor Engineering & Consultancy Inc.**, delivering solar and electrical solutions across Liberia. Tagline: *Engineering With Integrity, Powering Sustainable Solutions.* Built with vanilla HTML, CSS, and JavaScript.
+## Tech stack
 
-## Design
+- React + Vite
+- React Router
+- Tailwind CSS
+- Framer Motion
+- Swiper.js
+- Lucide icons
+- EmailJS (optional, for contact form)
 
-- **Style:** Clean, professional, futuristic energy-tech
-- **Colors:** Deep blue, electric yellow, white, subtle gradients
-- **Typography:** Poppins & Inter (Google Fonts)
-- **Features:** Sticky nav, smooth scroll, hover effects, scroll reveal animations, animated counters, carousels, accordion FAQ, project filtering, solar package cards
+## Brand + assets
 
-## Pages
+- Company logo: `assets/enersource_logo.jpeg` (used in `Navbar` + `Footer`)
+- Design system:
+  - Primary: `#FDB813` (solar yellow)
+  - Secondary: `#0B3C5D` (deep blue)
+  - Accent: `#00A896` (energy green)
+  - Typography: Poppins/Inter (headings), Open Sans/Roboto (body)
 
-| Page            | File                | Description |
-|-----------------|---------------------|-------------|
-| Home            | `index.html`        | Hero “Our Absolute Best Solar Package”, intro, features, about, solar packages, why choose us, stats, testimonials, CTA |
-| About           | `about.html`        | Trusted experts in Liberia, mission/vision/values, story, team, why choose us, certifications |
-| Services        | `services.html`     | Electrical, AC, CCTV, Solar, Consultancy (full service list) |
-| Solar Packages  | `solar-packages.html`| 2.3kW and 3.5kW packages with pricing |
-| Projects        | `projects.html`     | Filterable gallery, featured projects, before/after, testimonials |
-| Contact         | `contact.html`      | Contact form, Duazon/Paynesville addresses, phones, WhatsApp, map |
-| FAQ             | `faq.html`          | Accordion FAQ |
-| Blog            | `blog.html`         | Blog grid, sidebar, pagination UI |
-
-## Navigation (all pages)
-
-- Home → About → Services → Solar Packages → Projects → Blog → FAQ → Contact → Get Quote
-
-## Contact (footer & contact page)
-
-- **Locations:** Duazon, RIA Highway | GSA Junction, Paynesville City, Liberia
-- **Phone:** +231 776 676 675 | +231 888 661 114
-- **WhatsApp:** +231 889 469 956
-
-## Running Locally
-
-1. Open the project folder in a terminal.
-2. Serve the site with any static server, for example:
-   - **Python 3:** `python3 -m http.server 8080`
-   - **Node (npx):** `npx serve .`
-   - **VS Code:** Use the “Live Server” extension and open `index.html`.
-3. Visit `http://localhost:8080` (or the port your server uses).
-
-No build step or dependencies required.
-
-## Deploying on Render
-
-This repo is ready to deploy as a **Render Static Site** (no build step).
-
-1. In Render, click **New +** → **Static Site**
-2. Connect the GitHub repo `itconsultantbryant-svg/pf-company`
-3. Configure:
-   - **Branch:** `main`
-   - **Build Command:** *(leave blank)*
-   - **Publish Directory:** `.`
-4. Click **Create Static Site**
-
-Notes:
-- A `render.yaml` file is included so Render can auto-detect settings.
-- `_redirects` is included so clean URLs like `/about` work (they serve `about.html`).
-
-## Structure
+## Project structure
 
 ```
-PowerFactorSite/
-├── index.html          # Home
-├── about.html
-├── services.html
-├── solar-packages.html # Solar packages (2.3kW, 3.5kW)
-├── projects.html
-├── contact.html
-├── faq.html
-├── blog.html
-├── css/
-│   └── styles.css     # Global styles, package cards, responsive
-├── js/
-│   └── main.js        # Nav, carousel, testimonials, counters, accordion, tabs, filters, forms
-└── README.md
+src/
+  components/
+    Navbar.jsx
+    Footer.jsx
+    Hero.jsx
+    Services.jsx
+    About.jsx
+    Projects.jsx
+    Partners.jsx
+    Testimonials.jsx
+    Contact.jsx
+    Stats.jsx
+    CTA.jsx
+  pages/
+    Home.jsx
+    AboutPage.jsx
+    ServicesPage.jsx
+    ProjectsPage.jsx
+    ContactPage.jsx
+  styles/
+    index.css
+  App.jsx
 ```
 
-## Accessibility & Performance
+## Running locally
 
-- Semantic HTML and ARIA where needed (e.g. accordion, carousel).
-- Smooth scroll and reduced motion respected via `prefers-reduced-motion` (can be added in CSS if desired).
-- Images use Unsplash URLs; replace with your own and add `width`/`height` or `aspect-ratio` for best performance.
-- Single CSS and JS file for fewer requests.
+```bash
+npm install
+npm run dev
+```
 
-## Customization
+Build for production:
 
-- **Contact form / newsletter:** Hook `#contact-form` and `#newsletter-form` to your backend or form service.
-- **Map:** Replace the `iframe` `src` in `contact.html` with your Google Maps embed URL for Paynesville/Duazon, Liberia.
-- **Phone/WhatsApp:** Links use +231 numbers; update if needed.
-- **Social links:** Set real URLs in footer `href`s.
+```bash
+npm run build
+npm run preview
+```
 
----
+## Routes
 
-© 2026 Power Factor. All rights reserved.
+- `/` Home
+- `/about` About
+- `/services` Services
+- `/projects` Projects
+- `/contact` Contact
+
+## Contact form (EmailJS)
+
+1. Create a `.env` file (see `.env.example`)
+2. Add:
+   - `VITE_EMAILJS_SERVICE_ID`
+   - `VITE_EMAILJS_TEMPLATE_ID`
+   - `VITE_EMAILJS_PUBLIC_KEY`
+
+If these keys are not set, the UI will still render and will show a clear “not configured yet” message.
+
+## Deploying on Render (static)
+
+This repo includes `render.yaml` configured for Vite:
+
+- Build: `npm install && npm run build`
+- Publish directory: `dist`
+
+SPA routing is supported via `_redirects` (also copied to `dist/` via `public/_redirects`).
+

@@ -1,7 +1,7 @@
 services:
   - type: static_site
-    name: pf-company
+    name: enersource-inc
     env: static
-    buildCommand: ""
-    staticPublishPath: .
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
     pullRequestPreviewsEnabled: true
