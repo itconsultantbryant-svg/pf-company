@@ -57,7 +57,7 @@ export default function QuoteCalculator() {
     <div className="relative">
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <div className="grid h-10 w-10 place-items-center rounded-2xl bg-primary/15 text-secondary">
+          <div className="grid h-10 w-10 place-items-center rounded-2xl bg-primary/15 text-primary">
             <Calculator className="h-5 w-5" />
           </div>
           <div>

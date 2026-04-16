@@ -44,7 +44,7 @@ export default function ProjectGallerySlider() {
         <h2 className="mb-6 text-center font-heading text-xl font-extrabold text-secondary sm:text-2xl">
           Recent deployments & sites
         </h2>
-        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-glow">
+        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-glow">
           <Swiper
             modules={[Autoplay, EffectFade, Navigation, Pagination]}
             effect="fade"
@@ -72,11 +72,11 @@ export default function ProjectGallerySlider() {
           >
             {slides.map((s) => (
               <SwiperSlide key={s.src}>
-                <div className="relative aspect-[16/9] w-full min-h-[200px] sm:min-h-[280px]">
+                <div className="flex min-h-[220px] w-full items-center justify-center py-4 sm:min-h-[300px] md:min-h-[380px]">
                   <img
                     src={s.src}
                     alt={s.alt}
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className="max-h-[min(70vh,720px)] w-full object-contain"
                     loading={s.src === p1 ? 'eager' : 'lazy'}
                     decoding="async"
                   />

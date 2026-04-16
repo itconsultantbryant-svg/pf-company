@@ -14,7 +14,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'left
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.35 }}
         >
-          <span className="h-2 w-2 rounded-full bg-primary" aria-hidden="true" />
+          <span className="h-2 w-2 rounded-full bg-gold" aria-hidden="true" />
           {eyebrow}
         </motion.p>
       ) : null}

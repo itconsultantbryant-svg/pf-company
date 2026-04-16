@@ -74,7 +74,7 @@ export default function Navbar() {
           ))}
           <Link
             to="/contact"
-            className="ml-2 rounded-full bg-primary px-4 py-2 text-sm font-extrabold text-secondary shadow-glow transition hover:brightness-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/30 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 active:brightness-[0.98]"
+            className="ml-2 rounded-full bg-primary px-4 py-2 text-sm font-extrabold text-white shadow-glow transition hover:brightness-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/45 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 active:brightness-95"
           >
             Get a Quote
           </Link>
@@ -155,7 +155,7 @@ export default function Navbar() {
                 ))}
                 <Link
                   to="/contact"
-                  className="mt-2 rounded-xl bg-primary px-4 py-3 text-center text-base font-extrabold text-secondary shadow-glow hover:brightness-[1.02]"
+                  className="mt-2 rounded-xl bg-primary px-4 py-3 text-center text-base font-extrabold text-white shadow-glow hover:brightness-105"
                 >
                   Get a Quote
                 </Link>

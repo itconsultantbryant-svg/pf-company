@@ -32,7 +32,7 @@ export default function CTA() {
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col lg:items-stretch">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-extrabold text-secondary shadow-glow transition-transform hover:scale-[1.02] active:scale-[0.99]"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-extrabold text-white shadow-glow transition-transform hover:scale-[1.02] hover:brightness-105 active:scale-[0.99]"
               >
                 Request Consultation <ArrowRight className="h-4 w-4" />
               </Link>

@@ -5,9 +5,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#FDB813',
+        /** Brand red — primary CTAs (white text) */
+        primary: '#C62828',
+        /** Gold accent — matches logo highlights */
+        gold: '#FDB813',
         secondary: '#0B3C5D',
-        accent: '#00A896'
+        accent: '#00A896',
+        /** Official WhatsApp brand green */
+        whatsapp: '#25D366'
       },
       fontFamily: {
         sans: ['Open Sans', 'Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif'],
@@ -16,7 +21,7 @@ export default {
       },
       boxShadow: {
         glow:
-          '0 0 0 1px rgba(11,60,93,0.08), 0 1px 2px rgba(11,60,93,0.06), 0 12px 40px rgba(11,60,93,0.12)'
+          '0 0 0 1px rgba(198,40,40,0.12), 0 1px 2px rgba(11,60,93,0.06), 0 12px 40px rgba(11,60,93,0.12)'
       }
     }
   },

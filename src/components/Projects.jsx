@@ -93,7 +93,7 @@ export default function Projects() {
                         <div className="relative">
                           <div className="flex items-start justify-between gap-3">
                             <div className="flex items-center gap-3">
-                              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/15 text-secondary">
+                              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/15 text-primary">
                                 {p.icon}
                               </div>
                               <div>

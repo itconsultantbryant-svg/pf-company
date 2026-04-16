@@ -27,10 +27,10 @@ export default function HomeHeroSlider() {
 
   return (
     <section
-      className="relative border-b border-slate-200 bg-slate-900"
+      className="relative border-b border-slate-200 bg-slate-100"
       aria-label="Featured project photography"
     >
-      <div className="relative mx-auto max-h-[min(70vh,640px)] min-h-[280px] w-full overflow-hidden sm:min-h-[320px]">
+      <div className="relative w-full overflow-hidden">
         <Swiper
           modules={[Autoplay, EffectFade, Navigation, Pagination]}
           effect="fade"
@@ -49,25 +49,21 @@ export default function HomeHeroSlider() {
           }
           pagination={{
             clickable: true,
-            bulletClass: 'swiper-pagination-bullet !bg-white/50 !opacity-100',
+            bulletClass: 'swiper-pagination-bullet !bg-secondary/35 !opacity-100',
             bulletActiveClass: '!bg-primary !w-6'
           }}
           navigation
-          className="home-hero-swiper h-full [&_.swiper-button-next]:text-white [&_.swiper-button-prev]:text-white [&_.swiper-pagination]:!bottom-4"
+          className="home-hero-swiper [&_.swiper-button-next]:text-secondary [&_.swiper-button-prev]:text-secondary [&_.swiper-pagination]:!bottom-4"
         >
           {slides.map((s) => (
-            <SwiperSlide key={s.src} className="!h-auto">
-              <div className="relative aspect-[21/9] min-h-[280px] w-full sm:min-h-[320px] md:aspect-[2.4/1]">
+            <SwiperSlide key={s.src}>
+              <div className="flex min-h-[260px] w-full items-center justify-center bg-slate-100 py-4 sm:min-h-[320px] md:min-h-[420px] md:py-6">
                 <img
                   src={s.src}
                   alt={s.alt}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="max-h-[min(75vh,800px)] w-full object-contain"
                   loading={s.src === home1 ? 'eager' : 'lazy'}
                   decoding="async"
-                />
-                <div
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/20"
-                  aria-hidden
                 />
               </div>
             </SwiperSlide>

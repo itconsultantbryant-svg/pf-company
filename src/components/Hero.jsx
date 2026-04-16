@@ -13,7 +13,7 @@ export default function Hero() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent"
       />
 
       <Container className="relative py-20 sm:py-24">
@@ -25,7 +25,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: 'easeOut' }}
             >
-              <span className="h-2 w-2 rounded-full bg-primary" aria-hidden="true" />
+              <span className="h-2 w-2 rounded-full bg-gold" aria-hidden="true" />
               Clean energy • Sustainability • Innovation
             </motion.p>
 
@@ -57,7 +57,7 @@ export default function Hero() {
             >
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-extrabold text-secondary shadow-glow transition hover:brightness-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/25 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 active:brightness-[0.98]"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-extrabold text-white shadow-glow transition hover:brightness-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 active:brightness-95"
               >
                 Get a Quote <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
               </Link>
@@ -104,7 +104,7 @@ export default function Hero() {
                   className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
                 >
                   <div className="flex items-center gap-2 text-secondary">
-                    <div className="grid h-9 w-9 place-items-center rounded-xl bg-primary/20 text-secondary">
+                    <div className="grid h-9 w-9 place-items-center rounded-xl bg-primary/10 text-primary">
                       {f.icon}
                     </div>
                     <div className="font-heading text-sm font-extrabold">{f.title}</div>

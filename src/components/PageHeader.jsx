@@ -15,7 +15,7 @@ export default function PageHeader({ eyebrow, title, subtitle }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, ease: 'easeOut' }}
         >
-          <span className="h-2 w-2 rounded-full bg-primary" aria-hidden="true" />
+          <span className="h-2 w-2 rounded-full bg-gold" aria-hidden="true" />
           {eyebrow}
         </motion.p>
         <motion.h1

@@ -3,6 +3,7 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
+import AiChatWidget from './components/AiChatWidget.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
 
 const Home = lazy(() => import('./pages/Home.jsx'));
@@ -44,7 +45,7 @@ export default function App() {
   }, [location.hash, location.pathname, reduceMotion]);
 
   return (
-    <div className="min-h-dvh bg-slate-50 text-slate-900">
+    <div className="min-h-dvh bg-slate-50 pb-24 text-slate-900 sm:pb-20">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-xl focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-extrabold focus:text-slate-950 focus:shadow-lg focus:outline-none"
@@ -126,6 +127,7 @@ export default function App() {
         </Suspense>
       </main>
       <Footer />
+      <AiChatWidget />
       <WhatsAppButton />
     </div>
   );

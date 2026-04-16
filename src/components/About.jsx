@@ -117,7 +117,7 @@ export default function About() {
                         viewport={{ once: true, amount: 0.6 }}
                         transition={{ duration: 0.45, ease: 'easeOut', delay: 0.05 + idx * 0.04 }}
                       >
-                        <div className="grid h-10 w-10 place-items-center rounded-xl bg-primary/15 text-secondary">
+                        <div className="grid h-10 w-10 place-items-center rounded-xl bg-primary/15 text-primary">
                           {v.icon}
                         </div>
                         <div className="font-heading text-sm font-extrabold text-slate-950">

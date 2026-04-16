@@ -242,7 +242,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status.state === 'loading'}
-                className="mt-2 inline-flex h-12 items-center justify-center rounded-xl bg-primary px-5 text-sm font-extrabold text-secondary shadow-glow transition-transform hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-70"
+                className="mt-2 inline-flex h-12 items-center justify-center rounded-xl bg-primary px-5 text-sm font-extrabold text-white shadow-glow transition-transform hover:scale-[1.02] hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {status.state === 'loading' ? 'Sending…' : 'Send message'}
               </button>
@@ -264,8 +264,7 @@ export default function Contact() {
 
               {!canSend ? (
                 <p className="text-xs font-semibold text-slate-500">
-                  To enable EmailJS, add `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, and
-                  `VITE_EMAILJS_PUBLIC_KEY` to a `.env` file.
+                  Please try again later!
                 </p>
               ) : null}
             </form>

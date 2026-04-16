@@ -85,7 +85,7 @@ export default function Services() {
                 />
                 <div className="relative">
                   <div className="flex items-center justify-between">
-                    <div className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/15 text-secondary">
+                    <div className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/15 text-primary">
                       {s.icon}
                     </div>
                     <div className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
