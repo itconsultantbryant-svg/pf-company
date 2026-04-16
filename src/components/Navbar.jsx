@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { Menu, Moon, Sun, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
@@ -14,55 +14,9 @@ const navItems = [
   { to: '/contact', label: 'Contact' }
 ];
 
-function useTheme() {
-  const [theme, setTheme] = useState(() =>
-    document.documentElement.classList.contains('dark') ? 'dark' : 'light'
-  );
-
-  const apply = (next) => {
-    const isDark = next === 'dark';
-    document.documentElement.classList.toggle('dark', isDark);
-    document.body?.classList.toggle('dark', isDark);
-  };
-
-  useEffect(() => {
-    const saved = localStorage.getItem('enersource-theme');
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    const initial = saved ?? (prefersDark ? 'dark' : 'light');
-    setTheme(initial);
-    apply(initial);
-  }, []);
-
-  useEffect(() => {
-    const onStorage = (e) => {
-      if (e.key !== 'enersource-theme') return;
-      const next = e.newValue === 'dark' ? 'dark' : 'light';
-      setTheme(next);
-      apply(next);
-    };
-    window.addEventListener('storage', onStorage);
-    return () => window.removeEventListener('storage', onStorage);
-  }, []);
-
-  const toggle = () => {
-    setTheme((prev) => {
-      const next = prev === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('enersource-theme', next);
-      apply(next);
-      return next;
-    });
-  };
-
-  return { theme, toggle };
-}
-
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
-  const { theme, toggle } = useTheme();
 
   useEffect(() => {
     setOpen(false);
@@ -126,25 +80,9 @@ export default function Navbar() {
           >
             Get a Quote
           </Link>
-          <button
-            type="button"
-            onClick={toggle}
-            className="ml-1 grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-secondary/80 transition-colors hover:bg-secondary/5 hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/10 dark:bg-white/5 dark:text-white/80 dark:hover:bg-white/10 dark:hover:text-white dark:focus-visible:ring-offset-slate-950"
-            aria-label="Toggle dark mode"
-          >
-            {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </button>
         </nav>
 
         <div className="flex items-center gap-2 md:hidden">
-          <button
-            type="button"
-            onClick={toggle}
-            className="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
-            aria-label="Toggle dark mode"
-          >
-            {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </button>
           <button
             type="button"
             onClick={() => setOpen(true)}

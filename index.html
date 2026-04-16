@@ -16,16 +16,11 @@
     />
     <script>
       (() => {
+        // Light mode only
         try {
-          const saved = localStorage.getItem('enersource-theme');
-          const prefersDark =
-            window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches;
-          const theme = saved ?? (prefersDark ? 'dark' : 'light');
-          const isDark = theme === 'dark';
-          document.documentElement.classList.toggle('dark', isDark);
-          document.body && document.body.classList.toggle('dark', isDark);
+          localStorage.removeItem('enersource-theme');
         } catch {}
+        document.documentElement.classList.remove('dark');
       })();
     </script>
   </head>
