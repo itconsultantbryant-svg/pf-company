@@ -73,7 +73,7 @@ export default function Services() {
             {services.map((s, idx) => (
               <motion.article
                 key={s.title}
-                className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-transform hover:-translate-y-1"
+                className="group relative overflow-hidden rounded-3xl border border-red-200 bg-white p-6 shadow-sm transition-transform hover:-translate-y-1 dark:border-red-900/60 dark:bg-red-950/70"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
@@ -98,7 +98,7 @@ export default function Services() {
                   <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700 dark:text-slate-300">
                     {s.details}
                   </p>
-                  <div className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-secondary">
+                  <div className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-primary dark:text-gold">
                     Learn more
                     <span className="inline-block transition-transform group-hover:translate-x-1">
                       →

@@ -69,11 +69,11 @@ export default function Stats() {
   return (
     <section className="relative" ref={ref} id="stats">
       <Container className="py-14">
-        <div className="grid gap-4 rounded-3xl border border-slate-400/50 bg-slate-100/90 p-6 shadow-sm backdrop-blur dark:border-slate-600 dark:bg-slate-800/80 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 rounded-3xl border border-red-200 bg-white p-6 shadow-sm dark:border-red-900/60 dark:bg-red-950/70 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s, idx) => (
             <motion.div
               key={s.label}
-              className="rounded-2xl border border-slate-400/50 bg-slate-200/60 p-5 dark:border-slate-600 dark:bg-slate-900/50"
+              className="rounded-2xl border border-red-200 bg-red-50 p-5 dark:border-red-900/60 dark:bg-red-950/50"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.6 }}

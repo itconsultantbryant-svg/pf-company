@@ -37,7 +37,7 @@ export default function ProjectGallerySlider() {
 
   return (
     <section
-      className="border-b border-slate-400/50 bg-slate-200/50 py-10 dark:border-slate-700 dark:bg-slate-900/80 sm:py-12"
+      className="border-b border-red-200 bg-white py-10 dark:border-red-900/60 dark:bg-red-950 sm:py-12"
       aria-label="Project photography"
     >
       <Container>
@@ -47,7 +47,7 @@ export default function ProjectGallerySlider() {
         <h2 className="mb-6 text-center font-heading text-xl font-extrabold text-secondary dark:text-slate-100 sm:text-2xl">
           Recent deployments & sites
         </h2>
-        <div className="overflow-hidden rounded-2xl border border-slate-400/50 bg-slate-200/70 shadow-glow dark:border-slate-600 dark:bg-slate-800/60">
+        <div className="overflow-hidden rounded-2xl border border-red-200 bg-white shadow-glow dark:border-red-900/60 dark:bg-red-950/70">
           <Swiper
             modules={[Autoplay, EffectFade, Navigation, Pagination]}
             effect="fade"
@@ -75,7 +75,7 @@ export default function ProjectGallerySlider() {
           >
             {slides.map((s) => (
               <SwiperSlide key={s.src}>
-                <div className="flex min-h-[220px] w-full items-center justify-center bg-slate-200/40 py-4 dark:bg-slate-900/40 sm:min-h-[300px] md:min-h-[380px]">
+                <div className="flex min-h-[220px] w-full items-center justify-center bg-red-50 py-4 dark:bg-red-950/60 sm:min-h-[300px] md:min-h-[380px]">
                   <img
                     src={s.src}
                     alt={s.alt}

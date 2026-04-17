@@ -61,7 +61,7 @@ export default function Projects() {
           <div className="relative">
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute left-4 top-0 hidden h-full w-px bg-gradient-to-b from-transparent via-slate-300 to-transparent sm:block lg:left-1/2"
+              className="pointer-events-none absolute left-4 top-0 hidden h-full w-px bg-gradient-to-b from-transparent via-red-200 to-transparent sm:block lg:left-1/2 dark:via-red-900/60"
             />
 
             <div className="grid gap-6">
@@ -81,7 +81,7 @@ export default function Projects() {
 
                       <div
                         className={[
-                          'relative rounded-3xl border border-slate-200 bg-white p-6 shadow-sm',
+                          'relative rounded-3xl border border-red-200 bg-white p-6 shadow-sm dark:border-red-900/60 dark:bg-red-950/70',
                           isRight ? 'lg:col-start-2' : 'lg:col-start-1'
                         ].join(' ')}
                       >
@@ -97,10 +97,10 @@ export default function Projects() {
                                 {p.icon}
                               </div>
                               <div>
-                                <h3 className="font-heading text-lg font-extrabold text-slate-950">
+                                <h3 className="font-heading text-lg font-extrabold text-secondary dark:text-slate-100">
                                   {p.title}
                                 </h3>
-                                <div className="mt-1 flex flex-wrap items-center gap-3 text-sm font-semibold text-slate-600">
+                                <div className="mt-1 flex flex-wrap items-center gap-3 text-sm font-semibold text-slate-700 dark:text-slate-300">
                                   <span className="inline-flex items-center gap-1.5">
                                     <MapPin className="h-4 w-4 text-primary" aria-hidden="true" />
                                     {p.location}
@@ -118,25 +118,25 @@ export default function Projects() {
                             </div>
                           </div>
 
-                          <p className="mt-4 text-sm font-semibold leading-relaxed text-slate-600">
+                          <p className="mt-4 text-sm font-semibold leading-relaxed text-slate-700 dark:text-slate-300">
                             {p.summary}
                           </p>
 
                           <dl className="mt-5 grid gap-3 sm:grid-cols-2">
-                            <div className="rounded-2xl border border-slate-200 bg-white p-4">
-                              <dt className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
+                            <div className="rounded-2xl border border-red-200 bg-red-50 p-4 dark:border-red-900/60 dark:bg-red-950/50">
+                              <dt className="text-xs font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
                                 Project value
                               </dt>
-                              <dd className="mt-1 text-sm font-extrabold text-slate-950">
+                              <dd className="mt-1 text-sm font-extrabold text-secondary dark:text-slate-100">
                                 {p.value}
                               </dd>
                             </div>
-                            <div className="rounded-2xl border border-slate-200 bg-white p-4">
-                              <dt className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
+                            <div className="rounded-2xl border border-red-200 bg-red-50 p-4 dark:border-red-900/60 dark:bg-red-950/50">
+                              <dt className="text-xs font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
                                 Highlights
                               </dt>
                               <dd className="mt-1">
-                                <ul className="grid gap-1 text-sm font-semibold text-slate-600">
+                                <ul className="grid gap-1 text-sm font-semibold text-slate-700 dark:text-slate-300">
                                   {p.highlights.map((h) => (
                                     <li key={h} className="flex gap-2">
                                       <span

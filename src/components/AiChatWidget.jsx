@@ -28,9 +28,9 @@ export default function AiChatWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 12, scale: 0.98 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
-            className="mb-1 flex max-h-[min(70vh,28rem)] w-[min(100vw-2rem,22rem)] flex-col overflow-hidden rounded-2xl border border-slate-400/60 bg-slate-100 shadow-2xl shadow-slate-900/20 dark:border-slate-600 dark:bg-slate-900 dark:shadow-black/40"
+            className="mb-1 flex max-h-[min(70vh,28rem)] w-[min(100vw-2rem,22rem)] flex-col overflow-hidden rounded-2xl border border-red-200 bg-white shadow-2xl shadow-red-950/10 dark:border-red-900/60 dark:bg-red-950 dark:shadow-black/40"
           >
-            <div className="flex items-center justify-between gap-2 border-b border-slate-300/80 bg-secondary px-4 py-3 text-white dark:border-slate-700">
+            <div className="flex items-center justify-between gap-2 border-b border-red-200 bg-secondary px-4 py-3 text-white dark:border-red-900/60">
               <div className="flex items-center gap-2">
                 <span className="grid h-9 w-9 place-items-center rounded-xl bg-white/15">
                   <Sparkles className="h-5 w-5 text-gold" aria-hidden />
@@ -52,8 +52,8 @@ export default function AiChatWidget() {
               </button>
             </div>
 
-            <div className="flex min-h-[12rem] flex-1 flex-col gap-3 overflow-y-auto bg-slate-200/60 p-4 dark:bg-slate-800/80">
-              <div className="rounded-2xl rounded-tl-sm border border-slate-400/50 bg-white px-3 py-2 text-sm font-semibold leading-relaxed text-slate-800 shadow-sm dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200">
+            <div className="flex min-h-[12rem] flex-1 flex-col gap-3 overflow-y-auto bg-red-50 p-4 dark:bg-red-950/50">
+              <div className="rounded-2xl rounded-tl-sm border border-red-200 bg-white px-3 py-2 text-sm font-semibold leading-relaxed text-slate-800 shadow-sm dark:border-red-900/60 dark:bg-red-950/60 dark:text-slate-200">
                 Hi — I&apos;m your Enersource assistant. Soon I&apos;ll answer questions about our solar
                 services, projects, and how to get a quote. Other features are on the way.
               </div>
@@ -62,7 +62,7 @@ export default function AiChatWidget() {
               </p>
             </div>
 
-            <div className="border-t border-slate-400/50 bg-slate-100 p-3 dark:border-slate-600 dark:bg-slate-900">
+            <div className="border-t border-red-200 bg-white p-3 dark:border-red-900/60 dark:bg-red-950">
               <label htmlFor="ai-chat-input" className="sr-only">
                 Message (not active yet)
               </label>
@@ -72,12 +72,12 @@ export default function AiChatWidget() {
                   type="text"
                   disabled
                   placeholder="Messaging will be available soon…"
-                  className="min-w-0 flex-1 rounded-xl border border-slate-400/60 bg-white px-3 py-2.5 text-sm font-semibold text-slate-700 placeholder:text-slate-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:placeholder:text-slate-500"
+                  className="min-w-0 flex-1 rounded-xl border border-red-200 bg-white px-3 py-2.5 text-sm font-semibold text-slate-700 placeholder:text-slate-500 dark:border-red-900/60 dark:bg-red-950 dark:text-slate-200 dark:placeholder:text-slate-500"
                 />
                 <button
                   type="button"
                   disabled
-                  className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-slate-400/50 bg-slate-300 text-slate-500 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-400"
+                  className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-red-200 bg-red-50 text-slate-500 dark:border-red-900/60 dark:bg-red-950/50 dark:text-slate-400"
                   aria-label="Send (disabled)"
                 >
                   <Send className="h-4 w-4" />

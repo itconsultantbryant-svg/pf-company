@@ -20,7 +20,7 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-400/50 bg-slate-100 dark:border-slate-700 dark:bg-slate-900">
+    <footer className="border-t border-red-200 bg-white dark:border-red-900/60 dark:bg-red-950">
       <div className="mx-auto max-w-6xl px-4 py-14">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
@@ -49,21 +49,21 @@ export default function Footer() {
             <div className="mt-4 flex items-center gap-2">
               <a
                 href="#"
-                className="grid h-10 w-10 place-items-center rounded-full border border-slate-400/60 bg-slate-200/80 text-secondary transition-colors hover:border-primary/50 hover:bg-primary/15 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-primary/50 dark:hover:bg-primary/20"
+                className="grid h-10 w-10 place-items-center rounded-full border border-red-200 bg-white text-secondary transition-colors hover:border-primary/50 hover:bg-primary/10 dark:border-red-900/60 dark:bg-red-950 dark:text-slate-200 dark:hover:border-primary/60 dark:hover:bg-primary/20"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" strokeWidth={2} />
               </a>
               <a
                 href="#"
-                className="grid h-10 w-10 place-items-center rounded-full border border-slate-400/60 bg-slate-200/80 text-secondary transition-colors hover:border-primary/50 hover:bg-primary/15 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-primary/50 dark:hover:bg-primary/20"
+                className="grid h-10 w-10 place-items-center rounded-full border border-red-200 bg-white text-secondary transition-colors hover:border-primary/50 hover:bg-primary/10 dark:border-red-900/60 dark:bg-red-950 dark:text-slate-200 dark:hover:border-primary/60 dark:hover:bg-primary/20"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" strokeWidth={2} />
               </a>
               <a
                 href="#"
-                className="grid h-10 w-10 place-items-center rounded-full border border-slate-400/60 bg-slate-200/80 text-secondary transition-colors hover:border-primary/50 hover:bg-primary/15 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-primary/50 dark:hover:bg-primary/20"
+                className="grid h-10 w-10 place-items-center rounded-full border border-red-200 bg-white text-secondary transition-colors hover:border-primary/50 hover:bg-primary/10 dark:border-red-900/60 dark:bg-red-950 dark:text-slate-200 dark:hover:border-primary/60 dark:hover:bg-primary/20"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" strokeWidth={2} />
@@ -128,7 +128,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-slate-400/50 pt-6 text-sm text-slate-600 dark:border-slate-700 dark:text-slate-400 md:flex-row md:items-center">
+        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-red-200 pt-6 text-sm text-slate-600 dark:border-red-900/60 dark:text-slate-400 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Enersource Inc. All rights reserved.</p>
           <p className="font-semibold text-slate-700 dark:text-slate-300">
             Built for speed, accessibility, and trust.

@@ -10,14 +10,14 @@ export default function CTA() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_50%,rgba(253,184,19,0.22),transparent_60%),radial-gradient(60%_50%_at_15%_45%,rgba(0,168,150,0.14),transparent_60%)] dark:opacity-70"
       />
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-slate-300/20 dark:bg-slate-950/40" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-red-50/70 dark:bg-red-950/40" />
       <Container className="relative py-20">
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="rounded-3xl border border-slate-400/50 bg-slate-100/95 p-10 shadow-glow backdrop-blur dark:border-slate-600 dark:bg-slate-800/90"
+          className="rounded-3xl border border-red-200 bg-white p-10 shadow-glow dark:border-red-900/60 dark:bg-red-950/70"
         >
           <div className="grid gap-8 lg:grid-cols-[1.4fr_0.6fr] lg:items-center">
             <div>
@@ -39,7 +39,7 @@ export default function CTA() {
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center justify-center rounded-xl border border-slate-400/70 bg-slate-200/80 px-6 py-3 text-sm font-extrabold text-secondary transition-colors hover:bg-slate-300/80 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700"
+                className="inline-flex items-center justify-center rounded-xl border border-red-200 bg-white px-6 py-3 text-sm font-extrabold text-secondary transition-colors hover:bg-red-50 dark:border-red-900/60 dark:bg-red-950 dark:text-slate-100 dark:hover:bg-red-900/70"
               >
                 Explore Services
               </Link>

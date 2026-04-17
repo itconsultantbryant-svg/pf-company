@@ -175,7 +175,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+            <div className="mt-8 overflow-hidden rounded-3xl border border-red-200 bg-white shadow-sm dark:border-red-900/60 dark:bg-red-950/70">
               <iframe
                 title="Map to Paynesville City"
                 className="h-72 w-full"

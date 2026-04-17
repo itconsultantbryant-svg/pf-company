@@ -11,6 +11,7 @@ const AboutPage = lazy(() => import('./pages/AboutPage.jsx'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage.jsx'));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage.jsx'));
 const ContactPage = lazy(() => import('./pages/ContactPage.jsx'));
+const GalleryPage = lazy(() => import('./pages/GalleryPage.jsx'));
 const BlogPage = lazy(() => import('./pages/BlogPage.jsx'));
 const BlogPostPage = lazy(() => import('./pages/BlogPostPage.jsx'));
 
@@ -45,7 +46,7 @@ export default function App() {
   }, [location.hash, location.pathname, reduceMotion]);
 
   return (
-    <div className="min-h-dvh bg-slate-200 pb-24 text-slate-800 dark:bg-slate-950 dark:text-slate-100 sm:pb-20">
+    <div className="min-h-dvh bg-red-50 pb-24 text-slate-800 dark:bg-red-950 dark:text-slate-100 sm:pb-20">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-xl focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-extrabold focus:text-secondary focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary/40 dark:focus:bg-slate-800 dark:focus:text-slate-100"
@@ -94,6 +95,14 @@ export default function App() {
                 element={
                   <PageShell>
                     <ProjectsPage />
+                  </PageShell>
+                }
+              />
+              <Route
+                path="/gallery"
+                element={
+                  <PageShell>
+                    <GalleryPage />
                   </PageShell>
                 }
               />

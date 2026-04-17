@@ -27,7 +27,7 @@ export default function HomeHeroSlider() {
 
   return (
     <section
-      className="relative border-b border-slate-400/50 bg-slate-200/80 dark:border-slate-700 dark:bg-slate-900"
+      className="relative border-b border-red-200 bg-white dark:border-red-900/60 dark:bg-red-950"
       aria-label="Featured project photography"
     >
       <div className="relative w-full overflow-hidden">
@@ -57,7 +57,7 @@ export default function HomeHeroSlider() {
         >
           {slides.map((s) => (
             <SwiperSlide key={s.src}>
-              <div className="flex min-h-[260px] w-full items-center justify-center bg-slate-100 py-4 sm:min-h-[320px] md:min-h-[420px] md:py-6">
+              <div className="flex min-h-[260px] w-full items-center justify-center bg-red-50 py-4 dark:bg-red-950/60 sm:min-h-[320px] md:min-h-[420px] md:py-6">
                 <img
                   src={s.src}
                   alt={s.alt}

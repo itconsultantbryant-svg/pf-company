@@ -11,6 +11,7 @@ const navItems = [
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
   { to: '/projects', label: 'Projects' },
+  { to: '/gallery', label: 'Gallery' },
   { to: '/blog', label: 'Blog' },
   { to: '/contact', label: 'Contact' }
 ];
@@ -47,10 +48,10 @@ export default function Navbar() {
   );
 
   const themeBtnClass =
-    'grid h-10 w-10 place-items-center rounded-full border border-slate-300 bg-slate-200/80 text-secondary shadow-sm transition hover:bg-slate-300/90 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700';
+    'grid h-10 w-10 place-items-center rounded-full border border-red-200 bg-white text-secondary shadow-sm transition hover:bg-red-50 dark:border-red-900/60 dark:bg-red-950 dark:text-slate-200 dark:hover:bg-red-900/70';
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-300/90 bg-slate-100/95 shadow-md shadow-slate-900/5 backdrop-blur-md dark:border-slate-700/90 dark:bg-slate-900/95 dark:shadow-black/20 supports-[backdrop-filter]:bg-slate-100/90 dark:supports-[backdrop-filter]:bg-slate-900/90">
+    <header className="sticky top-0 z-50 border-b border-red-200/80 bg-white/90 shadow-md shadow-red-950/5 backdrop-blur-md dark:border-red-900/60 dark:bg-red-950/90 dark:shadow-black/30 supports-[backdrop-filter]:bg-white/80 dark:supports-[backdrop-filter]:bg-red-950/80">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4">
         <Link
           to="/"
@@ -107,7 +108,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-slate-300 bg-slate-200/80 text-secondary shadow-sm transition-colors hover:bg-slate-300/90 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-200 dark:focus-visible:ring-offset-slate-900"
+            className="grid h-10 w-10 place-items-center rounded-full border border-red-200 bg-white text-secondary shadow-sm transition-colors hover:bg-red-50 dark:border-red-900/60 dark:bg-red-950 dark:text-slate-200 dark:hover:bg-red-900/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-red-50 dark:focus-visible:ring-offset-red-950"
             aria-haspopup="dialog"
             aria-expanded={open}
             aria-controls="mobile-nav"
@@ -134,7 +135,7 @@ export default function Navbar() {
               id="mobile-nav"
               role="dialog"
               aria-modal="true"
-              className="fixed right-0 top-0 z-[60] h-dvh w-[86%] max-w-sm overflow-y-auto border-l border-slate-300 bg-slate-100 p-4 shadow-2xl dark:border-slate-700 dark:bg-slate-900"
+              className="fixed right-0 top-0 z-[60] h-dvh w-[86%] max-w-sm overflow-y-auto border-l border-red-200 bg-white p-4 shadow-2xl dark:border-red-900/60 dark:bg-red-950"
               initial={{ x: 40, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: 40, opacity: 0 }}
@@ -154,7 +155,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  className="grid h-10 w-10 place-items-center rounded-full border border-slate-300 bg-slate-200/80 text-secondary hover:bg-slate-300/90 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+                  className="grid h-10 w-10 place-items-center rounded-full border border-red-200 bg-white text-secondary hover:bg-red-50 dark:border-red-900/60 dark:bg-red-950 dark:text-slate-200 dark:hover:bg-red-900/70"
                   aria-label="Close menu"
                 >
                   <X className="h-5 w-5" strokeWidth={2.25} />

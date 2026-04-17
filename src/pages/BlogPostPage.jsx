@@ -53,7 +53,7 @@ export default function BlogPostPage() {
         </div>
 
         <motion.div
-          className="mt-8 rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm backdrop-blur sm:p-10"
+          className="mt-8 rounded-3xl border border-red-200 bg-white p-6 shadow-sm sm:p-10 dark:border-red-900/60 dark:bg-red-950/70"
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, ease: 'easeOut', delay: 0.05 }}

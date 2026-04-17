@@ -56,7 +56,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.45, ease: 'easeOut' }}
-            className="rounded-3xl border border-slate-400/50 bg-slate-100/90 p-6 shadow-sm backdrop-blur dark:border-slate-600 dark:bg-slate-800/80"
+            className="rounded-3xl border border-red-200 bg-white p-6 shadow-sm dark:border-red-900/60 dark:bg-red-950/70"
           >
             <Swiper
               modules={[Autoplay, Pagination]}
@@ -72,7 +72,7 @@ export default function Testimonials() {
             >
               {testimonials.map((t) => (
                 <SwiperSlide key={t.quote}>
-                  <article className="h-full rounded-2xl border border-slate-400/50 bg-slate-100 p-6 dark:border-slate-600 dark:bg-slate-800/90">
+                  <article className="h-full rounded-2xl border border-red-200 bg-red-50 p-6 dark:border-red-900/60 dark:bg-red-950/50">
                     <div className="flex items-center justify-between">
                       <div className="text-xs font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
                         {t.org} • {t.location}

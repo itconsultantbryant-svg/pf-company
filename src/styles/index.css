@@ -17,14 +17,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Light: muted slate (not harsh white) so brand reds/greens read clearly */
+/* Light: red + white palette base */
 html:not(.dark) body {
-  background: rgb(226 232 240);
+  background: rgb(254 242 242); /* red-50 */
   color: rgb(30 41 59);
 }
 
 html.dark body {
-  background: rgb(2 6 23);
+  background: rgb(69 10 10); /* red-950 */
   color: rgb(241 245 249);
 }
 

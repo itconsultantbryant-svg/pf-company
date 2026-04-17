@@ -56,7 +56,7 @@ export default function BlogPage() {
                     </Link>
                   </h2>
 
-                  <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-600">
+                  <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700 dark:text-slate-300">
                     {p.excerpt}
                   </p>
 
