@@ -25,7 +25,7 @@ export default function BlogPage() {
             {posts.map((p, idx) => (
               <motion.article
                 key={p.slug}
-                className="group relative overflow-hidden rounded-3xl border border-slate-400/50 bg-slate-100 p-6 shadow-sm transition-transform hover:-translate-y-1 dark:border-slate-600 dark:bg-slate-800/80"
+                className="group relative overflow-hidden rounded-3xl border border-white/20 bg-primary p-6 shadow-lg shadow-primary/25 transition-transform hover:-translate-y-1"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.35 }}
@@ -36,27 +36,27 @@ export default function BlogPage() {
                   className="pointer-events-none absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(70%_60%_at_20%_20%,rgba(253,184,19,0.22),transparent_60%),radial-gradient(70%_60%_at_80%_20%,rgba(0,168,150,0.16),transparent_60%)]"
                 />
                 <div className="relative">
-                  <div className="flex flex-wrap items-center gap-3 text-xs font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                  <div className="flex flex-wrap items-center gap-3 text-xs font-extrabold uppercase tracking-wider text-white/75">
                     <span className="inline-flex items-center gap-1.5">
-                      <Calendar className="h-4 w-4" aria-hidden="true" />
+                      <Calendar className="h-4 w-4 text-gold" aria-hidden="true" />
                       {formatDate(p.date)}
                     </span>
                     <span className="inline-flex items-center gap-1.5">
-                      <Clock className="h-4 w-4" aria-hidden="true" />
+                      <Clock className="h-4 w-4 text-gold" aria-hidden="true" />
                       {p.readingMinutes} min read
                     </span>
                   </div>
 
-                  <h2 className="mt-3 font-heading text-lg font-extrabold text-slate-900 dark:text-slate-100">
+                  <h2 className="mt-3 font-heading text-lg font-extrabold text-white">
                     <Link
                       to={`/blog/${p.slug}`}
-                      className="outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-300 dark:focus-visible:ring-offset-slate-900"
+                      className="outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
                     >
                       {p.title}
                     </Link>
                   </h2>
 
-                  <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700 dark:text-slate-300">
+                  <p className="mt-2 text-sm font-semibold leading-relaxed text-white/90">
                     {p.excerpt}
                   </p>
 
@@ -64,15 +64,15 @@ export default function BlogPage() {
                     {p.tags.map((t) => (
                       <span
                         key={t}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-slate-400/50 bg-slate-200/70 px-3 py-1 text-xs font-extrabold text-slate-800 dark:border-slate-600 dark:bg-slate-900/50 dark:text-slate-200"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-extrabold text-white"
                       >
-                        <Tag className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
+                        <Tag className="h-3.5 w-3.5 text-gold" aria-hidden="true" />
                         {t}
                       </span>
                     ))}
                   </div>
 
-                  <div className="mt-5 text-sm font-extrabold text-primary dark:text-gold">
+                  <div className="mt-5 text-sm font-extrabold text-gold">
                     Read more <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                   </div>
                 </div>

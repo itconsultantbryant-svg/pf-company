@@ -16,6 +16,9 @@ const navItems = [
   { to: '/contact', label: 'Contact' }
 ];
 
+const iconBtnClass =
+  'grid h-10 w-10 place-items-center rounded-full border border-white/35 bg-white/15 text-white shadow-sm transition hover:bg-white/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-primary';
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
@@ -39,36 +42,33 @@ export default function Navbar() {
       ({ isActive }) =>
         [
           'rounded-full px-3 py-2 text-sm font-extrabold tracking-tight transition-colors',
-          'focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-200 dark:focus-visible:ring-offset-slate-900',
+          'focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-primary',
           isActive
-            ? 'bg-primary/30 text-secondary shadow-sm dark:bg-primary/35 dark:text-slate-100'
-            : 'text-secondary/90 hover:bg-secondary/10 hover:text-secondary dark:text-slate-200/90 dark:hover:bg-white/10 dark:hover:text-white'
+            ? 'bg-white text-primary shadow-md'
+            : 'text-white hover:bg-white/15'
         ].join(' '),
     []
   );
 
-  const themeBtnClass =
-    'grid h-10 w-10 place-items-center rounded-full border border-red-200 bg-white text-secondary shadow-sm transition hover:bg-red-50 dark:border-red-900/60 dark:bg-red-950 dark:text-slate-200 dark:hover:bg-red-900/70';
-
   return (
-    <header className="sticky top-0 z-50 border-b border-red-200/80 bg-white/90 shadow-md shadow-red-950/5 backdrop-blur-md dark:border-red-900/60 dark:bg-red-950/90 dark:shadow-black/30 supports-[backdrop-filter]:bg-white/80 dark:supports-[backdrop-filter]:bg-red-950/80">
+    <header className="sticky top-0 z-50 border-b border-white/20 bg-primary shadow-md shadow-black/15">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4">
         <Link
           to="/"
-          className="group flex items-center gap-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-200 dark:focus-visible:ring-offset-slate-900"
+          className="group flex items-center gap-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
           aria-label="Enersource Inc. home"
         >
           <img
             src={logoSrc}
             alt="Enersource Inc. logo"
-            className="h-9 w-9 rounded-xl object-cover shadow-sm ring-1 ring-slate-400/50 dark:ring-slate-600"
+            className="h-9 w-9 rounded-xl object-cover shadow-sm ring-2 ring-white/40"
             loading="eager"
           />
           <div className="leading-tight">
-            <div className="font-heading text-sm font-extrabold tracking-tight text-secondary dark:text-slate-100">
+            <div className="font-heading text-sm font-extrabold tracking-tight text-white">
               Enersource Inc.
             </div>
-            <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">
+            <div className="text-xs font-semibold text-white/85">
               Source of Africa’s Energy
             </div>
           </div>
@@ -83,14 +83,14 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className={`${themeBtnClass} ml-1`}
+            className={`${iconBtnClass} ml-1`}
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </button>
           <Link
             to="/contact"
-            className="ml-2 rounded-full bg-primary px-4 py-2 text-sm font-extrabold text-white shadow-[0_2px_12px_rgba(198,40,40,0.35)] transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-200 active:brightness-95 dark:focus-visible:ring-offset-slate-900"
+            className="ml-2 rounded-full border border-white/25 bg-primary px-4 py-2 text-sm font-extrabold text-white shadow-[0_2px_14px_rgba(198,40,40,0.35)] transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary active:brightness-95"
           >
             Get a Quote
           </Link>
@@ -100,7 +100,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className={themeBtnClass}
+            className={iconBtnClass}
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
@@ -108,7 +108,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-red-200 bg-white text-secondary shadow-sm transition-colors hover:bg-red-50 dark:border-red-900/60 dark:bg-red-950 dark:text-slate-200 dark:hover:bg-red-900/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-red-50 dark:focus-visible:ring-offset-red-950"
+            className={iconBtnClass}
             aria-haspopup="dialog"
             aria-expanded={open}
             aria-controls="mobile-nav"
@@ -124,7 +124,7 @@ export default function Navbar() {
           <>
             <motion.button
               type="button"
-              className="fixed inset-0 z-50 cursor-default bg-slate-900/40 backdrop-blur-[2px] dark:bg-black/50"
+              className="fixed inset-0 z-50 cursor-default bg-black/35 backdrop-blur-[2px]"
               aria-label="Close menu overlay"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -135,7 +135,7 @@ export default function Navbar() {
               id="mobile-nav"
               role="dialog"
               aria-modal="true"
-              className="fixed right-0 top-0 z-[60] h-dvh w-[86%] max-w-sm overflow-y-auto border-l border-red-200 bg-white p-4 shadow-2xl dark:border-red-900/60 dark:bg-red-950"
+              className="fixed right-0 top-0 z-[60] flex h-dvh w-[86%] max-w-sm flex-col overflow-y-auto border-l border-white/20 bg-primary p-4 text-white shadow-2xl"
               initial={{ x: 40, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: 40, opacity: 0 }}
@@ -146,23 +146,23 @@ export default function Navbar() {
                   <img
                     src={logoSrc}
                     alt=""
-                    className="h-9 w-9 rounded-lg object-cover ring-1 ring-slate-400/50 dark:ring-slate-600"
+                    className="h-9 w-9 rounded-lg object-cover ring-2 ring-white/40"
                   />
-                  <div className="font-heading text-sm font-extrabold text-secondary dark:text-slate-100">
+                  <div className="font-heading text-sm font-extrabold text-white">
                     Enersource Inc.
                   </div>
                 </div>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  className="grid h-10 w-10 place-items-center rounded-full border border-red-200 bg-white text-secondary hover:bg-red-50 dark:border-red-900/60 dark:bg-red-950 dark:text-slate-200 dark:hover:bg-red-900/70"
+                  className={iconBtnClass}
                   aria-label="Close menu"
                 >
                   <X className="h-5 w-5" strokeWidth={2.25} />
                 </button>
               </div>
 
-              <div className="mt-4 grid gap-2">
+              <div className="mt-4 grid flex-1 gap-2">
                 {navItems.map((item) => (
                   <NavLink
                     key={item.to}
@@ -171,8 +171,8 @@ export default function Navbar() {
                       [
                         'rounded-xl px-3 py-3 text-base font-bold transition-colors',
                         isActive
-                          ? 'bg-primary/25 text-secondary ring-1 ring-primary/40 dark:bg-primary/30 dark:text-slate-100'
-                          : 'text-slate-700 hover:bg-slate-200/80 dark:text-slate-300 dark:hover:bg-slate-800'
+                          ? 'bg-white text-primary shadow-md'
+                          : 'text-white hover:bg-white/15'
                       ].join(' ')
                     }
                   >
@@ -181,7 +181,7 @@ export default function Navbar() {
                 ))}
                 <Link
                   to="/contact"
-                  className="mt-2 rounded-xl bg-primary px-4 py-3 text-center text-base font-extrabold text-white shadow-[0_2px_12px_rgba(198,40,40,0.35)] hover:brightness-110"
+                  className="mt-2 rounded-xl border border-white/25 bg-primary px-4 py-3 text-center text-base font-extrabold text-white shadow-[0_2px_14px_rgba(198,40,40,0.35)] hover:brightness-110"
                 >
                   Get a Quote
                 </Link>

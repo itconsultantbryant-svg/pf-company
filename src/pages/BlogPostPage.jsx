@@ -20,14 +20,14 @@ export default function BlogPostPage() {
       <Container className="py-12">
         <Link
           to="/blog"
-          className="inline-flex items-center gap-2 rounded-full border border-slate-400/60 bg-slate-100 px-4 py-2 text-sm font-extrabold text-secondary transition-colors hover:bg-slate-200/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-200 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 dark:focus-visible:ring-offset-slate-900"
+          className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-primary px-4 py-2 text-sm font-extrabold text-white shadow-md transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
         >
-          <ArrowLeft className="h-4 w-4" />
+          <ArrowLeft className="h-4 w-4 text-white" />
           Back to blog
         </Link>
 
         <motion.h1
-          className="mt-6 font-heading text-4xl font-extrabold tracking-tight text-secondary dark:text-slate-100 sm:text-5xl"
+          className="mt-6 font-heading text-4xl font-extrabold tracking-tight text-secondary dark:text-slate-900 sm:text-5xl"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -35,13 +35,13 @@ export default function BlogPostPage() {
           {post.title}
         </motion.h1>
 
-        <div className="mt-4 flex flex-wrap items-center gap-3 text-xs font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+        <div className="mt-4 flex flex-wrap items-center gap-3 text-xs font-extrabold uppercase tracking-wider text-slate-600">
           <span className="inline-flex items-center gap-1.5">
-            <Calendar className="h-4 w-4" aria-hidden="true" />
+            <Calendar className="h-4 w-4 text-primary" aria-hidden="true" />
             {formatDate(post.date)}
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <Clock className="h-4 w-4" aria-hidden="true" />
+            <Clock className="h-4 w-4 text-primary" aria-hidden="true" />
             {post.readingMinutes} min read
           </span>
           {post.tags.map((t) => (
@@ -53,7 +53,7 @@ export default function BlogPostPage() {
         </div>
 
         <motion.div
-          className="mt-8 rounded-3xl border border-red-200 bg-white p-6 shadow-sm sm:p-10 dark:border-red-900/60 dark:bg-red-950/70"
+          className="mt-8 rounded-3xl border border-white/20 bg-primary p-6 shadow-lg shadow-primary/25 sm:p-10"
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, ease: 'easeOut', delay: 0.05 }}
@@ -62,7 +62,7 @@ export default function BlogPostPage() {
             {post.content.map((para) => (
               <p
                 key={para}
-                className="text-sm font-semibold leading-relaxed text-slate-800 dark:text-slate-200 sm:text-base"
+                className="text-sm font-semibold leading-relaxed text-white/95 sm:text-base"
               >
                 {para}
               </p>

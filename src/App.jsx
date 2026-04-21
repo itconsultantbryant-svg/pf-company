@@ -46,10 +46,10 @@ export default function App() {
   }, [location.hash, location.pathname, reduceMotion]);
 
   return (
-    <div className="min-h-dvh bg-red-50 pb-24 text-slate-800 dark:bg-red-950 dark:text-slate-100 sm:pb-20">
+    <div className="min-h-dvh bg-white pb-24 text-slate-800 dark:bg-white dark:text-slate-900 sm:pb-20">
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-xl focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-extrabold focus:text-secondary focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary/40 dark:focus:bg-slate-800 dark:focus:text-slate-100"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-xl focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-extrabold focus:text-secondary focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary/40 dark:focus:bg-white dark:focus:text-slate-900"
       >
         Skip to content
       </a>
@@ -58,9 +58,9 @@ export default function App() {
         <Suspense
           fallback={
             <div className="mx-auto max-w-6xl px-4 py-20">
-              <div className="h-3 w-40 animate-pulse rounded-lg bg-slate-400/50 dark:bg-slate-600" />
-              <div className="mt-4 h-10 w-full animate-pulse rounded-lg bg-slate-400/40 dark:bg-slate-600/80" />
-              <div className="mt-4 h-10 w-2/3 animate-pulse rounded-lg bg-slate-400/35 dark:bg-slate-600/60" />
+              <div className="h-3 w-40 animate-pulse rounded-lg bg-slate-100 dark:bg-slate-100" />
+              <div className="mt-4 h-10 w-full animate-pulse rounded-lg bg-slate-100 dark:bg-slate-100" />
+              <div className="mt-4 h-10 w-2/3 animate-pulse rounded-lg bg-slate-50 dark:bg-slate-50" />
             </div>
           }
         >

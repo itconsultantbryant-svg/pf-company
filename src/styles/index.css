@@ -1,11 +1,20 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #C62828;
+  --color-gold: #FDB813;
+  --color-secondary: #0B3C5D;
+  --color-accent: #00A896;
+  --color-whatsapp: #25D366;
+}
+
 :root {
   color-scheme: light;
 }
 
 html.dark {
-  color-scheme: dark;
+  /* Keep UI chrome light so the site stays on a white canvas in both toggles */
+  color-scheme: light;
 }
 
 html {
@@ -17,15 +26,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Light: red + white palette base */
+/* Light: white page canvas; red lives on cards, buttons, and accents */
 html:not(.dark) body {
-  background: rgb(254 242 242); /* red-50 */
+  background: rgb(255 255 255);
   color: rgb(30 41 59);
 }
 
 html.dark body {
-  background: rgb(69 10 10); /* red-950 */
-  color: rgb(241 245 249);
+  background: rgb(255 255 255);
+  color: rgb(30 41 59);
 }
 
 ::selection {

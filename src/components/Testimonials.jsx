@@ -41,14 +41,15 @@ const testimonials = [
 export default function Testimonials() {
   const reduceMotion = useReducedMotion();
   return (
-    <section className="relative overflow-hidden" id="testimonials">
-      <Container className="py-20">
+    <section className="relative overflow-hidden bg-primary py-2" id="testimonials">
+      <Container className="py-24">
         <div className="flex flex-col gap-10">
           <SectionHeading
             eyebrow="Client references"
             title="Three verified references from recent projects."
             subtitle="Representative of Enersource Inc.'s capabilities, execution standards, and institutional client relationships."
             align="center"
+            tone="onPrimary"
           />
 
           <motion.div
@@ -56,42 +57,47 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.45, ease: 'easeOut' }}
-            className="rounded-3xl border border-red-200 bg-white p-6 shadow-sm dark:border-red-900/60 dark:bg-red-950/70"
+            className="rounded-3xl border border-white/20 bg-primary p-6 shadow-lg shadow-black/20"
           >
             <Swiper
               modules={[Autoplay, Pagination]}
               autoplay={
                 reduceMotion ? false : { delay: 4500, disableOnInteraction: false }
               }
-              pagination={{ clickable: true }}
+              pagination={{
+                clickable: true,
+                bulletClass: 'swiper-pagination-bullet !bg-white/35 !opacity-100',
+                bulletActiveClass: '!bg-white !w-6'
+              }}
               spaceBetween={16}
               slidesPerView={1}
               breakpoints={{
                 900: { slidesPerView: 2 }
               }}
+              className="testimonials-swiper pb-10 [&_.swiper-pagination]:!bottom-0"
             >
               {testimonials.map((t) => (
                 <SwiperSlide key={t.quote}>
-                  <article className="h-full rounded-2xl border border-red-200 bg-red-50 p-6 dark:border-red-900/60 dark:bg-red-950/50">
+                  <article className="h-full rounded-2xl border border-white/20 bg-primary p-6 shadow-md shadow-black/15">
                     <div className="flex items-center justify-between">
-                      <div className="text-xs font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                      <div className="text-xs font-extrabold uppercase tracking-wider text-white/75">
                         {t.org} • {t.location}
                       </div>
-                      <Quote className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Quote className="h-5 w-5 text-gold" aria-hidden="true" />
                     </div>
-                    <p className="mt-4 text-sm font-semibold leading-relaxed text-slate-800 dark:text-slate-200">
+                    <p className="mt-4 text-sm font-semibold leading-relaxed text-white/95">
                       “{t.quote}”
                     </p>
-                    <div className="mt-5 font-heading text-sm font-extrabold text-slate-900 dark:text-slate-100">
+                    <div className="mt-5 font-heading text-sm font-extrabold text-white">
                       {t.name}
                     </div>
-                    <div className="mt-3 grid gap-2 text-sm font-semibold text-slate-700 dark:text-slate-300">
-                      <a className="inline-flex items-center gap-2 hover:underline" href={`tel:${t.phone.replace(/\\s/g, '')}`}>
-                        <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
+                    <div className="mt-3 grid gap-2 text-sm font-semibold text-white/90">
+                      <a className="inline-flex items-center gap-2 text-white underline-offset-4 hover:underline" href={`tel:${t.phone.replace(/\\s/g, '')}`}>
+                        <Phone className="h-4 w-4 text-gold" aria-hidden="true" />
                         {t.phone}
                       </a>
-                      <a className="inline-flex items-center gap-2 hover:underline" href={`mailto:${t.email}`}>
-                        <Mail className="h-4 w-4 text-primary" aria-hidden="true" />
+                      <a className="inline-flex items-center gap-2 text-white underline-offset-4 hover:underline" href={`mailto:${t.email}`}>
+                        <Mail className="h-4 w-4 text-gold" aria-hidden="true" />
                         {t.email}
                       </a>
                     </div>

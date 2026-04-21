@@ -37,17 +37,17 @@ export default function ProjectGallerySlider() {
 
   return (
     <section
-      className="border-b border-red-200 bg-white py-10 dark:border-red-900/60 dark:bg-red-950 sm:py-12"
+      className="border-b border-slate-200 bg-white py-10 dark:border-slate-200 dark:bg-white sm:py-12"
       aria-label="Project photography"
     >
       <Container>
-        <p className="mb-4 text-center text-xs font-extrabold uppercase tracking-wider text-secondary dark:text-slate-300">
-          Gallery
-        </p>
-        <h2 className="mb-6 text-center font-heading text-xl font-extrabold text-secondary dark:text-slate-100 sm:text-2xl">
-          Recent deployments & sites
-        </h2>
-        <div className="overflow-hidden rounded-2xl border border-red-200 bg-white shadow-glow dark:border-red-900/60 dark:bg-red-950/70">
+        <div className="mb-6 rounded-2xl border border-white/25 bg-primary px-5 py-5 text-center shadow-lg shadow-primary/30 sm:px-8 sm:py-6">
+          <p className="text-xs font-extrabold uppercase tracking-wider text-white/90">Gallery</p>
+          <h2 className="mt-1 font-heading text-xl font-extrabold text-white sm:text-2xl">
+            Recent deployments & sites
+          </h2>
+        </div>
+        <div className="overflow-hidden rounded-2xl border border-white/25 bg-primary shadow-lg shadow-primary/25">
           <Swiper
             modules={[Autoplay, EffectFade, Navigation, Pagination]}
             effect="fade"
@@ -66,20 +66,26 @@ export default function ProjectGallerySlider() {
             }
             pagination={{
               clickable: true,
-              bulletClass:
-                'swiper-pagination-bullet !bg-secondary/25 !opacity-100',
-              bulletActiveClass: '!bg-primary !w-6'
+              bulletClass: 'swiper-pagination-bullet !bg-white/35 !opacity-100',
+              bulletActiveClass: '!bg-white !w-6'
             }}
             navigation
-            className="project-gallery-swiper [&_.swiper-button-next]:text-secondary [&_.swiper-button-prev]:text-secondary dark:[&_.swiper-button-next]:text-slate-200 dark:[&_.swiper-button-prev]:text-slate-200 [&_.swiper-pagination]:!bottom-3"
+            className="project-gallery-swiper [&_.swiper-button-next]:text-white [&_.swiper-button-prev]:text-white [&_.swiper-pagination]:!bottom-3"
           >
             {slides.map((s) => (
               <SwiperSlide key={s.src}>
-                <div className="flex min-h-[220px] w-full items-center justify-center bg-red-50 py-4 dark:bg-red-950/60 sm:min-h-[300px] md:min-h-[380px]">
+                <div className="relative flex min-h-[220px] w-full items-center justify-center overflow-hidden bg-red-50 py-4 sm:min-h-[300px] md:min-h-[380px]">
+                  <div className="pointer-events-none absolute inset-0 bg-primary/25" aria-hidden="true" />
+                  <div
+                    className="pointer-events-none absolute inset-0 scale-110 bg-cover bg-center opacity-45 blur-md mix-blend-multiply"
+                    style={{ backgroundImage: `url("${s.src}")` }}
+                    aria-hidden="true"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/15 via-red-100/40 to-primary/20" />
                   <img
                     src={s.src}
                     alt={s.alt}
-                    className="max-h-[min(70vh,720px)] w-full object-contain"
+                    className="relative z-10 max-h-[min(70vh,720px)] w-full object-contain drop-shadow-[0_12px_32px_rgba(198,40,40,0.22)]"
                     loading={s.src === p1 ? 'eager' : 'lazy'}
                     decoding="async"
                   />

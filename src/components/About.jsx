@@ -15,7 +15,7 @@ const values = [
 export default function About() {
   return (
     <section className="relative overflow-hidden" id="about">
-      <Container className="py-20">
+      <Container className="py-24">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
             <SectionHeading
@@ -45,16 +45,16 @@ export default function About() {
               ].map((b, idx) => (
                 <motion.div
                   key={b.title}
-                  className="rounded-2xl border border-slate-400/50 bg-slate-100 dark:border-slate-600 dark:bg-slate-800/80 p-5"
+                  className="rounded-2xl border border-white/20 bg-primary p-5 shadow-md shadow-primary/20"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.6 }}
                   transition={{ duration: 0.45, ease: 'easeOut', delay: idx * 0.04 }}
                 >
-                  <div className="font-heading text-sm font-extrabold text-slate-950">
+                  <div className="font-heading text-sm font-extrabold text-secondary dark:text-slate-900">
                     {b.title}
                   </div>
-                  <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700 dark:text-slate-300">
+                  <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700 dark:text-slate-700">
                     {b.text}
                   </p>
                 </motion.div>
@@ -64,18 +64,18 @@ export default function About() {
 
           <div className="relative">
             <motion.div
-              className="rounded-3xl border border-slate-400/50 bg-slate-100/90 p-6 shadow-glow backdrop-blur dark:border-slate-600 dark:bg-slate-800/80"
+              className="rounded-3xl border border-white/25 bg-primary p-6 shadow-lg shadow-primary/25 backdrop-blur"
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
             >
               <div className="grid gap-6">
-                <div className="grid gap-3 rounded-2xl border border-slate-400/50 bg-slate-100 dark:border-slate-600 dark:bg-slate-800/80 p-5">
-                  <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <div className="grid gap-3 rounded-2xl border border-white/20 bg-primary p-5 shadow-sm shadow-black/10">
+                  <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-white/75">
                     Vision
                   </div>
-                  <div className="text-lg font-extrabold text-slate-950">
+                  <div className="text-lg font-extrabold text-white">
                     To provide the most compelling value in the solar energy industry — designing and
                     installing the highest quality solar energy systems, on time, safely, with high
                     customer satisfaction, at the lowest possible cost. We are fully committed to
@@ -83,44 +83,44 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="grid gap-3 rounded-2xl border border-slate-400/50 bg-slate-100 dark:border-slate-600 dark:bg-slate-800/80 p-5">
-                  <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <div className="grid gap-3 rounded-2xl border border-white/20 bg-primary p-5 shadow-sm shadow-black/10">
+                  <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-white/75">
                     Mission
                   </div>
-                  <ul className="grid gap-2 text-sm font-semibold text-slate-700 dark:text-slate-300">
+                  <ul className="grid gap-2 text-sm font-semibold text-white/90">
                     <li className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true" />
                       Advancing the renewable energy industry by serving our clients and creating measurable value for them.
                     </li>
                     <li className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true" />
                       Driving the large-scale utilization of renewable energy and photovoltaic systems with entrepreneurial commitment, investing our own resources and sharing knowledge with local installers.
                     </li>
                     <li className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true" />
                       Providing unparalleled value that accelerates the adoption of solar energy systems, delivering clean, abundant, low-cost, and distributed energy to customers, communities, and our nation.
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                  <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-white/75">
                     Core values
                   </div>
                   <div className="mt-3 grid gap-3 sm:grid-cols-2">
                     {values.map((v, idx) => (
                       <motion.div
                         key={v.title}
-                        className="group flex items-center gap-3 rounded-2xl border border-slate-400/50 bg-slate-100 dark:border-slate-600 dark:bg-slate-800/80 p-4 transition-transform hover:-translate-y-0.5"
+                        className="group flex items-center gap-3 rounded-2xl border border-white/20 bg-primary p-4 shadow-sm shadow-black/10 transition-transform hover:-translate-y-0.5"
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.6 }}
                         transition={{ duration: 0.45, ease: 'easeOut', delay: 0.05 + idx * 0.04 }}
                       >
-                        <div className="grid h-10 w-10 place-items-center rounded-xl bg-primary/15 text-primary">
+                        <div className="grid h-10 w-10 place-items-center rounded-xl bg-white/15 text-gold ring-1 ring-white/20">
                           {v.icon}
                         </div>
-                        <div className="font-heading text-sm font-extrabold text-slate-900 dark:text-slate-100">
+                        <div className="font-heading text-sm font-extrabold text-white">
                           {v.title}
                         </div>
                       </motion.div>

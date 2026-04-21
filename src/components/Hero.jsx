@@ -9,22 +9,22 @@ export default function Hero() {
     <section className="relative overflow-hidden" id="hero">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_10%,rgba(253,184,19,0.28),transparent_60%),radial-gradient(60%_50%_at_10%_40%,rgba(0,168,150,0.2),transparent_55%),radial-gradient(60%_50%_at_90%_45%,rgba(11,60,93,0.3),transparent_55%)] dark:opacity-80"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_10%,rgba(253,184,19,0.28),transparent_60%),radial-gradient(60%_50%_at_10%_40%,rgba(0,168,150,0.2),transparent_55%),radial-gradient(60%_50%_at_90%_45%,rgba(11,60,93,0.3),transparent_55%)] opacity-70 dark:opacity-35"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-slate-300/30 dark:bg-slate-950/50"
+        className="pointer-events-none absolute inset-0 bg-white/80 dark:bg-white"
       />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent dark:via-primary/60"
       />
 
-      <Container className="relative py-20 sm:py-24">
+      <Container className="relative py-20 sm:py-24 lg:py-28">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>
             <motion.p
-              className="inline-flex items-center gap-2 rounded-full border border-slate-400/60 bg-slate-100 px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-secondary shadow-sm dark:border-slate-600 dark:bg-slate-800/90 dark:text-slate-200"
+              className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-primary px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-white shadow-sm"
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: 'easeOut' }}
@@ -34,7 +34,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.h1
-              className="mt-5 font-heading text-4xl font-extrabold leading-[1.05] tracking-tight text-secondary dark:text-slate-100 sm:text-5xl"
+              className="mt-5 font-heading text-4xl font-extrabold leading-[1.05] tracking-tight text-secondary dark:text-slate-900 sm:text-5xl"
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, ease: 'easeOut', delay: 0.05 }}
@@ -43,7 +43,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p
-              className="mt-5 max-w-xl text-base font-semibold leading-relaxed text-slate-700 dark:text-slate-300 sm:text-lg"
+              className="mt-5 max-w-xl text-base font-semibold leading-relaxed text-slate-700 dark:text-slate-700 sm:text-lg"
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, ease: 'easeOut', delay: 0.12 }}
@@ -61,13 +61,13 @@ export default function Hero() {
             >
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-extrabold text-white shadow-[0_2px_14px_rgba(198,40,40,0.35)] transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-300 active:brightness-95 dark:focus-visible:ring-offset-slate-900"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-extrabold text-white shadow-[0_2px_14px_rgba(198,40,40,0.35)] transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:brightness-95 dark:focus-visible:ring-offset-white"
               >
                 Get a Quote <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center justify-center rounded-xl border border-slate-400/70 bg-slate-100 px-5 py-3 text-sm font-extrabold text-secondary shadow-sm transition-colors hover:border-slate-500 hover:bg-slate-200/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-300 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 dark:focus-visible:ring-offset-slate-900"
+                className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-primary px-5 py-3 text-sm font-extrabold text-white shadow-[0_2px_14px_rgba(198,40,40,0.35)] transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               >
                 Our Services
               </Link>
@@ -105,15 +105,15 @@ export default function Hero() {
                     hidden: { opacity: 0, y: 10 },
                     show: { opacity: 1, y: 0 }
                   }}
-                  className="rounded-2xl border border-slate-400/50 bg-slate-100 p-4 shadow-sm dark:border-slate-600 dark:bg-slate-800/80"
+                  className="rounded-2xl border border-white/20 bg-primary p-4 shadow-lg shadow-primary/25"
                 >
-                  <div className="flex items-center gap-2 text-secondary dark:text-slate-100">
-                    <div className="grid h-9 w-9 place-items-center rounded-xl bg-primary/15 text-primary dark:bg-primary/25">
+                  <div className="flex items-center gap-2 text-white">
+                    <div className="grid h-9 w-9 place-items-center rounded-xl bg-white/15 text-gold ring-1 ring-white/20">
                       {f.icon}
                     </div>
                     <div className="font-heading text-sm font-extrabold">{f.title}</div>
                   </div>
-                  <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700 dark:text-slate-300">
+                  <p className="mt-2 text-sm font-semibold leading-relaxed text-white/90">
                     {f.text}
                   </p>
                 </motion.div>
@@ -127,10 +127,10 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.05 }}
           >
-            <div className="relative overflow-hidden rounded-3xl border border-slate-400/50 bg-slate-100 p-6 shadow-glow dark:border-slate-600 dark:bg-slate-800/90">
+            <div className="relative overflow-hidden rounded-3xl border border-white/25 bg-primary p-6 shadow-lg shadow-primary/30">
               <div
                 aria-hidden="true"
-                className="absolute inset-0 bg-[radial-gradient(60%_60%_at_20%_20%,rgba(253,184,19,0.30),transparent_60%),radial-gradient(60%_60%_at_80%_30%,rgba(0,168,150,0.18),transparent_60%)]"
+                className="absolute inset-0 bg-[radial-gradient(60%_60%_at_20%_20%,rgba(255,255,255,0.12),transparent_60%),radial-gradient(60%_60%_at_80%_30%,rgba(253,184,19,0.15),transparent_60%)]"
               />
 
               <div className="relative">

@@ -42,7 +42,7 @@ const projects = [
 export default function Projects() {
   return (
     <section className="relative overflow-hidden" id="projects">
-      <Container className="py-20">
+      <Container className="py-24">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading
@@ -52,7 +52,7 @@ export default function Projects() {
             />
             <Link
               to="/projects"
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-400/70 bg-slate-200/80 px-5 py-3 text-sm font-extrabold text-secondary transition-colors hover:bg-slate-300/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-300 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 dark:focus-visible:ring-offset-slate-900"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-primary px-5 py-3 text-sm font-extrabold text-white shadow-[0_2px_14px_rgba(198,40,40,0.35)] transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
               View projects <ArrowUpRight className="h-4 w-4" />
             </Link>
@@ -61,7 +61,7 @@ export default function Projects() {
           <div className="relative">
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute left-4 top-0 hidden h-full w-px bg-gradient-to-b from-transparent via-red-200 to-transparent sm:block lg:left-1/2 dark:via-red-900/60"
+              className="pointer-events-none absolute left-4 top-0 hidden h-full w-px bg-gradient-to-b from-transparent via-primary/35 to-transparent sm:block lg:left-1/2"
             />
 
             <div className="grid gap-6">
@@ -81,28 +81,28 @@ export default function Projects() {
 
                       <div
                         className={[
-                          'relative rounded-3xl border border-red-200 bg-white p-6 shadow-sm dark:border-red-900/60 dark:bg-red-950/70',
+                          'relative rounded-3xl border border-white/20 bg-primary p-6 shadow-lg shadow-primary/25',
                           isRight ? 'lg:col-start-2' : 'lg:col-start-1'
                         ].join(' ')}
                       >
                         <div
                           aria-hidden="true"
-                          className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(60%_60%_at_20%_20%,rgba(11,60,93,0.16),transparent_60%),radial-gradient(60%_60%_at_80%_20%,rgba(253,184,19,0.18),transparent_60%)]"
+                          className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(60%_60%_at_20%_20%,rgba(255,255,255,0.1),transparent_60%),radial-gradient(60%_60%_at_80%_20%,rgba(253,184,19,0.12),transparent_60%)]"
                         />
 
                         <div className="relative">
                           <div className="flex items-start justify-between gap-3">
                             <div className="flex items-center gap-3">
-                              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/15 text-primary">
+                              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white/15 text-gold ring-1 ring-white/20">
                                 {p.icon}
                               </div>
                               <div>
-                                <h3 className="font-heading text-lg font-extrabold text-secondary dark:text-slate-100">
+                                <h3 className="font-heading text-lg font-extrabold text-white">
                                   {p.title}
                                 </h3>
-                                <div className="mt-1 flex flex-wrap items-center gap-3 text-sm font-semibold text-slate-700 dark:text-slate-300">
+                                <div className="mt-1 flex flex-wrap items-center gap-3 text-sm font-semibold text-white/90">
                                   <span className="inline-flex items-center gap-1.5">
-                                    <MapPin className="h-4 w-4 text-primary" aria-hidden="true" />
+                                    <MapPin className="h-4 w-4 text-gold" aria-hidden="true" />
                                     {p.location}
                                   </span>
                                   <span className="inline-flex items-center gap-1.5">
@@ -113,34 +113,34 @@ export default function Projects() {
                               </div>
                             </div>
 
-                            <div className="shrink-0 rounded-full border border-slate-400/60 bg-slate-200/80 px-3 py-1 text-xs font-extrabold text-slate-800 dark:border-slate-600 dark:bg-slate-700/80 dark:text-slate-200">
+                            <div className="shrink-0 rounded-full border border-white/30 bg-primary px-3 py-1 text-xs font-extrabold text-white">
                               {p.year}
                             </div>
                           </div>
 
-                          <p className="mt-4 text-sm font-semibold leading-relaxed text-slate-700 dark:text-slate-300">
+                          <p className="mt-4 text-sm font-semibold leading-relaxed text-white/90">
                             {p.summary}
                           </p>
 
                           <dl className="mt-5 grid gap-3 sm:grid-cols-2">
-                            <div className="rounded-2xl border border-red-200 bg-red-50 p-4 dark:border-red-900/60 dark:bg-red-950/50">
-                              <dt className="text-xs font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                            <div className="rounded-2xl border border-white/20 bg-primary p-4 shadow-sm shadow-black/10">
+                              <dt className="text-xs font-extrabold uppercase tracking-wider text-white/75">
                                 Project value
                               </dt>
-                              <dd className="mt-1 text-sm font-extrabold text-secondary dark:text-slate-100">
+                              <dd className="mt-1 text-sm font-extrabold text-white">
                                 {p.value}
                               </dd>
                             </div>
-                            <div className="rounded-2xl border border-red-200 bg-red-50 p-4 dark:border-red-900/60 dark:bg-red-950/50">
-                              <dt className="text-xs font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                            <div className="rounded-2xl border border-white/20 bg-primary p-4 shadow-sm shadow-black/10">
+                              <dt className="text-xs font-extrabold uppercase tracking-wider text-white/75">
                                 Highlights
                               </dt>
                               <dd className="mt-1">
-                                <ul className="grid gap-1 text-sm font-semibold text-slate-700 dark:text-slate-300">
+                                <ul className="grid gap-1 text-sm font-semibold text-white/90">
                                   {p.highlights.map((h) => (
                                     <li key={h} className="flex gap-2">
                                       <span
-                                        className="mt-2 h-1.5 w-1.5 rounded-full bg-primary"
+                                        className="mt-2 h-1.5 w-1.5 rounded-full bg-gold"
                                         aria-hidden="true"
                                       />
                                       {h}
@@ -158,8 +158,8 @@ export default function Projects() {
                       aria-hidden="true"
                       className="absolute left-4 top-8 hidden -translate-x-1/2 sm:block lg:left-1/2"
                     >
-                      <div className="grid h-9 w-9 place-items-center rounded-full border border-slate-400/60 bg-slate-200/80 shadow-sm dark:border-slate-600 dark:bg-slate-800">
-                        <div className="h-2.5 w-2.5 rounded-full bg-primary" />
+                      <div className="grid h-9 w-9 place-items-center rounded-full border border-white/30 bg-primary shadow-md shadow-primary/30">
+                        <div className="h-2.5 w-2.5 rounded-full bg-white" />
                       </div>
                     </div>
                   </motion.article>

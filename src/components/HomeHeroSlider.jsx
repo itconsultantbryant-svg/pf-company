@@ -27,7 +27,7 @@ export default function HomeHeroSlider() {
 
   return (
     <section
-      className="relative border-b border-red-200 bg-white dark:border-red-900/60 dark:bg-red-950"
+      className="relative border-b border-slate-200 bg-white dark:border-slate-200 dark:bg-white"
       aria-label="Featured project photography"
     >
       <div className="relative w-full overflow-hidden">
@@ -49,19 +49,29 @@ export default function HomeHeroSlider() {
           }
           pagination={{
             clickable: true,
-            bulletClass: 'swiper-pagination-bullet !bg-secondary/35 !opacity-100',
-            bulletActiveClass: '!bg-primary !w-6'
+            bulletClass: 'swiper-pagination-bullet !bg-white/40 !opacity-100',
+            bulletActiveClass: '!bg-white !w-6'
           }}
           navigation
-          className="home-hero-swiper [&_.swiper-button-next]:text-secondary [&_.swiper-button-prev]:text-secondary dark:[&_.swiper-button-next]:text-slate-200 dark:[&_.swiper-button-prev]:text-slate-200 [&_.swiper-pagination]:!bottom-4"
+          className="home-hero-swiper [&_.swiper-button-next]:text-primary [&_.swiper-button-prev]:text-primary [&_.swiper-pagination]:!bottom-4"
         >
           {slides.map((s) => (
             <SwiperSlide key={s.src}>
-              <div className="flex min-h-[260px] w-full items-center justify-center bg-red-50 py-4 dark:bg-red-950/60 sm:min-h-[320px] md:min-h-[420px] md:py-6">
+              <div className="relative flex min-h-[260px] w-full items-center justify-center overflow-hidden bg-red-50 py-4 sm:min-h-[320px] md:min-h-[420px] md:py-6">
+                <div
+                  className="pointer-events-none absolute inset-0 bg-primary/25"
+                  aria-hidden="true"
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 scale-110 bg-cover bg-center opacity-45 blur-md mix-blend-multiply"
+                  style={{ backgroundImage: `url("${s.src}")` }}
+                  aria-hidden="true"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/15 via-red-100/40 to-primary/20" />
                 <img
                   src={s.src}
                   alt={s.alt}
-                  className="max-h-[min(75vh,800px)] w-full object-contain"
+                  className="relative z-10 max-h-[min(75vh,800px)] w-full object-contain drop-shadow-[0_12px_32px_rgba(198,40,40,0.22)]"
                   loading={s.src === home1 ? 'eager' : 'lazy'}
                   decoding="async"
                 />
