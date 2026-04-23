@@ -9,6 +9,7 @@ import WhatsAppButton from './components/WhatsAppButton.jsx';
 const Home = lazy(() => import('./pages/Home.jsx'));
 const AboutPage = lazy(() => import('./pages/AboutPage.jsx'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage.jsx'));
+const ProductsPage = lazy(() => import('./pages/ProductsPage.jsx'));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage.jsx'));
 const ContactPage = lazy(() => import('./pages/ContactPage.jsx'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage.jsx'));
@@ -46,10 +47,10 @@ export default function App() {
   }, [location.hash, location.pathname, reduceMotion]);
 
   return (
-    <div className="min-h-dvh bg-white pb-24 text-slate-800 dark:bg-white dark:text-slate-900 sm:pb-20">
+    <div className="min-h-dvh bg-white pb-24 text-primary sm:pb-20">
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-xl focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-extrabold focus:text-secondary focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary/40 dark:focus:bg-white dark:focus:text-slate-900"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-xl focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-extrabold focus:text-primary focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary/40"
       >
         Skip to content
       </a>
@@ -57,10 +58,10 @@ export default function App() {
       <main id="main-content" tabIndex={-1}>
         <Suspense
           fallback={
-            <div className="mx-auto max-w-6xl px-4 py-20">
-              <div className="h-3 w-40 animate-pulse rounded-lg bg-slate-100 dark:bg-slate-100" />
-              <div className="mt-4 h-10 w-full animate-pulse rounded-lg bg-slate-100 dark:bg-slate-100" />
-              <div className="mt-4 h-10 w-2/3 animate-pulse rounded-lg bg-slate-50 dark:bg-slate-50" />
+            <div className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
+              <div className="h-3 w-40 animate-pulse rounded-lg bg-primary/20" />
+              <div className="mt-4 h-10 w-full animate-pulse rounded-lg bg-primary/20" />
+              <div className="mt-4 h-10 w-2/3 animate-pulse rounded-lg bg-primary/10" />
             </div>
           }
         >
@@ -87,6 +88,14 @@ export default function App() {
                 element={
                   <PageShell>
                     <ServicesPage />
+                  </PageShell>
+                }
+              />
+              <Route
+                path="/products"
+                element={
+                  <PageShell>
+                    <ProductsPage />
                   </PageShell>
                 }
               />

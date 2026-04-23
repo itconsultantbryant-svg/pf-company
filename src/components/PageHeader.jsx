@@ -12,9 +12,9 @@ export default function PageHeader({ eyebrow, title, subtitle }) {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-white/85 dark:bg-white"
       />
-      <Container className="relative py-14 sm:py-16">
+      <Container className="relative py-16 sm:py-20">
         <motion.p
-          className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-primary px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-white shadow-sm"
+          className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-primary shadow-sm"
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, ease: 'easeOut' }}
@@ -23,7 +23,7 @@ export default function PageHeader({ eyebrow, title, subtitle }) {
           {eyebrow}
         </motion.p>
         <motion.h1
-          className="mt-4 font-heading text-4xl font-extrabold tracking-tight text-secondary dark:text-slate-900 sm:text-5xl"
+          className="mt-4 font-heading text-4xl font-extrabold tracking-tight text-primary sm:text-5xl"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: 'easeOut', delay: 0.05 }}
@@ -32,7 +32,7 @@ export default function PageHeader({ eyebrow, title, subtitle }) {
         </motion.h1>
         {subtitle ? (
           <motion.p
-            className="mt-4 max-w-3xl text-base font-semibold leading-relaxed text-slate-700 dark:text-slate-700 sm:text-lg"
+            className="mt-4 max-w-3xl text-base font-semibold leading-relaxed text-primary/85 sm:text-lg"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, ease: 'easeOut', delay: 0.1 }}

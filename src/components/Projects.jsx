@@ -81,7 +81,7 @@ export default function Projects() {
 
                       <div
                         className={[
-                          'relative rounded-3xl border border-white/20 bg-primary p-6 shadow-lg shadow-primary/25',
+                          'relative rounded-3xl border border-primary/15 bg-white p-6 shadow-sm',
                           isRight ? 'lg:col-start-2' : 'lg:col-start-1'
                         ].join(' ')}
                       >
@@ -97,10 +97,10 @@ export default function Projects() {
                                 {p.icon}
                               </div>
                               <div>
-                                <h3 className="font-heading text-lg font-extrabold text-white">
+                                <h3 className="font-heading text-lg font-extrabold text-primary">
                                   {p.title}
                                 </h3>
-                                <div className="mt-1 flex flex-wrap items-center gap-3 text-sm font-semibold text-white/90">
+                                <div className="mt-1 flex flex-wrap items-center gap-3 text-sm font-semibold text-slate-700">
                                   <span className="inline-flex items-center gap-1.5">
                                     <MapPin className="h-4 w-4 text-gold" aria-hidden="true" />
                                     {p.location}
@@ -113,30 +113,30 @@ export default function Projects() {
                               </div>
                             </div>
 
-                            <div className="shrink-0 rounded-full border border-white/30 bg-primary px-3 py-1 text-xs font-extrabold text-white">
+                            <div className="shrink-0 rounded-full border border-white/30 bg-white px-3 py-1 text-xs font-extrabold text-primary border border-primary/20">
                               {p.year}
                             </div>
                           </div>
 
-                          <p className="mt-4 text-sm font-semibold leading-relaxed text-white/90">
+                          <p className="mt-4 text-sm font-semibold leading-relaxed text-slate-700">
                             {p.summary}
                           </p>
 
                           <dl className="mt-5 grid gap-3 sm:grid-cols-2">
-                            <div className="rounded-2xl border border-white/20 bg-primary p-4 shadow-sm shadow-black/10">
-                              <dt className="text-xs font-extrabold uppercase tracking-wider text-white/75">
+                            <div className="rounded-2xl border border-primary/15 bg-white p-4 shadow-sm">
+                              <dt className="text-xs font-extrabold uppercase tracking-wider text-primary/75">
                                 Project value
                               </dt>
-                              <dd className="mt-1 text-sm font-extrabold text-white">
+                              <dd className="mt-1 text-sm font-extrabold text-primary">
                                 {p.value}
                               </dd>
                             </div>
-                            <div className="rounded-2xl border border-white/20 bg-primary p-4 shadow-sm shadow-black/10">
-                              <dt className="text-xs font-extrabold uppercase tracking-wider text-white/75">
+                            <div className="rounded-2xl border border-primary/15 bg-white p-4 shadow-sm">
+                              <dt className="text-xs font-extrabold uppercase tracking-wider text-primary/75">
                                 Highlights
                               </dt>
                               <dd className="mt-1">
-                                <ul className="grid gap-1 text-sm font-semibold text-white/90">
+                                <ul className="grid gap-1 text-sm font-semibold text-slate-700">
                                   {p.highlights.map((h) => (
                                     <li key={h} className="flex gap-2">
                                       <span

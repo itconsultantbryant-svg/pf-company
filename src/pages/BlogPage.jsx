@@ -20,12 +20,12 @@ export default function BlogPage() {
       />
 
       <section>
-        <Container className="py-16">
+        <Container className="py-20">
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((p, idx) => (
               <motion.article
                 key={p.slug}
-                className="group relative overflow-hidden rounded-3xl border border-white/20 bg-primary p-6 shadow-lg shadow-primary/25 transition-transform hover:-translate-y-1"
+                className="group relative overflow-hidden rounded-3xl border border-primary/15 bg-white p-6 shadow-sm transition-transform hover:-translate-y-1"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.35 }}
@@ -36,7 +36,7 @@ export default function BlogPage() {
                   className="pointer-events-none absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(70%_60%_at_20%_20%,rgba(253,184,19,0.22),transparent_60%),radial-gradient(70%_60%_at_80%_20%,rgba(0,168,150,0.16),transparent_60%)]"
                 />
                 <div className="relative">
-                  <div className="flex flex-wrap items-center gap-3 text-xs font-extrabold uppercase tracking-wider text-white/75">
+                  <div className="flex flex-wrap items-center gap-3 text-xs font-extrabold uppercase tracking-wider text-primary/70">
                     <span className="inline-flex items-center gap-1.5">
                       <Calendar className="h-4 w-4 text-gold" aria-hidden="true" />
                       {formatDate(p.date)}
@@ -47,7 +47,7 @@ export default function BlogPage() {
                     </span>
                   </div>
 
-                  <h2 className="mt-3 font-heading text-lg font-extrabold text-white">
+                  <h2 className="mt-3 font-heading text-lg font-extrabold text-primary">
                     <Link
                       to={`/blog/${p.slug}`}
                       className="outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
@@ -56,7 +56,7 @@ export default function BlogPage() {
                     </Link>
                   </h2>
 
-                  <p className="mt-2 text-sm font-semibold leading-relaxed text-white/90">
+                  <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700">
                     {p.excerpt}
                   </p>
 
@@ -64,7 +64,7 @@ export default function BlogPage() {
                     {p.tags.map((t) => (
                       <span
                         key={t}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-extrabold text-white"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-primary/15 bg-primary/10 px-3 py-1 text-xs font-extrabold text-primary"
                       >
                         <Tag className="h-3.5 w-3.5 text-gold" aria-hidden="true" />
                         {t}

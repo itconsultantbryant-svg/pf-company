@@ -10,6 +10,7 @@ const navItems = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
+  { to: '/products', label: 'Products' },
   { to: '/projects', label: 'Projects' },
   { to: '/gallery', label: 'Gallery' },
   { to: '/blog', label: 'Blog' },
@@ -17,7 +18,7 @@ const navItems = [
 ];
 
 const iconBtnClass =
-  'grid h-10 w-10 place-items-center rounded-full border border-white/35 bg-white/15 text-white shadow-sm transition hover:bg-white/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-primary';
+  'grid h-10 w-10 place-items-center rounded-full border border-primary/20 bg-white text-primary shadow-sm transition hover:bg-primary/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -42,20 +43,20 @@ export default function Navbar() {
       ({ isActive }) =>
         [
           'rounded-full px-3 py-2 text-sm font-extrabold tracking-tight transition-colors',
-          'focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-primary',
+          'focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white',
           isActive
-            ? 'bg-white text-primary shadow-md'
-            : 'text-white hover:bg-white/15'
+            ? 'bg-primary text-white shadow-sm'
+            : 'text-primary hover:bg-primary/10'
         ].join(' '),
     []
   );
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/20 bg-primary shadow-md shadow-black/15">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white shadow-sm">
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between gap-3 px-4 lg:px-6">
         <Link
           to="/"
-          className="group flex items-center gap-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+          className="group flex items-center gap-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
           aria-label="Enersource Inc. home"
         >
           <img
@@ -65,10 +66,10 @@ export default function Navbar() {
             loading="eager"
           />
           <div className="leading-tight">
-            <div className="font-heading text-sm font-extrabold tracking-tight text-white">
+            <div className="font-heading text-sm font-extrabold tracking-tight text-primary">
               Enersource Inc.
             </div>
-            <div className="text-xs font-semibold text-white/85">
+            <div className="text-xs font-semibold text-primary/80">
               Source of Africa’s Energy
             </div>
           </div>
@@ -90,7 +91,7 @@ export default function Navbar() {
           </button>
           <Link
             to="/contact"
-            className="ml-2 rounded-full border border-white/25 bg-primary px-4 py-2 text-sm font-extrabold text-white shadow-[0_2px_14px_rgba(198,40,40,0.35)] transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary active:brightness-95"
+            className="ml-2 rounded-full border border-primary/20 bg-primary px-4 py-2 text-sm font-extrabold text-white shadow-sm transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:brightness-95"
           >
             Get a Quote
           </Link>
@@ -135,7 +136,7 @@ export default function Navbar() {
               id="mobile-nav"
               role="dialog"
               aria-modal="true"
-              className="fixed right-0 top-0 z-[60] flex h-dvh w-[86%] max-w-sm flex-col overflow-y-auto border-l border-white/20 bg-primary p-4 text-white shadow-2xl"
+              className="fixed right-0 top-0 z-[60] flex h-dvh w-[86%] max-w-sm flex-col overflow-y-auto border-l border-slate-200 bg-white p-4 text-primary shadow-2xl"
               initial={{ x: 40, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: 40, opacity: 0 }}
@@ -148,7 +149,7 @@ export default function Navbar() {
                     alt=""
                     className="h-9 w-9 rounded-lg object-cover ring-2 ring-white/40"
                   />
-                  <div className="font-heading text-sm font-extrabold text-white">
+                  <div className="font-heading text-sm font-extrabold text-primary">
                     Enersource Inc.
                   </div>
                 </div>
@@ -171,8 +172,8 @@ export default function Navbar() {
                       [
                         'rounded-xl px-3 py-3 text-base font-bold transition-colors',
                         isActive
-                          ? 'bg-white text-primary shadow-md'
-                          : 'text-white hover:bg-white/15'
+                          ? 'bg-primary text-white shadow-sm'
+                          : 'text-primary hover:bg-primary/10'
                       ].join(' ')
                     }
                   >

@@ -71,34 +71,34 @@ export default function Contact() {
             />
 
             <div className="mt-8 grid gap-4">
-              <div className="rounded-2xl border border-white/20 bg-primary p-5 shadow-md shadow-primary/20">
+              <div className="rounded-2xl border border-primary/15 bg-white p-5 shadow-sm">
                 <div className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-white">Address</div>
-                    <div className="mt-1 text-sm font-semibold text-white/90">
+                    <div className="font-heading text-sm font-extrabold text-primary">Address</div>
+                    <div className="mt-1 text-sm font-semibold text-slate-700">
                       Rehab Junction, Paynesville City, Liberia
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/20 bg-primary p-5 shadow-md shadow-primary/20">
+              <div className="rounded-2xl border border-primary/15 bg-white p-5 shadow-sm">
                 <div className="flex items-start gap-3">
                   <Phone className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-white">
+                    <div className="font-heading text-sm font-extrabold text-primary">
                       Phone
                     </div>
                     <div className="mt-1 grid gap-1">
                       <a
-                        className="text-sm font-semibold text-white/90 underline-offset-4 hover:underline"
+                        className="text-sm font-semibold text-slate-700 underline-offset-4 hover:underline"
                         href="tel:+231773227668"
                       >
                         +231-773-227-668
                       </a>
                       <a
-                        className="text-sm font-semibold text-white/90 underline-offset-4 hover:underline"
+                        className="text-sm font-semibold text-slate-700 underline-offset-4 hover:underline"
                         href="tel:+231881126464"
                       >
                         +231-881-126-464
@@ -108,14 +108,14 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/20 bg-primary p-5 shadow-md shadow-primary/20">
+              <div className="rounded-2xl border border-primary/15 bg-white p-5 shadow-sm">
                 <div className="flex items-start gap-3">
                   <MessageCircle className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-white">WhatsApp</div>
+                    <div className="font-heading text-sm font-extrabold text-primary">WhatsApp</div>
                     <div className="mt-1 grid gap-1">
                       <a
-                        className="text-sm font-semibold text-white/90 underline-offset-4 hover:underline"
+                        className="text-sm font-semibold text-slate-700 underline-offset-4 hover:underline"
                         href="https://wa.me/231881199106"
                         target="_blank"
                         rel="noreferrer"
@@ -123,7 +123,7 @@ export default function Contact() {
                         +231-881-199-106
                       </a>
                       <a
-                        className="text-sm font-semibold text-white/90 underline-offset-4 hover:underline"
+                        className="text-sm font-semibold text-slate-700 underline-offset-4 hover:underline"
                         href="https://wa.me/231773227668"
                         target="_blank"
                         rel="noreferrer"
@@ -135,15 +135,15 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/20 bg-primary p-5 shadow-md shadow-primary/20">
+              <div className="rounded-2xl border border-primary/15 bg-white p-5 shadow-sm">
                 <div className="flex items-start gap-3">
                   <Mail className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-white">
+                    <div className="font-heading text-sm font-extrabold text-primary">
                       Email
                     </div>
                     <a
-                      className="mt-1 block text-sm font-semibold text-white/90 underline-offset-4 hover:underline"
+                      className="mt-1 block text-sm font-semibold text-slate-700 underline-offset-4 hover:underline"
                       href="mailto:info@enersourcelr.com"
                     >
                       info@enersourcelr.com
@@ -152,12 +152,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/20 bg-primary p-5 shadow-md shadow-primary/20">
+              <div className="rounded-2xl border border-primary/15 bg-white p-5 shadow-sm">
                 <div className="flex items-start gap-3">
                   <Facebook className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
                   <div>
-                    <div className="font-heading text-sm font-extrabold text-white">Follow Us</div>
-                    <div className="mt-1 grid gap-1 text-sm font-semibold text-white/90">
+                    <div className="font-heading text-sm font-extrabold text-primary">Follow Us</div>
+                    <div className="mt-1 grid gap-1 text-sm font-semibold text-slate-700">
                       <div>Facebook: @enersource</div>
                       <div className="inline-flex items-center gap-2">
                         <Instagram className="h-4 w-4 text-gold" aria-hidden="true" />
@@ -169,7 +169,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="mt-8 overflow-hidden rounded-3xl border border-white/20 bg-primary shadow-lg shadow-primary/25">
+            <div className="mt-8 overflow-hidden rounded-3xl border border-primary/15 bg-white shadow-sm">
               <iframe
                 title="Map to Paynesville City"
                 className="h-72 w-full"
@@ -185,11 +185,11 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="rounded-3xl border border-white/25 bg-primary p-6 shadow-lg shadow-primary/30 backdrop-blur"
+            className="rounded-3xl border border-primary/15 bg-white p-6 shadow-sm backdrop-blur"
           >
             <form onSubmit={onSubmit} className="grid gap-4">
               <div className="grid gap-4 sm:grid-cols-2">
-                <label className="grid gap-2 text-sm font-extrabold text-white">
+                <label className="grid gap-2 text-sm font-extrabold text-primary">
                   Name
                   <input
                     required
@@ -199,7 +199,7 @@ export default function Contact() {
                     autoComplete="name"
                   />
                 </label>
-                <label className="grid gap-2 text-sm font-extrabold text-white">
+                <label className="grid gap-2 text-sm font-extrabold text-primary">
                   Email
                   <input
                     required
@@ -212,7 +212,7 @@ export default function Contact() {
                 </label>
               </div>
 
-              <label className="grid gap-2 text-sm font-extrabold text-white">
+              <label className="grid gap-2 text-sm font-extrabold text-primary">
                 Phone
                 <input
                   value={form.phone}
@@ -222,7 +222,7 @@ export default function Contact() {
                 />
               </label>
 
-              <label className="grid gap-2 text-sm font-extrabold text-white">
+              <label className="grid gap-2 text-sm font-extrabold text-primary">
                 Message
                 <textarea
                   required
@@ -248,7 +248,7 @@ export default function Contact() {
                       ? 'text-gold'
                       : status.state === 'error'
                         ? 'text-rose-200'
-                        : 'text-white/80'
+                        : 'text-primary/80'
                   }`}
                   role={status.state === 'error' ? 'alert' : 'status'}
                 >
@@ -257,7 +257,7 @@ export default function Contact() {
               ) : null}
 
               {!canSend ? (
-                <p className="text-xs font-semibold text-white/75">
+                <p className="text-xs font-semibold text-primary/75">
                   Please try again later!
                 </p>
               ) : null}

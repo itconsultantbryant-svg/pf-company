@@ -41,7 +41,7 @@ const testimonials = [
 export default function Testimonials() {
   const reduceMotion = useReducedMotion();
   return (
-    <section className="relative overflow-hidden bg-primary py-2" id="testimonials">
+    <section className="relative overflow-hidden py-2" id="testimonials">
       <Container className="py-24">
         <div className="flex flex-col gap-10">
           <SectionHeading
@@ -57,7 +57,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.45, ease: 'easeOut' }}
-            className="rounded-3xl border border-white/20 bg-primary p-6 shadow-lg shadow-black/20"
+            className="rounded-3xl border border-primary/15 bg-white p-6 shadow-sm"
           >
             <Swiper
               modules={[Autoplay, Pagination]}
@@ -78,25 +78,25 @@ export default function Testimonials() {
             >
               {testimonials.map((t) => (
                 <SwiperSlide key={t.quote}>
-                  <article className="h-full rounded-2xl border border-white/20 bg-primary p-6 shadow-md shadow-black/15">
+                  <article className="h-full rounded-2xl border border-primary/15 bg-white p-6 shadow-sm">
                     <div className="flex items-center justify-between">
-                      <div className="text-xs font-extrabold uppercase tracking-wider text-white/75">
+                      <div className="text-xs font-extrabold uppercase tracking-wider text-primary/70">
                         {t.org} • {t.location}
                       </div>
                       <Quote className="h-5 w-5 text-gold" aria-hidden="true" />
                     </div>
-                    <p className="mt-4 text-sm font-semibold leading-relaxed text-white/95">
+                    <p className="mt-4 text-sm font-semibold leading-relaxed text-slate-700">
                       “{t.quote}”
                     </p>
-                    <div className="mt-5 font-heading text-sm font-extrabold text-white">
+                    <div className="mt-5 font-heading text-sm font-extrabold text-primary">
                       {t.name}
                     </div>
-                    <div className="mt-3 grid gap-2 text-sm font-semibold text-white/90">
-                      <a className="inline-flex items-center gap-2 text-white underline-offset-4 hover:underline" href={`tel:${t.phone.replace(/\\s/g, '')}`}>
+                    <div className="mt-3 grid gap-2 text-sm font-semibold text-slate-700">
+                      <a className="inline-flex items-center gap-2 text-primary underline-offset-4 hover:underline" href={`tel:${t.phone.replace(/\\s/g, '')}`}>
                         <Phone className="h-4 w-4 text-gold" aria-hidden="true" />
                         {t.phone}
                       </a>
-                      <a className="inline-flex items-center gap-2 text-white underline-offset-4 hover:underline" href={`mailto:${t.email}`}>
+                      <a className="inline-flex items-center gap-2 text-primary underline-offset-4 hover:underline" href={`mailto:${t.email}`}>
                         <Mail className="h-4 w-4 text-gold" aria-hidden="true" />
                         {t.email}
                       </a>

@@ -73,7 +73,7 @@ export default function Services() {
             {services.map((s, idx) => (
               <motion.article
                 key={s.title}
-                className="group relative overflow-hidden rounded-3xl border border-white/20 bg-primary p-6 shadow-lg shadow-primary/25 transition-transform hover:-translate-y-1"
+                className="group relative overflow-hidden rounded-3xl border border-primary/15 bg-white p-6 shadow-sm transition-transform hover:-translate-y-1"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
@@ -88,14 +88,14 @@ export default function Services() {
                     <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white/15 text-gold ring-1 ring-white/20">
                       {s.icon}
                     </div>
-                    <div className="text-xs font-extrabold uppercase tracking-wider text-white/75">
+                    <div className="text-xs font-extrabold uppercase tracking-wider text-primary/70">
                       Enersource
                     </div>
                   </div>
-                  <h3 className="mt-4 font-heading text-lg font-extrabold text-white">
+                  <h3 className="mt-4 font-heading text-lg font-extrabold text-primary">
                     {s.title}
                   </h3>
-                  <p className="mt-2 text-sm font-semibold leading-relaxed text-white/90">
+                  <p className="mt-2 text-sm font-semibold leading-relaxed text-primary/90">
                     {s.details}
                   </p>
                   <div className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-gold">

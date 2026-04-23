@@ -32,7 +32,7 @@ export default function GalleryPage() {
             {images.map((m, idx) => (
               <motion.div
                 key={m.path}
-                className="overflow-hidden rounded-3xl border border-white/20 bg-primary shadow-lg shadow-primary/20"
+                className="overflow-hidden rounded-3xl border border-primary/15 bg-white shadow-sm"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -56,7 +56,7 @@ export default function GalleryPage() {
               {videos.map((m, idx) => (
                 <motion.div
                   key={m.path}
-                  className="overflow-hidden rounded-3xl border border-white/20 bg-primary shadow-lg shadow-primary/20"
+                  className="overflow-hidden rounded-3xl border border-primary/15 bg-white shadow-sm"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}

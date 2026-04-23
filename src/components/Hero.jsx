@@ -34,7 +34,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.h1
-              className="mt-5 font-heading text-4xl font-extrabold leading-[1.05] tracking-tight text-secondary dark:text-slate-900 sm:text-5xl"
+              className="mt-5 font-heading text-4xl font-extrabold leading-[1.05] tracking-tight text-primary sm:text-5xl"
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, ease: 'easeOut', delay: 0.05 }}
@@ -43,7 +43,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p
-              className="mt-5 max-w-xl text-base font-semibold leading-relaxed text-slate-700 dark:text-slate-700 sm:text-lg"
+              className="mt-5 max-w-xl text-base font-semibold leading-relaxed text-primary/85 sm:text-lg"
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, ease: 'easeOut', delay: 0.12 }}
@@ -127,10 +127,10 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.05 }}
           >
-            <div className="relative overflow-hidden rounded-3xl border border-white/25 bg-primary p-6 shadow-lg shadow-primary/30">
+            <div className="relative overflow-hidden rounded-3xl border border-primary/15 bg-white p-6 shadow-sm">
               <div
                 aria-hidden="true"
-                className="absolute inset-0 bg-[radial-gradient(60%_60%_at_20%_20%,rgba(255,255,255,0.12),transparent_60%),radial-gradient(60%_60%_at_80%_30%,rgba(253,184,19,0.15),transparent_60%)]"
+                className="absolute inset-0 bg-[radial-gradient(60%_60%_at_20%_20%,rgba(198,40,40,0.08),transparent_60%),radial-gradient(60%_60%_at_80%_30%,rgba(253,184,19,0.18),transparent_60%)]"
               />
 
               <div className="relative">

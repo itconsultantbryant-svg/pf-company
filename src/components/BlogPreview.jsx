@@ -35,13 +35,13 @@ export default function BlogPreview() {
             {latest.map((p, idx) => (
               <motion.article
                 key={p.slug}
-                className="group rounded-3xl border border-white/20 bg-primary p-6 shadow-lg shadow-primary/25 transition-transform hover:-translate-y-1"
+                className="group rounded-3xl border border-primary/15 bg-white p-6 shadow-sm transition-transform hover:-translate-y-1"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.35 }}
                 transition={{ duration: 0.45, ease: 'easeOut', delay: idx * 0.04 }}
               >
-                <div className="flex flex-wrap items-center gap-3 text-xs font-extrabold uppercase tracking-wider text-white/75">
+                <div className="flex flex-wrap items-center gap-3 text-xs font-extrabold uppercase tracking-wider text-primary/70">
                   <span className="inline-flex items-center gap-1.5">
                     <Calendar className="h-4 w-4 text-gold" aria-hidden="true" />
                     {formatDate(p.date)}
@@ -51,7 +51,7 @@ export default function BlogPreview() {
                     {p.readingMinutes} min
                   </span>
                 </div>
-                <h3 className="mt-3 font-heading text-lg font-extrabold text-white">
+                <h3 className="mt-3 font-heading text-lg font-extrabold text-primary">
                   <Link
                     to={`/blog/${p.slug}`}
                     className="focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
@@ -59,7 +59,7 @@ export default function BlogPreview() {
                     {p.title}
                   </Link>
                 </h3>
-                <p className="mt-2 text-sm font-semibold leading-relaxed text-white/90">
+                <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700">
                   {p.excerpt}
                 </p>
                 <div className="mt-5 text-sm font-extrabold text-gold">

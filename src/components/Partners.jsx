@@ -18,7 +18,7 @@ export default function Partners() {
   return (
     <section className="relative" id="partners">
       <Container className="py-24">
-        <div className="rounded-3xl border border-white/20 bg-primary p-8 shadow-lg shadow-primary/25">
+        <div className="rounded-3xl border border-primary/15 bg-white p-6 shadow-sm lg:p-8">
           <SectionHeading
             eyebrow="Partners & clients"
             title="Trusted by institutions and growing teams."
@@ -30,7 +30,7 @@ export default function Partners() {
             {partners.map((p, idx) => (
               <motion.div
                 key={p.name}
-                className="group flex items-center justify-center rounded-2xl border border-white/20 bg-primary p-6 text-center shadow-md shadow-black/15"
+                className="group flex items-center justify-center rounded-2xl border border-primary/15 bg-white p-6 text-center shadow-sm"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
@@ -49,41 +49,41 @@ export default function Partners() {
           </div>
 
           <div className="mt-10 grid gap-4 lg:grid-cols-2">
-            <div className="rounded-3xl border border-white/20 bg-primary p-6 shadow-md shadow-black/10">
-              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-white/75">
+            <div className="rounded-3xl border border-primary/15 bg-white p-6 shadow-sm">
+              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-primary/70">
                 Healthcare & Medical Institutions
               </div>
-              <ul className="mt-4 grid gap-2 text-sm font-semibold text-white/95">
+              <ul className="mt-4 grid gap-2 text-sm font-semibold text-slate-700">
                 <li>John F. Kennedy Medical Center (JFKMC)</li>
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-white/20 bg-primary p-6 shadow-md shadow-black/10">
-              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-white/75">
+            <div className="rounded-3xl border border-primary/15 bg-white p-6 shadow-sm">
+              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-primary/70">
                 Financial Institutions
               </div>
-              <ul className="mt-4 grid gap-2 text-sm font-semibold text-white/95">
+              <ul className="mt-4 grid gap-2 text-sm font-semibold text-slate-700">
                 <li>Bloom Bank Africa Liberia Ltd.</li>
                 <li>International Bank Liberia Limited (IBLL) — Solarization proposal (POC phase)</li>
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-white/20 bg-primary p-6 shadow-md shadow-black/10">
-              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-white/75">
+            <div className="rounded-3xl border border-primary/15 bg-white p-6 shadow-sm">
+              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-primary/70">
                 International Development & Civil Society
               </div>
-              <ul className="mt-4 grid gap-2 text-sm font-semibold text-white/95">
+              <ul className="mt-4 grid gap-2 text-sm font-semibold text-slate-700">
                 <li>ECOWAS Commission – Liberia</li>
                 <li>USAID Global Health Supply Chain Program (GHSC-PSM)</li>
                 <li>Verve Energy Resources Ltd. — Consortium partner (CRS Global Fund bid)</li>
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-white/20 bg-primary p-6 shadow-md shadow-black/10">
-              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-white/75">
+            <div className="rounded-3xl border border-primary/15 bg-white p-6 shadow-sm">
+              <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-primary/70">
                 Government & Regulatory Bodies / Commercial
               </div>
-              <ul className="mt-4 grid gap-2 text-sm font-semibold text-white/95">
+              <ul className="mt-4 grid gap-2 text-sm font-semibold text-slate-700">
                 <li>RREA (Rural & Renewable Energy Agency) — Duty waiver request submitted</li>
                 <li>Aminata & Sons Inc. — MOU for solarization of 23 filling stations (Lease-to-Own)</li>
               </ul>

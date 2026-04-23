@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logoSrc from '../assets/enersource_logo.jpeg';
+import Container from './Container.jsx';
 
 const quickLinks = [
   { to: '/', label: 'Home' },
@@ -20,28 +21,28 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/20 bg-primary text-white">
-      <div className="mx-auto max-w-6xl px-4 py-14">
+    <footer className="border-t border-primary/15 bg-white text-primary">
+      <Container className="py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-3">
               <img
                 src={logoSrc}
                 alt="Enersource Inc. logo"
-                className="h-10 w-10 rounded-xl object-cover ring-2 ring-white/40"
+                className="h-10 w-10 rounded-xl object-cover ring-2 ring-primary/20"
                 loading="lazy"
               />
               <div>
-                <div className="font-heading text-base font-extrabold text-white">
+                <div className="font-heading text-base font-extrabold text-primary">
                   Enersource Inc.
                 </div>
-                <div className="text-sm font-semibold text-white/85">
+                <div className="text-sm font-semibold text-primary/75">
                   Source of Africa’s Energy
                 </div>
               </div>
             </div>
 
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/90">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-700">
               Clean, affordable, and reliable solar solutions across Liberia — from design and
               procurement to installation, commissioning, and long-term maintenance.
             </p>
@@ -49,21 +50,21 @@ export default function Footer() {
             <div className="mt-4 flex items-center gap-2">
               <a
                 href="#"
-                className="grid h-10 w-10 place-items-center rounded-full border border-white/35 bg-white/10 text-white transition-colors hover:bg-white/20"
+                className="grid h-10 w-10 place-items-center rounded-full border border-primary/20 bg-primary text-white transition-colors hover:brightness-110"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" strokeWidth={2} />
               </a>
               <a
                 href="#"
-                className="grid h-10 w-10 place-items-center rounded-full border border-white/35 bg-white/10 text-white transition-colors hover:bg-white/20"
+                className="grid h-10 w-10 place-items-center rounded-full border border-primary/20 bg-primary text-white transition-colors hover:brightness-110"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" strokeWidth={2} />
               </a>
               <a
                 href="#"
-                className="grid h-10 w-10 place-items-center rounded-full border border-white/35 bg-white/10 text-white transition-colors hover:bg-white/20"
+                className="grid h-10 w-10 place-items-center rounded-full border border-primary/20 bg-primary text-white transition-colors hover:brightness-110"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" strokeWidth={2} />
@@ -72,7 +73,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading text-sm font-extrabold uppercase tracking-wider text-white">
+            <h3 className="font-heading text-sm font-extrabold uppercase tracking-wider text-primary">
               Quick Links
             </h3>
             <nav className="mt-4 grid gap-2">
@@ -80,7 +81,7 @@ export default function Footer() {
                 <Link
                   key={l.to}
                   to={l.to}
-                  className="text-sm font-semibold text-white/90 transition-colors hover:text-white hover:underline"
+                  className="text-sm font-semibold text-primary/85 transition-colors hover:text-primary hover:underline"
                 >
                   {l.label}
                 </Link>
@@ -89,12 +90,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading text-sm font-extrabold uppercase tracking-wider text-white">
+            <h3 className="font-heading text-sm font-extrabold uppercase tracking-wider text-primary">
               Services
             </h3>
             <ul className="mt-4 grid gap-2">
               {services.map((s) => (
-                <li key={s} className="text-sm font-semibold text-white/90">
+                <li key={s} className="text-sm font-semibold text-slate-700">
                   {s}
                 </li>
               ))}
@@ -102,23 +103,23 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading text-sm font-extrabold uppercase tracking-wider text-white">
+            <h3 className="font-heading text-sm font-extrabold uppercase tracking-wider text-primary">
               Contact
             </h3>
-            <div className="mt-4 grid gap-3 text-sm font-semibold text-white/90">
+            <div className="mt-4 grid gap-3 text-sm font-semibold text-slate-700">
               <div className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-gold" aria-hidden />
                 <div>Rehab Junction, Paynesville City</div>
               </div>
               <a
-                className="flex items-center gap-2 text-white hover:text-white hover:underline"
+                className="flex items-center gap-2 text-primary hover:text-primary hover:underline"
                 href="tel:+231773227668"
               >
                 <Phone className="h-5 w-5 shrink-0 text-gold" aria-hidden />
                 +231-773-227-668
               </a>
               <a
-                className="flex items-center gap-2 text-white hover:text-white hover:underline"
+                className="flex items-center gap-2 text-primary hover:text-primary hover:underline"
                 href="mailto:info@enersourcelr.com"
               >
                 <Mail className="h-5 w-5 shrink-0 text-gold" aria-hidden />
@@ -128,13 +129,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-white/20 pt-6 text-sm text-white/80 md:flex-row md:items-center">
+        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-primary/15 pt-6 text-sm text-primary/70 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Enersource Inc. All rights reserved.</p>
-          <p className="font-semibold text-white/90">
+          <p className="font-semibold text-primary/85">
             Built for speed, accessibility, and trust.
           </p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

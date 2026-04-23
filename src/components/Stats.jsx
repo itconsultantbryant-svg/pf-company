@@ -56,7 +56,7 @@ function CountUp({ to, suffix = '', start }) {
   }, [reduceMotion, start, to]);
 
   return (
-    <div className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+    <div className="text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
       {val}
       <span className="text-gold">{suffix}</span>
     </div>
@@ -68,19 +68,19 @@ export default function Stats() {
 
   return (
     <section className="relative" ref={ref} id="stats">
-      <Container className="py-14">
-        <div className="grid gap-4 rounded-3xl border border-white/20 bg-primary p-6 shadow-lg shadow-primary/25 sm:grid-cols-2 lg:grid-cols-4">
+      <Container className="py-20">
+        <div className="grid gap-4 rounded-3xl border border-primary/15 bg-white p-6 shadow-sm sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s, idx) => (
             <motion.div
               key={s.label}
-              className="rounded-2xl border border-white/20 bg-primary p-5 shadow-md shadow-black/15"
+              className="rounded-2xl border border-primary/15 bg-white p-5 shadow-sm"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.45, ease: 'easeOut', delay: idx * 0.05 }}
             >
               <CountUp to={s.value} suffix={s.suffix} start={inView} />
-              <div className="mt-2 text-sm font-extrabold text-white/90">
+              <div className="mt-2 text-sm font-extrabold text-primary">
                 {s.label}
               </div>
             </motion.div>

@@ -45,16 +45,16 @@ export default function About() {
               ].map((b, idx) => (
                 <motion.div
                   key={b.title}
-                  className="rounded-2xl border border-white/20 bg-primary p-5 shadow-md shadow-primary/20"
+                  className="rounded-2xl border border-primary/15 bg-white p-5 shadow-sm"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.6 }}
                   transition={{ duration: 0.45, ease: 'easeOut', delay: idx * 0.04 }}
                 >
-                  <div className="font-heading text-sm font-extrabold text-secondary dark:text-slate-900">
+                  <div className="font-heading text-sm font-extrabold text-primary">
                     {b.title}
                   </div>
-                  <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700 dark:text-slate-700">
+                  <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700">
                     {b.text}
                   </p>
                 </motion.div>
@@ -64,18 +64,18 @@ export default function About() {
 
           <div className="relative">
             <motion.div
-              className="rounded-3xl border border-white/25 bg-primary p-6 shadow-lg shadow-primary/25 backdrop-blur"
+              className="rounded-3xl border border-primary/15 bg-white p-6 shadow-sm backdrop-blur"
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
             >
               <div className="grid gap-6">
-                <div className="grid gap-3 rounded-2xl border border-white/20 bg-primary p-5 shadow-sm shadow-black/10">
-                  <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-white/75">
+                <div className="grid gap-3 rounded-2xl border border-primary/15 bg-white p-5 shadow-sm">
+                  <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-primary/75">
                     Vision
                   </div>
-                  <div className="text-lg font-extrabold text-white">
+                  <div className="text-lg font-extrabold text-primary">
                     To provide the most compelling value in the solar energy industry — designing and
                     installing the highest quality solar energy systems, on time, safely, with high
                     customer satisfaction, at the lowest possible cost. We are fully committed to
@@ -83,11 +83,11 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="grid gap-3 rounded-2xl border border-white/20 bg-primary p-5 shadow-sm shadow-black/10">
-                  <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-white/75">
+                <div className="grid gap-3 rounded-2xl border border-primary/15 bg-white p-5 shadow-sm">
+                  <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-primary/75">
                     Mission
                   </div>
-                  <ul className="grid gap-2 text-sm font-semibold text-white/90">
+                  <ul className="grid gap-2 text-sm font-semibold text-slate-700">
                     <li className="flex gap-2">
                       <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true" />
                       Advancing the renewable energy industry by serving our clients and creating measurable value for them.
@@ -104,14 +104,14 @@ export default function About() {
                 </div>
 
                 <div>
-                  <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-white/75">
+                  <div className="font-heading text-sm font-extrabold uppercase tracking-wider text-primary/75">
                     Core values
                   </div>
                   <div className="mt-3 grid gap-3 sm:grid-cols-2">
                     {values.map((v, idx) => (
                       <motion.div
                         key={v.title}
-                        className="group flex items-center gap-3 rounded-2xl border border-white/20 bg-primary p-4 shadow-sm shadow-black/10 transition-transform hover:-translate-y-0.5"
+                        className="group flex items-center gap-3 rounded-2xl border border-primary/15 bg-white p-4 shadow-sm transition-transform hover:-translate-y-0.5"
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.6 }}
@@ -120,7 +120,7 @@ export default function About() {
                         <div className="grid h-10 w-10 place-items-center rounded-xl bg-white/15 text-gold ring-1 ring-white/20">
                           {v.icon}
                         </div>
-                        <div className="font-heading text-sm font-extrabold text-white">
+                        <div className="font-heading text-sm font-extrabold text-primary">
                           {v.title}
                         </div>
                       </motion.div>
