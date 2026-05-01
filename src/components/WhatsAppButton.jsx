@@ -13,7 +13,7 @@ function WhatsAppIcon({ className }) {
 
 /** WhatsApp brand green — isolated from page theme so it never washes out */
 export default function WhatsAppButton() {
-  const phone = '+231773227668';
+  const phone = '+231881126464';
   const message = encodeURIComponent('Hello Enersource Inc. — I would like a solar quote.');
   const href = `https://wa.me/${phone.replace(/\D/g, '')}?text=${message}`;
 

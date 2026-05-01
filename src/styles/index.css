@@ -26,6 +26,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Keep body copy readable and consistent across sections */
+p {
+  color: rgb(15 23 42);
+}
+
 /* Light: white page canvas; red lives on cards, buttons, and accents */
 html:not(.dark) body {
   background: rgb(255 255 255);

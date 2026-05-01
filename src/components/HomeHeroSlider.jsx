@@ -11,7 +11,6 @@ import home2 from '../assets/home_slide_2.jpeg';
 import home3 from '../assets/home_slide_3.jpeg';
 import home4 from '../assets/home_slide_4.jpeg';
 import home5 from '../assets/home_slide_5.jpeg';
-import home6 from '../assets/home_slide_6.jpeg';
 
 const slides = [
   { src: home1, alt: 'Enersource solar installation showcase 1' },
@@ -19,7 +18,6 @@ const slides = [
   { src: home3, alt: 'Enersource solar installation showcase 3' },
   { src: home4, alt: 'Enersource solar installation showcase 4' },
   { src: home5, alt: 'Enersource solar installation showcase 5' },
-  { src: home6, alt: 'Enersource solar installation showcase 6' }
 ];
 
 export default function HomeHeroSlider() {
@@ -49,25 +47,25 @@ export default function HomeHeroSlider() {
           }
           pagination={{
             clickable: true,
-            bulletClass: 'swiper-pagination-bullet !bg-white/40 !opacity-100',
-            bulletActiveClass: '!bg-white !w-6'
+            bulletClass: 'swiper-pagination-bullet !bg-primary/30 !opacity-100',
+            bulletActiveClass: '!bg-primary !w-6'
           }}
           navigation
           className="home-hero-swiper [&_.swiper-button-next]:text-primary [&_.swiper-button-prev]:text-primary [&_.swiper-pagination]:!bottom-4"
         >
           {slides.map((s) => (
             <SwiperSlide key={s.src}>
-              <div className="relative flex min-h-[260px] w-full items-center justify-center overflow-hidden bg-red-50 py-4 sm:min-h-[320px] md:min-h-[420px] md:py-6">
+              <div className="relative flex min-h-[260px] w-full items-center justify-center overflow-hidden bg-white py-4 sm:min-h-[320px] md:min-h-[420px] md:py-6">
                 <div
-                  className="pointer-events-none absolute inset-0 bg-primary/25"
+                  className="pointer-events-none absolute inset-0 bg-white/75"
                   aria-hidden="true"
                 />
                 <div
-                  className="pointer-events-none absolute inset-0 scale-110 bg-cover bg-center opacity-45 blur-md mix-blend-multiply"
+                  className="pointer-events-none absolute inset-0 scale-110 bg-cover bg-center opacity-30"
                   style={{ backgroundImage: `url("${s.src}")` }}
                   aria-hidden="true"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/15 via-red-100/40 to-primary/20" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/80 via-white/65 to-white/80" />
                 <img
                   src={s.src}
                   alt={s.alt}

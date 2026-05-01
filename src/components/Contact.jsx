@@ -116,19 +116,11 @@ export default function Contact() {
                     <div className="mt-1 grid gap-1">
                       <a
                         className="text-sm font-semibold text-slate-700 underline-offset-4 hover:underline"
-                        href="https://wa.me/231881199106"
+                        href="https://wa.me/231881126464"
                         target="_blank"
                         rel="noreferrer"
                       >
-                        +231-881-199-106
-                      </a>
-                      <a
-                        className="text-sm font-semibold text-slate-700 underline-offset-4 hover:underline"
-                        href="https://wa.me/231773227668"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        +231-773-227-668
+                        +231-881-126-464
                       </a>
                     </div>
                   </div>

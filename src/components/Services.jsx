@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import {
   GraduationCap,
   Hammer,
@@ -51,6 +52,16 @@ const services = [
 ];
 
 export default function Services() {
+  const [openCard, setOpenCard] = useState(null);
+
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setOpenCard(null);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
+
   return (
     <section className="relative" id="services">
       <Container className="py-24">
@@ -83,28 +94,69 @@ export default function Services() {
                   aria-hidden="true"
                   className="pointer-events-none absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(70%_60%_at_20%_20%,rgba(255,255,255,0.12),transparent_60%),radial-gradient(70%_60%_at_80%_20%,rgba(253,184,19,0.12),transparent_60%)]"
                 />
-                <div className="relative">
-                  <div className="flex items-center justify-between">
-                    <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white/15 text-gold ring-1 ring-white/20">
-                      {s.icon}
+                <motion.div
+                  initial={false}
+                  animate={{ rotateY: openCard === s.title ? 180 : 0 }}
+                  transition={{ duration: 0.45, ease: 'easeInOut' }}
+                  className="relative min-h-[280px] [transform-style:preserve-3d]"
+                >
+                  <div className="absolute inset-0 [backface-visibility:hidden]">
+                    <div className="flex items-center justify-between">
+                      <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white/15 text-gold ring-1 ring-white/20">
+                        {s.icon}
+                      </div>
+                      <div className="text-xs font-extrabold uppercase tracking-wider text-primary/70">
+                        Enersource
+                      </div>
                     </div>
-                    <div className="text-xs font-extrabold uppercase tracking-wider text-primary/70">
-                      Enersource
+                    <h3 className="mt-4 font-heading text-lg font-extrabold text-primary">
+                      {s.title}
+                    </h3>
+                    <p className="mt-2 text-sm font-semibold leading-relaxed text-primary/90">
+                      {s.details}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setOpenCard((current) => (current === s.title ? null : s.title))}
+                      aria-expanded={openCard === s.title}
+                      aria-controls={`service-card-${idx}`}
+                      className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-gold"
+                    >
+                      Learn more
+                      <span className="inline-block transition-transform group-hover:translate-x-1">
+                        →
+                      </span>
+                    </button>
+                  </div>
+
+                  <div
+                    id={`service-card-${idx}`}
+                    className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden]"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white/15 text-gold ring-1 ring-white/20">
+                        {s.icon}
+                      </div>
+                      <div className="text-xs font-extrabold uppercase tracking-wider text-primary/70">
+                        Enersource
+                      </div>
                     </div>
+                    <h3 className="mt-4 font-heading text-base font-extrabold text-primary">{s.title}</h3>
+                    <p className="mt-2 text-sm font-semibold leading-relaxed text-primary/90">{s.details}</p>
+                    <p className="mt-2 text-sm font-semibold leading-relaxed text-primary/90">
+                      Our team handles planning, implementation, and post-delivery support so every
+                      project remains reliable, safe, and aligned with your energy goals.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setOpenCard(null)}
+                      aria-controls={`service-card-${idx}`}
+                      className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-gold"
+                    >
+                      Flip back <span aria-hidden="true">↺</span>
+                    </button>
                   </div>
-                  <h3 className="mt-4 font-heading text-lg font-extrabold text-primary">
-                    {s.title}
-                  </h3>
-                  <p className="mt-2 text-sm font-semibold leading-relaxed text-primary/90">
-                    {s.details}
-                  </p>
-                  <div className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-gold">
-                    Learn more
-                    <span className="inline-block transition-transform group-hover:translate-x-1">
-                      →
-                    </span>
-                  </div>
-                </div>
+                </motion.div>
               </motion.article>
             ))}
           </div>

@@ -1,18 +1,69 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { Award, HandHeart, Shield, Target } from 'lucide-react';
 import Container from './Container.jsx';
 import SectionHeading from './SectionHeading.jsx';
 
 const values = [
-  { title: 'Ethics & Moral', icon: <Shield className="h-5 w-5" /> },
-  { title: 'Honesty', icon: <HandHeart className="h-5 w-5" /> },
-  { title: 'Quality & Safety', icon: <Award className="h-5 w-5" /> },
-  { title: 'Responsibility', icon: <Target className="h-5 w-5" /> },
-  { title: 'Humanity', icon: <HandHeart className="h-5 w-5" /> },
-  { title: 'Excellence', icon: <Award className="h-5 w-5" /> }
+  {
+    title: 'Ethics & Moral',
+    icon: <Shield className="h-5 w-5" />,
+    details: [
+      'We uphold strong ethical standards in every engagement, from procurement and vendor selection to installation and long-term service delivery.',
+      'Our team commits to fair dealing, respect for local communities, and transparent decision-making, even when projects involve difficult trade-offs.',
+      'This value ensures that clients, partners, and communities can trust not only what we deliver, but how we deliver it.'
+    ]
+  },
+  {
+    title: 'Honesty',
+    icon: <HandHeart className="h-5 w-5" />,
+    details: [
+      'We communicate clearly about costs, timelines, technical limits, and expected outcomes before a project starts and throughout delivery.',
+      'When constraints arise, we explain them early and provide practical alternatives rather than hiding risks or overpromising.',
+      'Honesty builds long-term relationships and helps clients make informed energy decisions with confidence.'
+    ]
+  },
+  {
+    title: 'Quality & Safety',
+    icon: <Award className="h-5 w-5" />,
+    details: [
+      'We design and install systems to high technical standards, using reliable components and disciplined engineering practices.',
+      'Safety is integrated into planning, site work, commissioning, and maintenance through proper protection, grounding, and operational checks.',
+      'Our goal is dependable system performance that protects people, property, and investment value over the full project lifecycle.'
+    ]
+  },
+  {
+    title: 'Responsibility',
+    icon: <Target className="h-5 w-5" />,
+    details: [
+      'We take ownership of project outcomes, timelines, and service commitments from concept through post-installation support.',
+      'Responsibility means proactive follow-through, measurable accountability, and timely action when maintenance or adjustments are needed.',
+      'We are accountable to clients, teammates, and communities for delivering sustainable energy solutions that work in real conditions.'
+    ]
+  },
+  {
+    title: 'Humanity',
+    icon: <HandHeart className="h-5 w-5" />,
+    details: [
+      'We put people at the center of our work by designing energy solutions that improve daily life, productivity, and community resilience.',
+      'Our projects are delivered with empathy, respect, and an understanding of local realities across homes, schools, clinics, and businesses.',
+      'Humanity drives us to create impact beyond infrastructure by empowering people with safer, cleaner, and more reliable power.'
+    ]
+  },
+  {
+    title: 'Excellence',
+    icon: <Award className="h-5 w-5" />,
+    details: [
+      'We pursue excellence through continuous improvement in design quality, execution discipline, and service responsiveness.',
+      'Our teams refine methods, upgrade skills, and apply lessons learned to exceed baseline expectations on each project.',
+      'Excellence means delivering consistent results that clients can rely on today while preparing systems for tomorrow’s energy needs.'
+    ]
+  }
 ];
 
 export default function About() {
+  const [openValue, setOpenValue] = useState(null);
+
   return (
     <section className="relative overflow-hidden" id="about">
       <Container className="py-24">
@@ -109,21 +160,72 @@ export default function About() {
                   </div>
                   <div className="mt-3 grid gap-3 sm:grid-cols-2">
                     {values.map((v, idx) => (
-                      <motion.div
+                      <motion.article
                         key={v.title}
-                        className="group flex items-center gap-3 rounded-2xl border border-primary/15 bg-white p-4 shadow-sm transition-transform hover:-translate-y-0.5"
+                        className="group rounded-2xl border border-primary/15 bg-white p-4 shadow-sm transition-transform hover:-translate-y-0.5"
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.6 }}
                         transition={{ duration: 0.45, ease: 'easeOut', delay: 0.05 + idx * 0.04 }}
                       >
-                        <div className="grid h-10 w-10 place-items-center rounded-xl bg-white/15 text-gold ring-1 ring-white/20">
-                          {v.icon}
-                        </div>
-                        <div className="font-heading text-sm font-extrabold text-primary">
-                          {v.title}
-                        </div>
-                      </motion.div>
+                        <motion.div
+                          initial={false}
+                          animate={{ rotateY: openValue === v.title ? 180 : 0 }}
+                          transition={{ duration: 0.45, ease: 'easeInOut' }}
+                          className="relative min-h-[170px] [transform-style:preserve-3d]"
+                        >
+                          <div className="absolute inset-0 [backface-visibility:hidden]">
+                            <div className="flex items-center gap-3">
+                              <div className="grid h-10 w-10 place-items-center rounded-xl bg-white/15 text-gold ring-1 ring-white/20">
+                                {v.icon}
+                              </div>
+                              <div className="font-heading text-sm font-extrabold text-primary">
+                                {v.title}
+                              </div>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() =>
+                                setOpenValue((current) => (current === v.title ? null : v.title))
+                              }
+                              aria-expanded={openValue === v.title}
+                              aria-controls={`core-value-${idx}`}
+                              className="mt-5 inline-flex items-center gap-1 text-sm font-extrabold text-gold"
+                            >
+                              Read details <span aria-hidden="true">→</span>
+                            </button>
+                          </div>
+
+                          <div
+                            id={`core-value-${idx}`}
+                            className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden]"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="grid h-10 w-10 place-items-center rounded-xl bg-white/15 text-gold ring-1 ring-white/20">
+                                {v.icon}
+                              </div>
+                              <div className="font-heading text-sm font-extrabold text-primary">
+                                {v.title}
+                              </div>
+                            </div>
+                            <div className="mt-3 max-h-28 space-y-2 overflow-y-auto pr-2">
+                              {v.details.map((line) => (
+                                <p key={line} className="text-sm font-semibold leading-relaxed text-slate-700">
+                                  {line}
+                                </p>
+                              ))}
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() => setOpenValue(null)}
+                              aria-controls={`core-value-${idx}`}
+                              className="mt-3 inline-flex items-center gap-1 text-sm font-extrabold text-gold"
+                            >
+                              Flip back <span aria-hidden="true">↺</span>
+                            </button>
+                          </div>
+                        </motion.div>
+                      </motion.article>
                     ))}
                   </div>
                 </div>

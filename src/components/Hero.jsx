@@ -105,15 +105,15 @@ export default function Hero() {
                     hidden: { opacity: 0, y: 10 },
                     show: { opacity: 1, y: 0 }
                   }}
-                  className="rounded-2xl border border-white/20 bg-primary p-4 shadow-lg shadow-primary/25"
+                  className="rounded-2xl border border-primary/15 bg-white p-4 shadow-lg shadow-primary/10"
                 >
-                  <div className="flex items-center gap-2 text-white">
-                    <div className="grid h-9 w-9 place-items-center rounded-xl bg-white/15 text-gold ring-1 ring-white/20">
+                  <div className="flex items-center gap-2 text-primary">
+                    <div className="grid h-9 w-9 place-items-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/15">
                       {f.icon}
                     </div>
                     <div className="font-heading text-sm font-extrabold">{f.title}</div>
                   </div>
-                  <p className="mt-2 text-sm font-semibold leading-relaxed text-white/90">
+                  <p className="mt-2 text-sm font-semibold leading-relaxed">
                     {f.text}
                   </p>
                 </motion.div>
