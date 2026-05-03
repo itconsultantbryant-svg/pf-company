@@ -47,7 +47,9 @@ export default function ProjectGallerySlider() {
             Recent deployments & sites
           </h2>
         </div>
-        <div className="overflow-hidden rounded-2xl border border-white/25 bg-primary shadow-lg shadow-primary/25">
+      </Container>
+      <div className="w-full px-2 sm:px-4 lg:px-6">
+        <div className="mx-auto max-w-[min(100%,120rem)] overflow-hidden rounded-2xl border border-white/25 bg-primary shadow-lg shadow-primary/25 sm:rounded-3xl">
           <Swiper
             modules={[Autoplay, EffectFade, Navigation, Pagination]}
             effect="fade"
@@ -70,22 +72,15 @@ export default function ProjectGallerySlider() {
               bulletActiveClass: '!bg-white !w-6'
             }}
             navigation
-            className="project-gallery-swiper [&_.swiper-button-next]:text-white [&_.swiper-button-prev]:text-white [&_.swiper-pagination]:!bottom-3"
+            className="project-gallery-swiper !h-auto [&_.swiper-slide]:!h-auto [&_.swiper-button-next]:text-white [&_.swiper-button-prev]:text-white [&_.swiper-pagination]:!bottom-3"
           >
             {slides.map((s) => (
-              <SwiperSlide key={s.src}>
-                <div className="relative flex min-h-[220px] w-full items-center justify-center overflow-hidden bg-red-50 py-4 sm:min-h-[300px] md:min-h-[380px]">
-                  <div className="pointer-events-none absolute inset-0 bg-primary/25" aria-hidden="true" />
-                  <div
-                    className="pointer-events-none absolute inset-0 scale-110 bg-cover bg-center opacity-45 blur-md mix-blend-multiply"
-                    style={{ backgroundImage: `url("${s.src}")` }}
-                    aria-hidden="true"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/15 via-red-100/40 to-primary/20" />
+              <SwiperSlide key={s.src} className="!h-auto">
+                <div className="relative h-[min(82svh,1500px)] min-h-[max(17rem,48svh)] w-full overflow-hidden bg-neutral-950">
                   <img
                     src={s.src}
                     alt={s.alt}
-                    className="relative z-10 max-h-[min(70vh,720px)] w-full object-contain drop-shadow-[0_12px_32px_rgba(198,40,40,0.22)]"
+                    className="absolute inset-0 h-full w-full object-cover object-center"
                     loading={s.src === p1 ? 'eager' : 'lazy'}
                     decoding="async"
                   />
@@ -94,7 +89,7 @@ export default function ProjectGallerySlider() {
             ))}
           </Swiper>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

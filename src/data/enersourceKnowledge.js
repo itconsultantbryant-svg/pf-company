@@ -10,7 +10,8 @@ export const COMPANY = {
   founders: 'Alfred V. Morris, Jr. and Jonetta Bijoux Morris',
   mission:
     'Clean, abundant, low-cost, distributed, and renewable energy alongside security and technology services for clients, communities, and Liberia.',
-  address: 'Rehab Junction, Paynesville City, Montserrado County, Liberia',
+  address:
+    'Adjacent City Sharama, Rehab Johnson, Paynesville, Monrovia-Liberia',
   email: 'info@enersourcelr.com',
   phones: ['+231-773-227-668', '+231-881-126-464'],
   whatsapp: '+231-881-126-464',

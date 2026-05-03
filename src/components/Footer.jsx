@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { COMPANY } from '../data/enersourceKnowledge.js';
 import logoSrc from '../assets/enersource_logo.jpeg';
 import Container from './Container.jsx';
 
@@ -109,7 +110,7 @@ export default function Footer() {
             <div className="mt-4 grid gap-3 text-sm font-semibold text-slate-700">
               <div className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-gold" aria-hidden />
-                <div>Rehab Junction, Paynesville City</div>
+                <div className="leading-relaxed">{COMPANY.address}</div>
               </div>
               <a
                 className="flex items-center gap-2 text-primary hover:text-primary hover:underline"

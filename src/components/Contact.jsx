@@ -2,6 +2,7 @@ import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import { Facebook, Instagram, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { useMemo, useState } from 'react';
+import { COMPANY } from '../data/enersourceKnowledge.js';
 import Container from './Container.jsx';
 import SectionHeading from './SectionHeading.jsx';
 
@@ -67,7 +68,7 @@ export default function Contact() {
             <SectionHeading
               eyebrow="Contact"
               title="Contact information"
-              subtitle="Rehab Junction, Paynesville City Montserrado County, Liberia"
+              subtitle={COMPANY.address}
             />
 
             <div className="mt-8 grid gap-4">
@@ -76,9 +77,9 @@ export default function Contact() {
                   <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
                   <div>
                     <div className="font-heading text-sm font-extrabold text-primary">Address</div>
-                    <div className="mt-1 text-sm font-semibold text-slate-700">
-                      Rehab Junction, Paynesville City, Liberia
-                    </div>
+                    <address className="mt-1 text-sm font-semibold not-italic text-slate-700">
+                      {COMPANY.address}
+                    </address>
                   </div>
                 </div>
               </div>
@@ -163,11 +164,11 @@ export default function Contact() {
 
             <div className="mt-8 overflow-hidden rounded-3xl border border-primary/15 bg-white shadow-sm">
               <iframe
-                title="Map to Paynesville City"
+                title={`Map — ${COMPANY.address}`}
                 className="h-72 w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=Paynesville%20City%2C%20Liberia&output=embed"
+                src={`https://www.google.com/maps?q=${encodeURIComponent(COMPANY.address)}&output=embed`}
               />
             </div>
           </div>

@@ -51,25 +51,15 @@ export default function HomeHeroSlider() {
             bulletActiveClass: '!bg-primary !w-6'
           }}
           navigation
-          className="home-hero-swiper [&_.swiper-button-next]:text-primary [&_.swiper-button-prev]:text-primary [&_.swiper-pagination]:!bottom-4"
+          className="home-hero-swiper !h-auto [&_.swiper-slide]:!h-auto [&_.swiper-button-next]:text-primary [&_.swiper-button-prev]:text-primary [&_.swiper-pagination]:!bottom-4"
         >
           {slides.map((s) => (
-            <SwiperSlide key={s.src}>
-              <div className="relative flex min-h-[260px] w-full items-center justify-center overflow-hidden bg-white py-4 sm:min-h-[320px] md:min-h-[420px] md:py-6">
-                <div
-                  className="pointer-events-none absolute inset-0 bg-white/75"
-                  aria-hidden="true"
-                />
-                <div
-                  className="pointer-events-none absolute inset-0 scale-110 bg-cover bg-center opacity-30"
-                  style={{ backgroundImage: `url("${s.src}")` }}
-                  aria-hidden="true"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/80 via-white/65 to-white/80" />
+            <SwiperSlide key={s.src} className="!h-auto">
+              <div className="relative h-[min(88svh,1600px)] min-h-[max(18rem,52svh)] w-full overflow-hidden bg-neutral-900">
                 <img
                   src={s.src}
                   alt={s.alt}
-                  className="relative z-10 max-h-[min(75vh,800px)] w-full object-contain drop-shadow-[0_12px_32px_rgba(198,40,40,0.22)]"
+                  className="absolute inset-0 h-full w-full object-cover object-center"
                   loading={s.src === home1 ? 'eager' : 'lazy'}
                   decoding="async"
                 />
