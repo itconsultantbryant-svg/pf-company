@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   GraduationCap,
   Hammer,
@@ -8,51 +8,26 @@ import {
   ShoppingCart,
   Wrench
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useChatWidget } from '../context/ChatWidgetContext.jsx';
+import { SERVICES_CATALOG } from '../data/enersourceKnowledge.js';
 import Container from './Container.jsx';
 import SectionHeading from './SectionHeading.jsx';
 
-const services = [
-  {
-    title: 'System Design & Engineering',
-    icon: <PlugZap className="h-5 w-5" />,
-    details:
-      'Custom solar system design for off-grid and grid-tie applications, load assessments, and technical specification development.'
-  },
-  {
-    title: 'Supply & Procurement',
-    icon: <ShoppingCart className="h-5 w-5" />,
-    details:
-      'Sourcing of high-quality solar panels, inverters, batteries, and balance-of-system components from certified global manufacturers.'
-  },
-  {
-    title: 'Installation & Commissioning',
-    icon: <Hammer className="h-5 w-5" />,
-    details:
-      'Professional installation of solar PV systems from 1kW to 10MW capacity, including three-phase hybrid systems for critical facilities.'
-  },
-  {
-    title: 'Preventive Maintenance & SLA',
-    icon: <Wrench className="h-5 w-5" />,
-    details:
-      'Scheduled maintenance contracts, system monitoring, fault diagnosis, and performance optimization to ensure maximum uptime.'
-  },
-  {
-    title: 'System Upgrades & Expansion',
-    icon: <RefreshCcw className="h-5 w-5" />,
-    details:
-      'Assessment and upgrade of existing solar installations, battery bank replacements, and capacity expansion projects.'
-  },
-  {
-    title: 'Technical Training',
-    icon: <GraduationCap className="h-5 w-5" />,
-    details:
-      'Training of client technical staff on system operation, basic maintenance, and safety procedures post-commissioning.'
-  }
-];
+const iconById = {
+  'svc-design': PlugZap,
+  'svc-supply': ShoppingCart,
+  'svc-install': Hammer,
+  'svc-maintenance': Wrench,
+  'svc-upgrade': RefreshCcw,
+  'svc-training': GraduationCap
+};
 
 export default function Services() {
   const [openCard, setOpenCard] = useState(null);
+  const sectionRef = useRef(null);
+  const location = useLocation();
+  const { notifyServicesSection } = useChatWidget();
 
   useEffect(() => {
     const onKeyDown = (e) => {
@@ -62,8 +37,28 @@ export default function Services() {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
 
+  useEffect(() => {
+    if (location.pathname !== '/services') return;
+    const el = sectionRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const en of entries) {
+          if (en.isIntersecting && en.intersectionRatio >= 0.3) {
+            notifyServicesSection();
+            io.disconnect();
+            break;
+          }
+        }
+      },
+      { threshold: [0.25, 0.35, 0.5] }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [location.pathname, notifyServicesSection]);
+
   return (
-    <section className="relative" id="services">
+    <section className="relative" id="services" ref={sectionRef}>
       <Container className="py-24">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -81,9 +76,9 @@ export default function Services() {
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s, idx) => (
+            {SERVICES_CATALOG.map((s, idx) => (
               <motion.article
-                key={s.title}
+                key={s.id}
                 className="group relative overflow-hidden rounded-3xl border border-primary/15 bg-white p-6 shadow-sm transition-transform hover:-translate-y-1"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -96,14 +91,17 @@ export default function Services() {
                 />
                 <motion.div
                   initial={false}
-                  animate={{ rotateY: openCard === s.title ? 180 : 0 }}
+                  animate={{ rotateY: openCard === s.id ? 180 : 0 }}
                   transition={{ duration: 0.45, ease: 'easeInOut' }}
                   className="relative min-h-[280px] [transform-style:preserve-3d]"
                 >
                   <div className="absolute inset-0 [backface-visibility:hidden]">
                     <div className="flex items-center justify-between">
                       <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white/15 text-gold ring-1 ring-white/20">
-                        {s.icon}
+                        {iconById[s.id] ? (() => {
+                            const I = iconById[s.id];
+                            return <I className="h-5 w-5" />;
+                          })() : null}
                       </div>
                       <div className="text-xs font-extrabold uppercase tracking-wider text-primary/70">
                         Enersource
@@ -117,8 +115,8 @@ export default function Services() {
                     </p>
                     <button
                       type="button"
-                      onClick={() => setOpenCard((current) => (current === s.title ? null : s.title))}
-                      aria-expanded={openCard === s.title}
+                      onClick={() => setOpenCard((current) => (current === s.id ? null : s.id))}
+                      aria-expanded={openCard === s.id}
                       aria-controls={`service-card-${idx}`}
                       className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-gold"
                     >
@@ -135,7 +133,10 @@ export default function Services() {
                   >
                     <div className="flex items-center justify-between">
                       <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white/15 text-gold ring-1 ring-white/20">
-                        {s.icon}
+                        {iconById[s.id] ? (() => {
+                            const I = iconById[s.id];
+                            return <I className="h-5 w-5" />;
+                          })() : null}
                       </div>
                       <div className="text-xs font-extrabold uppercase tracking-wider text-primary/70">
                         Enersource
@@ -165,4 +166,3 @@ export default function Services() {
     </section>
   );
 }
-

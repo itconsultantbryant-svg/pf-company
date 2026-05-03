@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, BatteryCharging, Factory, Home, ShieldCheck, Truck, Wrench } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useChatWidget } from '../context/ChatWidgetContext.jsx';
 import Container from './Container.jsx';
 import SectionHeading from './SectionHeading.jsx';
 
@@ -81,6 +83,30 @@ const caseTeasers = [
 ];
 
 export default function HomeCommercialShowcase() {
+  const packagesRef = useRef(null);
+  const location = useLocation();
+  const { notifyPackagesSection } = useChatWidget();
+
+  useEffect(() => {
+    if (location.pathname !== '/') return;
+    const el = packagesRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const en of entries) {
+          if (en.isIntersecting && en.intersectionRatio >= 0.28) {
+            notifyPackagesSection();
+            io.disconnect();
+            break;
+          }
+        }
+      },
+      { threshold: [0.2, 0.28, 0.4] }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [location.pathname, notifyPackagesSection]);
+
   return (
     <section className="relative border-y border-primary/10 bg-white">
       <Container className="py-24">
@@ -135,7 +161,7 @@ export default function HomeCommercialShowcase() {
             ))}
           </div>
 
-          <div id="solutions" className="grid gap-4 scroll-mt-24 lg:grid-cols-3">
+          <div id="solutions" ref={packagesRef} className="grid gap-4 scroll-mt-24 lg:grid-cols-3">
             {solutionBlocks.map((block, idx) => (
               <motion.article
                 key={block.title}

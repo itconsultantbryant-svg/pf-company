@@ -3,9 +3,11 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
-import AiChatWidget from './components/AiChatWidget.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
+import { isChatWidgetEnabled } from './config/features.js';
+import { ChatWidgetProvider } from './context/ChatWidgetContext.jsx';
 
+const AiChatWidget = lazy(() => import('./components/AiChatWidget.jsx'));
 const Home = lazy(() => import('./pages/Home.jsx'));
 const AboutPage = lazy(() => import('./pages/AboutPage.jsx'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage.jsx'));
@@ -47,6 +49,7 @@ export default function App() {
   }, [location.hash, location.pathname, reduceMotion]);
 
   return (
+    <ChatWidgetProvider>
     <div className="min-h-dvh bg-white pb-24 text-primary sm:pb-20">
       <a
         href="#main-content"
@@ -145,9 +148,14 @@ export default function App() {
         </Suspense>
       </main>
       <Footer />
-      <AiChatWidget />
+      {isChatWidgetEnabled ? (
+        <Suspense fallback={null}>
+          <AiChatWidget />
+        </Suspense>
+      ) : null}
       <WhatsAppButton />
     </div>
+    </ChatWidgetProvider>
   );
 }
 
