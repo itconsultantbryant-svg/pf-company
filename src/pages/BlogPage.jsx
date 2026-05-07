@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock, Tag } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import blogHeaderImage from '../assets/blog-page.jpeg';
 import Container from '../components/Container.jsx';
 import PageHeader from '../components/PageHeader.jsx';
 import { posts } from '../data/posts.js';
@@ -28,6 +29,8 @@ export default function BlogPage() {
         eyebrow="Blog / News"
         title="Insights on clean energy, performance, and project delivery."
         subtitle="Short, practical posts to help clients make confident solar decisions."
+        backgroundImage={blogHeaderImage}
+        imageOverlay="light"
       />
 
       <section>

@@ -1,8 +1,114 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Building2, Hospital, Landmark, MapPin, Zap } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Building2, Hospital, Landmark, MapPin, Zap } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Container from './Container.jsx';
 import SectionHeading from './SectionHeading.jsx';
+import bloomBank1 from '../assets/bloom_bank-1.jpeg';
+import bloomBank2 from '../assets/bloom_bank-2.jpeg';
+import bloomBank3 from '../assets/bloom_bank-3.jpeg';
+import bloomBank4 from '../assets/bloom_bank-4.jpeg';
+import ecowas1 from '../assets/ecowas-1.jpeg';
+import ecowas2 from '../assets/ecowas-2.jpeg';
+import ecowas3 from '../assets/ecowas-3.jpeg';
+import jfk1 from '../assets/jfk-1.jpeg';
+import jfk2 from '../assets/jfk-2.jpeg';
+import jfk3 from '../assets/jfk-3.jpeg';
+import jfk4 from '../assets/jfk-4.jpeg';
+import rre1 from '../assets/rre-1.jpeg';
+import rre2 from '../assets/rre-2.jpeg';
+import rre3 from '../assets/rre-3.jpeg';
+
+function ProjectImageSlider({ images, title, align }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const isAlignedRight = align === 'right';
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [images]);
+
+  useEffect(() => {
+    if (images.length <= 1) return undefined;
+    if (isPaused) return undefined;
+    const timer = setInterval(() => {
+      setActiveIndex((current) => (current + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [images, isPaused]);
+
+  const goTo = (index) => setActiveIndex(index);
+  const goNext = () => setActiveIndex((current) => (current + 1) % images.length);
+  const goPrev = () =>
+    setActiveIndex((current) => (current - 1 + images.length) % images.length);
+
+  return (
+    <div
+      className={[
+        'overflow-hidden rounded-3xl border border-primary/15 bg-white p-3 shadow-sm',
+        isAlignedRight ? 'lg:col-start-2' : 'lg:col-start-1'
+      ].join(' ')}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocusCapture={() => setIsPaused(true)}
+      onBlurCapture={() => setIsPaused(false)}
+      onTouchStart={() => setIsPaused(true)}
+      onTouchEnd={() => setIsPaused(false)}
+    >
+      <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 sm:aspect-[16/11]">
+        {images.map((src, idx) => (
+          <img
+            key={src}
+            src={src}
+            alt={`${title} site image ${idx + 1}`}
+            className={[
+              'absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-700',
+              idx === activeIndex ? 'opacity-100' : 'opacity-0'
+            ].join(' ')}
+            loading={idx === 0 ? 'eager' : 'lazy'}
+          />
+        ))}
+        <div className="absolute bottom-3 right-3 rounded-full bg-primary/85 px-2.5 py-1 text-[11px] font-extrabold text-white shadow">
+          {activeIndex + 1}/{images.length}
+        </div>
+      </div>
+
+      <div className="mt-3 flex items-center justify-between gap-2 sm:gap-3">
+        <button
+          type="button"
+          onClick={goPrev}
+          className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-primary/20 text-primary transition hover:bg-primary hover:text-white"
+          aria-label={`Show previous image for ${title}`}
+        >
+          <ArrowLeft className="h-4 w-4" />
+        </button>
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          {images.map((image, idx) => (
+            <button
+              key={image}
+              type="button"
+              onClick={() => goTo(idx)}
+              aria-label={`Show image ${idx + 1} for ${title}`}
+              aria-pressed={idx === activeIndex}
+              className={[
+                'h-2.5 rounded-full transition-all',
+                idx === activeIndex ? 'w-6 bg-primary' : 'w-2.5 bg-primary/25 hover:bg-primary/45'
+              ].join(' ')}
+            />
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={goNext}
+          className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-primary/20 text-primary transition hover:bg-primary hover:text-white"
+          aria-label={`Show next image for ${title}`}
+        >
+          <ArrowRight className="h-4 w-4" />
+        </button>
+      </div>
+    </div>
+  );
+}
 
 const projects = [
   {
@@ -14,7 +120,8 @@ const projects = [
     value: 'USD $388,045',
     summary:
       'Solar Standalone System for 9 Critical Units at JFKMC (operating theaters, ICU, maternity wards, emergency units).',
-    highlights: ['Final Phase — Battery Bank Installation', 'Testing, Commissioning & Staff Training']
+    highlights: ['Final Phase — Battery Bank Installation', 'Testing, Commissioning & Staff Training'],
+    images: [jfk1, jfk2, jfk3, jfk4]
   },
   {
     title: 'Bloom Bank Africa Liberia Limited',
@@ -24,7 +131,8 @@ const projects = [
     capacity: '202.8kWp Solar PV | 445kWh Battery Storage (16kW–100kW per location)',
     value: 'USD $316,110.60',
     summary: 'Installation of Hybrid Solar Energy System at Five Bloom Bank Branches.',
-    highlights: ['Successfully Completed Ahead of Schedule (4.5 Months)']
+    highlights: ['Successfully Completed Ahead of Schedule (4.5 Months)'],
+    images: [bloomBank1, bloomBank2, bloomBank3, bloomBank4]
   },
   {
     title: 'USAID GHSC-PSM / ECOWAS Commission',
@@ -35,7 +143,8 @@ const projects = [
     capacity: '136kWp Solar PV | 255kWh Battery Storage (17 stations × 5kW systems)',
     value: 'USD $198,000',
     summary: 'Installation of 5kW Solar Hybrid Systems at 17 Community Radio Stations.',
-    highlights: ['Successfully Completed — Currently Under Preventive Maintenance Contract']
+    highlights: ['Successfully Completed — Currently Under Preventive Maintenance Contract'],
+    images: [ecowas1, ecowas2, ecowas3, rre1, rre2, rre3]
   }
 ];
 
@@ -66,7 +175,6 @@ export default function Projects() {
 
             <div className="grid gap-6">
               {projects.map((p, idx) => {
-                const isRight = idx % 2 === 1;
                 return (
                   <motion.article
                     key={p.title}
@@ -77,12 +185,12 @@ export default function Projects() {
                     transition={{ duration: 0.45, ease: 'easeOut', delay: idx * 0.04 }}
                   >
                     <div className="grid gap-4 lg:grid-cols-2 lg:gap-10">
-                      <div className={isRight ? 'hidden lg:block' : ''} />
+                      <ProjectImageSlider images={p.images} title={p.title} align="left" />
 
                       <div
                         className={[
                           'relative rounded-3xl border border-primary/15 bg-white p-6 shadow-sm',
-                          isRight ? 'lg:col-start-2' : 'lg:col-start-1'
+                          'lg:col-start-2'
                         ].join(' ')}
                       >
                         <div
@@ -113,7 +221,7 @@ export default function Projects() {
                               </div>
                             </div>
 
-                            <div className="shrink-0 rounded-full border border-white/30 bg-white px-3 py-1 text-xs font-extrabold text-primary border border-primary/20">
+                            <div className="shrink-0 rounded-full border border-primary/20 bg-white px-3 py-1 text-xs font-extrabold text-primary">
                               {p.year}
                             </div>
                           </div>

@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import Container from './Container.jsx';
 import SectionHeading from './SectionHeading.jsx';
 
-import jfkLogo from '../assets/partners/jfk-medical-center.svg';
-import bloomLogo from '../assets/partners/bloom-bank.svg';
-import ecowasLogo from '../assets/partners/ecowas.svg';
-import rreaLogo from '../assets/partners/rrea.svg';
+import jfkLogo from '../assets/partners/jfk-medical-center.png';
+import bloomLogo from '../assets/partners/bloom-bank.png';
+import ecowasLogo from '../assets/partners/ecowas.png';
+import rreaLogo from '../assets/partners/rrea.png';
 
 const partners = [
   { name: 'John F. Kennedy Medical Center (JFKMC)', src: jfkLogo },

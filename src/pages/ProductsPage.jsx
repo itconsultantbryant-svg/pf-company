@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Download, FileText } from 'lucide-react';
 import { useCallback, useMemo, useRef, useState } from 'react';
 import logoSrc from '../assets/enersource_logo.jpeg';
+import productsHeaderImage from '../assets/products-page.jpeg';
 import Container from '../components/Container.jsx';
 import PageHeader from '../components/PageHeader.jsx';
 import { useChatWidget } from '../context/ChatWidgetContext.jsx';
@@ -46,6 +47,8 @@ export default function ProductsPage() {
         eyebrow="Products"
         title="Enersource engineered solar products and storage systems."
         subtitle="Select a product to view full technical details, use-case notes, and datasheet download options."
+        backgroundImage={productsHeaderImage}
+        imageOverlay="strong"
       />
       <section>
         <Container className="py-20">

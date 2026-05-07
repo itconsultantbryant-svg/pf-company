@@ -14,9 +14,7 @@ import p3 from '../assets/project_slide_3.jpeg';
 import p4 from '../assets/project_slide_4.jpeg';
 import p5 from '../assets/project_slide_5.jpeg';
 import p6 from '../assets/project_slide_6.jpeg';
-import p7 from '../assets/project_slide_7.jpeg';
 import p8 from '../assets/project_slide_8.jpeg';
-import p9 from '../assets/project_slide_9.jpeg';
 import p10 from '../assets/project_slide_10.jpeg';
 
 const slides = [
@@ -26,9 +24,7 @@ const slides = [
   { src: p4, alt: 'Project gallery image 4' },
   { src: p5, alt: 'Project gallery image 5' },
   { src: p6, alt: 'Project gallery image 6' },
-  { src: p7, alt: 'Project gallery image 7' },
   { src: p8, alt: 'Project gallery image 8' },
-  { src: p9, alt: 'Project gallery image 9' },
   { src: p10, alt: 'Project gallery image 10' }
 ];
 
